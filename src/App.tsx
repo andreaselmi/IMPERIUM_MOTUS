@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <h1>IMPERIUM_MOTUS</h1>
-      <Button type={"secondary"} />
+      <Button type={"secondary"} label={"Test Button"} />
     </div>
   );
 }

@@ -3,9 +3,10 @@ import styles from "./Button.module.css";
 
 interface ButtonProps {
   type?: "primary" | "secondary";
+  label: string;
 }
 
-const Button = ({ type = "primary" }: ButtonProps) => {
+const Button = ({ label, type = "primary" }: ButtonProps) => {
   return (
     <button
       className={`${styles.container}`}
@@ -15,7 +16,7 @@ const Button = ({ type = "primary" }: ButtonProps) => {
           : { backgroundColor: "blue" }
       }
     >
-      Ciao
+      {label}
     </button>
   );
 };
