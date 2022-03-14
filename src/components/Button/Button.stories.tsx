@@ -11,6 +11,5 @@ const Template: ComponentStory<typeof Button> = () => <Button />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  label: "Button",
+  type: "primary",
 };
