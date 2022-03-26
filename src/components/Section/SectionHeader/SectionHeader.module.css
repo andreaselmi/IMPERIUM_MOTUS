@@ -1,0 +1,23 @@
+.imageContainer {
+    position: relative;
+    left: 10px;
+    top: 25px;
+    max-width: 200px;
+    max-height: 71px;
+}
+
+@media only screen and (min-width: 576px) {
+    .imageContainer {
+        max-height: 100px;
+        max-width: 300px;
+        top: 35px;
+        left: -5%
+    }
+
+
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
