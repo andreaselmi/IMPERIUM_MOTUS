@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./NavbarMobile.module.css";
 import Container from "../../Container/Container";
 import Typography from "../../Typography/Typography";
@@ -6,16 +6,21 @@ import Typography from "../../Typography/Typography";
 import Logo from "../../../assets/icons/logoHorizontal.svg";
 
 const NavbarMobile = () => {
+  const [isOpened, setIsOpened] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsOpened((prevState) => !prevState);
+  };
+
   return (
-    <div className={styles.navBarContainer}>
+    <div
+      className={`${styles.navBarContainer} ${isOpened && styles.navbarOpened}`}
+    >
       <Container>
         <nav className={styles.navbar}>
           <div className={styles.collapseNavbarContainer}>
             <img src={Logo} alt={"Imperium motus logo"} />
-            <a
-              style={{ cursor: "pointer" }}
-              onClick={() => console.log("ciao")}
-            >
+            <a style={{ cursor: "pointer" }} onClick={() => toggleNavbar()}>
               <Typography
                 className={styles.menuButton}
                 variant={"menu"}
@@ -24,11 +29,40 @@ const NavbarMobile = () => {
             </a>
           </div>
 
-          <div>
-            <p>OPZIONE 1</p>
-            <p>OPZIONE 2</p>
-            <p>OPZIONE 3</p>
-            <p>OPZIONE 4</p>
+          <div style={{ marginTop: 32 }}>
+            <div className={styles.collapseMenuSection}>
+              <a className={styles.collapseMenuLink}>
+                <Typography
+                  className={styles.menuButton}
+                  variant={"menu"}
+                  label={"Il calisthenics"}
+                />
+              </a>
+              <a className={styles.collapseMenuLink}>
+                <Typography
+                  className={styles.menuButton}
+                  variant={"menu"}
+                  label={"Il coach"}
+                />
+              </a>
+            </div>
+
+            <div className={styles.collapseMenuSection}>
+              <a className={styles.collapseMenuLink}>
+                <Typography
+                  className={styles.menuButton}
+                  variant={"menu"}
+                  label={"I corsi"}
+                />
+              </a>
+              <a className={styles.collapseMenuLink}>
+                <Typography
+                  className={styles.menuButton}
+                  variant={"menu"}
+                  label={"Dove siamo"}
+                />
+              </a>
+            </div>
           </div>
         </nav>
       </Container>
