@@ -1,12 +1,17 @@
 import React from "react";
-import Button from "./components/Button/Button";
+import Header from "./components/Header/Header";
+import Navbar from "./components/Navbar/Navbar/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <h1>IMPERIUM_MOTUS</h1>
-      <Button />
-    </div>
+    <>
+      <Navbar />
+      <Header />
+      {/*<Typography label={"titolo"} variant={"paragraph"} />*/}
+      {/*<div style={{ height: 300 }}>*/}
+      {/*  <Button type={"primary"} label={"ciao un bottone lunghissimo"} />*/}
+      {/*</div>*/}
+    </>
   );
 }
 
