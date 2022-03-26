@@ -27,6 +27,7 @@
     height: 96px;
     overflow: hidden;
     background-color: rgba(0, 0, 0, .8);
+    backdrop-filter: blur(5px);
     position: fixed;
     top: 0;
     width: 100%;
