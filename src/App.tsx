@@ -1,12 +1,11 @@
 import React from "react";
+import Container from "./components/Container/Container";
 
 function App() {
   return (
-    <div>
-      <h1 style={{ fontSize: "3rem", fontFamily: "bisonbold" }}>
-        IMPERIUM_MOTUS
-      </h1>
-    </div>
+    <Container>
+      <div style={{ backgroundColor: "red", height: 300 }} />
+    </Container>
   );
 }
 
