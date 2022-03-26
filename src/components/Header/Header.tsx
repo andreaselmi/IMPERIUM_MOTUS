@@ -2,21 +2,21 @@ import React from "react";
 import Container from "../Container/Container";
 import Button from "../Button/Button";
 import HeaderLogo from "./HeaderLogo/HeaderLogo";
+import styles from "./Header.module.css";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const Header = () => {
+  const { width } = useWindowDimensions();
+
   return (
-    <div style={{ backgroundColor: "#121212" }}>
+    <div style={{ backgroundColor: "#121212", display: "flex" }}>
       <Container
-        style={{
-          height: "100%",
-          alignItems: "center",
-          paddingTop: 150,
-          paddingBottom: 30,
-          display: "flex",
-          flexDirection: "column",
-        }}
+        style={
+          width ? (width > 991 ? { paddingTop: 160 } : { paddingTop: 96 }) : {}
+        }
+        className={styles.container}
       >
-        <div style={{ height: "100%", width: "100%" }}>
+        <div className={styles.headerLogoContainer}>
           <HeaderLogo />
         </div>
 

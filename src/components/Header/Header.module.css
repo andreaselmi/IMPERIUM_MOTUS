@@ -1,0 +1,29 @@
+.container {
+    min-height: 497px;
+    align-items: center;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerLogoContainer {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+@media only screen and (min-width: 576px) {
+    .container {
+        min-height: 588px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        min-height: 750px;
+    }
+}
+
+
+
+
