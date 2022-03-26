@@ -1,0 +1,29 @@
+@import "../../../utils/theme/colors.css";
+
+.collapseNavbarContainer {
+    display: flex;
+    flex-direction: row;
+    height: 96px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    padding: 0 5%;
+}
+
+.navBarContainer {
+    height: 96px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+
+}
+
+.menuButton {
+    color: var(--global-color-light, #FFFFFF);
+}
+

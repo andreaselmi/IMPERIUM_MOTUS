@@ -1,0 +1,23 @@
+.container {
+    margin-bottom: 30%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.logo1 {
+    position: relative;
+    bottom: -15px;
+    left: 10%;
+    width: 80%;
+}
+
+.logo3 {
+    position: relative;
+    top: -15px;
+    right: 5%;
+    width: 80%;
+    align-self: center;
+    text-align: right;
+}
