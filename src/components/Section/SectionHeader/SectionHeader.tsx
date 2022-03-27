@@ -7,16 +7,18 @@ interface SectionHeaderProps {
   imageAlt: string;
   label: string;
   titleClass?: string;
+  className?: string;
 }
 
 const SectionHeader = ({
+  className,
   imageAlt,
   imageSrc,
   label,
   titleClass,
 }: SectionHeaderProps) => {
   return (
-    <>
+    <div className={className}>
       <div className={styles.imageContainer}>
         <img className={styles.image} alt={imageAlt} src={imageSrc} />
       </div>
@@ -25,7 +27,7 @@ const SectionHeader = ({
         label={label}
         variant={"sectionTitle"}
       />
-    </>
+    </div>
   );
 };
 

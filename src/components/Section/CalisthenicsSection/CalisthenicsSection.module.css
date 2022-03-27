@@ -30,19 +30,18 @@
     z-index: -1;
 }
 
-.sectionContainer {
-    padding: 80px 0
-}
-
 .sectionTitle {
     color: white;
 }
 
+.sectionContainer {
+    padding: 80px 0;
+    grid-column: col-start / span 12;
+}
+
 @media only screen and (min-width: 1200px) {
     .sectionContainer {
-        padding-left: 45%;
-        padding-top: 160px;
-        padding-bottom: 160px;
-    }
+        grid-column: col-start 7 / span 12;
 
+    }
 }
