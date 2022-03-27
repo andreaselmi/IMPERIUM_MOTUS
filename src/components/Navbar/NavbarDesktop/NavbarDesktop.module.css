@@ -1,3 +1,17 @@
+.logo {
+    width: 75%;
+    transition: all 1s;
+    position: relative;
+}
+
+.compactLogoName {
+    opacity: 0;
+}
+
+.compactLogo {
+    transform: translate(0, 10px);
+}
+
 .logoContainer {
     display: flex;
     flex-direction: column;
@@ -12,6 +26,10 @@
     align-items: center;
 }
 
+.navbarMenu {
+    color: white
+}
+
 .navbarContainer {
     height: 160px;
     background-color: rgba(0, 0, 0, .8);
@@ -21,5 +39,10 @@
     width: 100%;
     z-index: 999;
     display: flex;
-    flex: 1
+    flex: 1;
+    transition: height .500s;
+}
+
+.compactNavbar {
+    height: 90px;
 }
