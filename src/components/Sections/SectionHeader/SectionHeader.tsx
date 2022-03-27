@@ -20,7 +20,7 @@ const SectionHeader = ({
   titleClass,
 }: SectionHeaderProps) => {
   return (
-    <div style={{ position: "relative", zIndex: 1 }} className={className}>
+    <header style={{ position: "relative", zIndex: 1 }} className={className}>
       <div className={`${styles.imageContainer} ${imageContainerClassName}`}>
         <img className={styles.image} alt={imageAlt} src={imageSrc} />
       </div>
@@ -29,7 +29,7 @@ const SectionHeader = ({
         label={label}
         variant={"sectionTitle"}
       />
-    </div>
+    </header>
   );
 };
 
