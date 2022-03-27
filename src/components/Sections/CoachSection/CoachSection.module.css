@@ -4,53 +4,8 @@
     margin-top: 24px;
 }
 
-.singleCertificateContainer {
-    width: 239px;
-    height: 171px;
-    display: flex;
-    flex-direction: column;
-}
 
-.certificateImgContainer {
-    height: 110px;
-    width: 160px;
-    display: flex;
-    align-items: center;
-}
-
-
-.certificatesScrollableContainer {
-    max-width: 1092px;
-    margin: 0 auto;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-    padding: 16px;
-}
-
-.certificatesScrollableContainer::-webkit-scrollbar {
-    display: none;
-}
-
-.certificateText {
-    margin-top: 15px;
-    line-height: 130%;
-}
-
-.certificatesContentContainer {
-    display: flex;
-    justify-content: space-between;
-}
-
-.certificatesContainer {
-    width: 1092px;
-    margin: auto;
-    padding: 32px;
-    border: 1px solid black;
-}
-
-.container {
+.headerContainer, .imageContainer, .textContainer {
     grid-column: col-start / span 12;
 }
 
@@ -70,44 +25,45 @@
     padding-bottom: 80px;
 }
 
-@media only screen and (min-width: 576px) {
-    .certificatesScrollableContainer {
-        padding: 0 32px;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .certificatesScrollableContainer {
-        padding: 0 32px;
-    }
-
+.text {
+    line-height: 150%;
 }
 
 
 @media only screen and (min-width: 992px) {
-    .certificatesScrollableContainer {
-        max-width: 896px;
-        padding: 0;
+
+
+    .textContainer {
+        grid-column: col-start / span 7;
+        grid-row: 2;
+
     }
 
-    .singleCertificateContainer {
-        width: 200px;
-    }
 
-    .certificatesContainer {
-        width: auto;
-    }
-
-}
-
-@media only screen and (min-width: 1199px) {
-    .certificatesScrollableContainer {
-        max-width: 1200px;
-    }
-
-    .singleCertificateContainer {
-        width: 251px;
+    .imageContainer {
+        grid-column: col-start 8 / span 12;
+        height: 556px;
+        margin: 0;
     }
 
 }
+
+@media only screen and (min-width: 1200px) {
+    .button {
+        margin-top: auto;
+    }
+
+    .imageContainer {
+        grid-column: col-start 9 / span 12;
+        height: 600px;
+        margin: 0;
+    }
+
+    .textContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 
