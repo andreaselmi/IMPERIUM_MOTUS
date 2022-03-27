@@ -4,9 +4,8 @@
     margin-top: 24px;
 }
 
-
 .singleCertificateContainer {
-    max-width: 239px;
+    width: 239px;
     height: 171px;
     display: flex;
     flex-direction: column;
@@ -107,7 +106,7 @@
     }
 
     .singleCertificateContainer {
-        max-width: 251px;
+        width: 251px;
     }
 
 }
