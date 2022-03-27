@@ -39,11 +39,16 @@
 
     }
 
-
     .imageContainer {
         grid-column: col-start 8 / span 12;
-        height: 556px;
         margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image {
+        width: 366px;
+        height: 566px;
     }
 
 }
@@ -54,9 +59,14 @@
     }
 
     .imageContainer {
-        grid-column: col-start 9 / span 12;
-        height: 600px;
+        grid-column: col-start 8 / span 12;
         margin: 0;
+
+    }
+
+    .image {
+        width: 385px;
+        height: 600px;
     }
 
     .textContainer {
