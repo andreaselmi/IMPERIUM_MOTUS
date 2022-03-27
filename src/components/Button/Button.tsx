@@ -8,14 +8,15 @@ import ArrowRightWhite from "../../assets/icons/arrowRightWhite.svg";
 interface ButtonProps {
   type?: "primary" | "secondary";
   label: string;
+  className?: string;
 }
 
-const Button = ({ label, type = "primary" }: ButtonProps) => {
+const Button = ({ className, label, type = "primary" }: ButtonProps) => {
   return (
     <button
       className={`${styles.container} ${
         type === "primary" ? styles.primary : styles.secondary
-      }`}
+      } ${className}`}
     >
       <div className={styles.buttonSection}>
         <Typography

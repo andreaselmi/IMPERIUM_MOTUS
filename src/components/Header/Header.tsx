@@ -9,7 +9,7 @@ const Header = () => {
   const { width } = useWindowDimensions();
 
   return (
-    <div style={{ backgroundColor: "#121212", display: "flex" }}>
+    <header style={{ backgroundColor: "#121212", display: "flex" }}>
       <Container
         style={
           width ? (width > 991 ? { paddingTop: 160 } : { paddingTop: 96 }) : {}
@@ -22,7 +22,7 @@ const Header = () => {
 
         <Button type={"secondary"} label={"Prenota una lezione di prova"} />
       </Container>
-    </div>
+    </header>
   );
 };
 

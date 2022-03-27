@@ -1,17 +1,17 @@
 .imageContainer {
-    position: relative;
+    z-index: -1;
+    position: absolute;
     left: 10px;
-    top: 25px;
+    top: -30px;
     max-width: 200px;
-    max-height: 71px;
 }
 
 @media only screen and (min-width: 576px) {
     .imageContainer {
         max-height: 100px;
         max-width: 300px;
-        top: 35px;
-        left: -5%
+        top: -35px;
+        left: -25px;
     }
 
 

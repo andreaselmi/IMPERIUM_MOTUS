@@ -11,13 +11,16 @@
 }
 
 .container {
-    background-image: url("../../../assets/images/sections/calisthenicsSectionBg.jpg");
+    grid-column: col-start / span 12;
+}
+
+.sectionContainer {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../../assets/images/sections/calisthenicsSectionBg.jpg");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
     z-index: 1;
-    padding-bottom: 80px;
 }
 
 .overlay {
@@ -34,13 +37,9 @@
     color: white;
 }
 
-.sectionContainer {
-    padding: 80px 0;
-    grid-column: col-start / span 12;
-}
 
 @media only screen and (min-width: 1200px) {
-    .sectionContainer {
+    .container {
         grid-column: col-start 7 / span 12;
 
     }

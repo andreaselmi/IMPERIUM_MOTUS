@@ -8,18 +8,20 @@ interface SectionHeaderProps {
   label: string;
   titleClass?: string;
   className?: string;
+  imageContainerClassName?: string;
 }
 
 const SectionHeader = ({
   className,
   imageAlt,
+  imageContainerClassName,
   imageSrc,
   label,
   titleClass,
 }: SectionHeaderProps) => {
   return (
-    <div className={className}>
-      <div className={styles.imageContainer}>
+    <header style={{ position: "relative", zIndex: 1 }} className={className}>
+      <div className={`${styles.imageContainer} ${imageContainerClassName}`}>
         <img className={styles.image} alt={imageAlt} src={imageSrc} />
       </div>
       <Typography
@@ -27,7 +29,7 @@ const SectionHeader = ({
         label={label}
         variant={"sectionTitle"}
       />
-    </div>
+    </header>
   );
 };
 

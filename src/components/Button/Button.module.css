@@ -20,7 +20,7 @@
 
 
 .primary {
-    background-color: var(--global-background-color-light, #FFFFFF);
+    background-color: transparent;
     border-color: var(--global-color-dark, #131313);
 }
 

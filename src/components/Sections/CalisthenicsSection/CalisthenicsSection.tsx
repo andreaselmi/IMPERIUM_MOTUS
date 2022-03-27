@@ -1,12 +1,13 @@
 import React from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
-import calisthenics from "../../../assets/images/sections/calisthenicsSection.svg";
-import styles from "./CalisthenicsSection.module.css";
-import Container from "../../Container/Container";
 import Typography from "../../Typography/Typography";
 import Button from "../../Button/Button";
+import SectionContainer from "../SectionContainer/SectionContainer";
+import styles from "./CalisthenicsSection.module.css";
+import calisthenics from "../../../assets/images/sections/calisthenicsSection.svg";
+
+//Utils
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
-import Grid from "../../Grid/Grid";
 
 const CalisthenicsSection = () => {
   const { width } = useWindowDimensions();
@@ -33,42 +34,34 @@ const CalisthenicsSection = () => {
     : shortSecondText;
 
   return (
-    <section className={styles.container}>
-      <div className={styles.overlay} />
-      <Container>
-        <Grid>
-          <div className={styles.sectionContainer}>
-            <SectionHeader
-              titleClass={styles.sectionTitle}
-              imageSrc={calisthenics}
-              imageAlt={"Il Calisthenics"}
-              label={"Calisthenics garage"}
-            />
+    <SectionContainer className={styles.sectionContainer}>
+      <div className={styles.container}>
+        <SectionHeader
+          titleClass={styles.sectionTitle}
+          imageSrc={calisthenics}
+          imageAlt={"Il Calisthenics"}
+          label={"Calisthenics garage"}
+        />
 
-            <div className={styles.body}>
-              <Typography
-                className={styles.bodyText}
-                variant={"paragraph"}
-                label={firstText}
-              />
-              <br />
-              <Typography
-                className={styles.bodyText}
-                variant={"paragraph"}
-                label={secondText}
-              />
-            </div>
+        <div className={styles.body}>
+          <Typography
+            className={styles.bodyText}
+            variant={"paragraph"}
+            label={firstText}
+          />
+          <br />
+          <Typography
+            className={styles.bodyText}
+            variant={"paragraph"}
+            label={secondText}
+          />
+        </div>
 
-            <div>
-              <Button
-                type={"secondary"}
-                label={"Perchè Calisthenics Garage?"}
-              />
-            </div>
-          </div>
-        </Grid>
-      </Container>
-    </section>
+        <div>
+          <Button type={"secondary"} label={"Perchè Calisthenics Garage?"} />
+        </div>
+      </div>
+    </SectionContainer>
   );
 };
 
