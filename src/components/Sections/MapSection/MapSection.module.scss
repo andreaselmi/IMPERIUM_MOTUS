@@ -1,0 +1,10 @@
+@import "../../../utils/theme/colors";
+
+.container {
+  background-color: $global-background-color-dark;
+}
+
+.header {
+  grid-column: col-start / span 12;
+  color: $global-color-light;
+}
