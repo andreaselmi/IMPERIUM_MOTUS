@@ -8,7 +8,7 @@
   font-weight: bold;
 }
 
-.header, .contactsContainer {
+.header, .contactsContainer, .mapContainer {
   grid-column: col-start / span 12;
 
   &.contactsContainer {

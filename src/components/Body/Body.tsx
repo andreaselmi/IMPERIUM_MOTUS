@@ -6,12 +6,12 @@ import MapSection from "../Sections/MapSection/MapSection";
 
 const Body = () => {
   return (
-    <body>
+    <div>
       <CalisthenicsSection />
       <CoachSection />
       <Schedules />
       <MapSection />
-    </body>
+    </div>
   );
 };
 
