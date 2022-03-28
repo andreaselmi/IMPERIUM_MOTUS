@@ -1,0 +1,56 @@
+@import "../../utils/theme/colors";
+
+.container {
+  height: 48px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $global-color-light;
+  margin: 0;
+  padding: 0;
+}
+
+.buttonSection {
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  .primaryText {
+    color: $global-color-dark;
+  }
+
+  .secondaryText {
+    color: $global-color-light;
+  }
+}
+
+
+.primary {
+  background-color: transparent;
+  border-color: $global-color-dark;
+}
+
+
+.secondary {
+  background-color: $global-background-color-dark;
+  border-color: $global-color-light
+}
+
+.separator {
+  width: 1px;
+  height: 48px;
+}
+
+.primarySeparator {
+  background-color: $global-background-color-dark;
+}
+
+.secondarySeparator {
+  background-color: $global-background-color-light;
+}
+
+
+
+

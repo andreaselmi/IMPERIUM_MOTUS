@@ -1,0 +1,22 @@
+@import "../../utils/theme/breakpoints";
+
+.container {
+  padding: 0 16px;
+  margin: auto;
+
+  @include respond-to("tabletSmall") {
+    padding: 0 32px
+  }
+
+  @include respond-to("tabletBig") {
+    max-width: 704px;
+  }
+
+  @include respond-to("desktopSmall") {
+    max-width: 896px;
+  }
+
+  @include respond-to("desktopBig") {
+    max-width: 1140px;
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../../Container/Container";
 import Grid from "../../Grid/Grid";
-import styles from "./SectionContainer.module.css";
+import styles from "./SectionContainer.module.scss";
 
 interface SectionContainerProps {
   className?: string;

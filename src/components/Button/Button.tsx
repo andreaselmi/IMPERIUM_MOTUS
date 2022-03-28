@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Button.module.css";
+import styles from "./Button.module.scss";
 import Typography from "../Typography/Typography";
 
 import ArrowRightBlack from "../../assets/icons/arrowRightBlack.svg";

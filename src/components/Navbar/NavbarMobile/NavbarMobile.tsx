@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import styles from "./NavbarMobile.module.css";
+import styles from "./NavbarMobile.module.scss";
 import Container from "../../Container/Container";
 import Typography from "../../Typography/Typography";
 
 import Logo from "../../../assets/icons/logoHorizontal.svg";
+import { navBarButtons } from "../../../defs/navbarButtons";
 
 const NavbarMobile = () => {
   const [isOpened, setIsOpened] = useState(false);
@@ -17,7 +18,7 @@ const NavbarMobile = () => {
       className={`${styles.navBarContainer} ${isOpened && styles.navbarOpened}`}
     >
       <Container>
-        <nav className={styles.navbar}>
+        <nav>
           <div className={styles.collapseNavbarContainer}>
             <img src={Logo} alt={"Imperium motus logo"} />
             <a style={{ cursor: "pointer" }} onClick={() => toggleNavbar()}>
@@ -35,14 +36,14 @@ const NavbarMobile = () => {
                 <Typography
                   className={styles.menuButton}
                   variant={"menu"}
-                  label={"Il calisthenics"}
+                  label={navBarButtons.CALISTHENICS}
                 />
               </a>
               <a className={styles.collapseMenuLink}>
                 <Typography
                   className={styles.menuButton}
                   variant={"menu"}
-                  label={"Il coach"}
+                  label={navBarButtons.COACH}
                 />
               </a>
             </div>
@@ -52,14 +53,14 @@ const NavbarMobile = () => {
                 <Typography
                   className={styles.menuButton}
                   variant={"menu"}
-                  label={"I corsi"}
+                  label={navBarButtons.COURSES}
                 />
               </a>
               <a className={styles.collapseMenuLink}>
                 <Typography
                   className={styles.menuButton}
                   variant={"menu"}
-                  label={"Dove siamo"}
+                  label={navBarButtons.MAP}
                 />
               </a>
             </div>

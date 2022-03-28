@@ -3,11 +3,12 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 import Typography from "../../Typography/Typography";
 import Button from "../../Button/Button";
 import SectionContainer from "../SectionContainer/SectionContainer";
-import styles from "./CalisthenicsSection.module.css";
+import styles from "./CalisthenicsSection.module.scss";
 import calisthenics from "../../../assets/images/sections/calisthenicsSection.svg";
 
 //Utils
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
+import { breakpoints } from "../../../defs/breakpoints";
 
 const CalisthenicsSection = () => {
   const { width } = useWindowDimensions();
@@ -22,13 +23,13 @@ const CalisthenicsSection = () => {
     "Il Calisthenics è l'arte di usare il proprio peso corporeo come resistenza per allenarsi e sviluppare il fisico tramite il sistema di allenamento basato sulla ginnastica a corpo libero, includendo tutti quegli esercizi ginnici atti a sviluppare la bellezza, la forza e l'eleganza dei movimenti.";
 
   const firstText = width
-    ? width > 1199
+    ? width >= breakpoints.DESKTOPBIG
       ? longFirstText
       : shortFirstText
     : shortFirstText;
 
   const secondText = width
-    ? width > 1199
+    ? width >= breakpoints.DESKTOPBIG
       ? longSecondText
       : shortSecondText
     : shortSecondText;

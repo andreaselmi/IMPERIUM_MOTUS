@@ -1,0 +1,23 @@
+@import "../../../utils/theme/colors";
+
+.container {
+  background-color: $global-background-color-dark;
+}
+
+.locationStreetText {
+  font-weight: bold;
+}
+
+.header, .contactsContainer {
+  grid-column: col-start / span 12;
+
+  &.contactsContainer {
+    margin: 24px 0;
+  }
+}
+
+.text {
+  color: $global-color-light;
+}
+
+

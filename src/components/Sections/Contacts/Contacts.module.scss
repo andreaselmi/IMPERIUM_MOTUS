@@ -1,0 +1,25 @@
+@import "../../../utils/theme/colors";
+
+.contactField {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: flex-start;
+  margin-bottom: 24px;
+
+  &:not(:first-child) {
+    align-items: center;
+  }
+
+  .contactIcon {
+    margin-right: 16px;
+  }
+}
+
+.locationStreetText {
+  font-weight: bold;
+}
+
+.text {
+  color: $global-color-light;
+}

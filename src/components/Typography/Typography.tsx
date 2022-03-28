@@ -1,5 +1,5 @@
 import React, { CSSProperties } from "react";
-import styles from "./Typography.module.css";
+import styles from "./Typography.module.scss";
 
 interface TypographyProps {
   variant:

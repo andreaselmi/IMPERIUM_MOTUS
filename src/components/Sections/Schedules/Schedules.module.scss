@@ -1,0 +1,32 @@
+@import "../../../utils/theme/breakpoints";
+
+.header, .scheduleTypesContainer, .calendarContainer, .button {
+  grid-column: col-start / span 12;
+
+  &.scheduleTypesContainer {
+    @include respond-to("tabletBig") {
+      display: flex;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.calendarContainer {
+  margin-top: 24px;
+  margin-bottom: 40px;
+}
+
+.scheduleType {
+  @include respond-to("tabletBig") {
+    display: flex;
+    flex: 1;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+}

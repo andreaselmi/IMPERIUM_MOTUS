@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "../../Typography/Typography";
-import styles from "./SectionHeader.module.css";
+import styles from "./SectionHeader.module.scss";
 
 interface SectionHeaderProps {
   imageSrc: string;

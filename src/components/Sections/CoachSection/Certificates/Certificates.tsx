@@ -4,7 +4,7 @@ import attestatoAICS from "../../../../assets/images/sections/attestato1.png";
 import attestatoFGI from "../../../../assets/images/sections/attestato2.png";
 import attestatoTrainingLab from "../../../../assets/images/sections/attestato3.png";
 import attestatoMidea from "../../../../assets/images/sections/attestato4.png";
-import styles from "./Certificates.module.css";
+import styles from "./Certificates.module.scss";
 
 const Certificates = () => {
   return (

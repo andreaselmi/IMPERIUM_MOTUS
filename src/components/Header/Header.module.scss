@@ -1,0 +1,28 @@
+@import "../../utils/theme/breakpoints";
+
+.container {
+  min-height: 497px;
+  align-items: center;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to("tabletSmall") {
+    min-height: 588px;
+  }
+
+  @include respond-to("desktopSmall") {
+    min-height: 750px;
+  }
+}
+
+.headerLogoContainer {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+
+
+
+

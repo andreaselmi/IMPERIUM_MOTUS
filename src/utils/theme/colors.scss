@@ -1,0 +1,19 @@
+$neon: #E1FF2C;
+$black: #131313;
+$white: #FFFFFF;
+$grey: #757575;
+$red: #E11900;
+$orange: #FFA14F;
+$green: #4CD60C;
+
+$global-color-success: $green;
+$global-color-warning: $orange;
+$global-color-danger: $red;
+$global-color-neon: $neon;
+$global-color-dark: $black;
+$global-color-muted: $grey;
+$global-color-light: $white;
+
+$global-background-color-dark: $global-color-dark;
+$global-background-color-light: $global-color-light;
+$global-background-color-neon: $global-color-neon;
