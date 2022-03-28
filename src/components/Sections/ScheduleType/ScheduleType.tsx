@@ -6,11 +6,17 @@ interface ScheduleTypeProps {
   type: "small" | "calisthenics" | "open";
   title: string;
   subTitle: string;
+  className?: string;
 }
 
-const ScheduleType = ({ subTitle, title, type }: ScheduleTypeProps) => {
+const ScheduleType = ({
+  className,
+  subTitle,
+  title,
+  type,
+}: ScheduleTypeProps) => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className}`}>
       <div
         className={`${styles.typeBar} ${
           type === "small"

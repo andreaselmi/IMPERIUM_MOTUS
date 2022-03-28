@@ -19,16 +19,23 @@ const Schedules = () => {
       />
       <div className={styles.scheduleTypesContainer}>
         <ScheduleType
+          className={styles.scheduleType}
           type={"small"}
           title={"Small group"}
           subTitle={"Lezione con massimo 6 persone"}
         />
         <ScheduleType
+          className={styles.scheduleType}
           type={"calisthenics"}
           title={"Calisthenics"}
           subTitle={"Lezione con massimo 16 persone"}
         />
-        <ScheduleType type={"open"} title={"Open"} subTitle={"Studio Aperto"} />
+        <ScheduleType
+          className={styles.scheduleType}
+          type={"open"}
+          title={"Open"}
+          subTitle={"Studio Aperto"}
+        />
       </div>
 
       <div className={styles.calendarContainer} style={{ height: 300 }}>
