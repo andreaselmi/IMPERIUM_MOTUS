@@ -1,3 +1,13 @@
-.header, .scheduleTypesContainer {
+.header, .scheduleTypesContainer, .calendarContainer, .button {
     grid-column: col-start / span 12;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.calendarContainer {
+    margin-top: 24px;
+    margin-bottom: 40px;
 }

@@ -5,6 +5,8 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 import courses from "../../../assets/images/sections/coursesSection.svg";
 import styles from "./Schedules.module.css";
 import ScheduleType from "../ScheduleType/ScheduleType";
+import Typography from "../../Typography/Typography";
+import Button from "../../Button/Button";
 
 const Schedules = () => {
   return (
@@ -27,6 +29,14 @@ const Schedules = () => {
           subTitle={"Lezione con massimo 16 persone"}
         />
         <ScheduleType type={"open"} title={"Open"} subTitle={"Studio Aperto"} />
+      </div>
+
+      <div className={styles.calendarContainer} style={{ height: 300 }}>
+        <Typography variant={"pageTitle"} label={"Qui andrà il calendario"} />
+      </div>
+
+      <div className={styles.button}>
+        <Button label={"Prenota una lezione di prova"} />
       </div>
     </SectionContainer>
   );
