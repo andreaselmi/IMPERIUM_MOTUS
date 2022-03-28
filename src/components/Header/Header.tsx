@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 import HeaderLogo from "./HeaderLogo/HeaderLogo";
 import styles from "./Header.module.css";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
+import { breakpoints } from "../../defs/breakpoints";
 
 const Header = () => {
   const { width } = useWindowDimensions();
@@ -12,7 +13,11 @@ const Header = () => {
     <header style={{ backgroundColor: "#121212", display: "flex" }}>
       <Container
         style={
-          width ? (width > 991 ? { paddingTop: 160 } : { paddingTop: 96 }) : {}
+          width
+            ? width >= breakpoints.DESKTOPSMALL
+              ? { paddingTop: 160 }
+              : { paddingTop: 96 }
+            : {}
         }
         className={styles.container}
       >

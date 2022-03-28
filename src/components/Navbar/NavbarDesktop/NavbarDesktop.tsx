@@ -5,6 +5,7 @@ import Container from "../../Container/Container";
 
 import logo from "../../../assets/icons/logo.svg";
 import logoName from "../../../assets/icons/logoName.svg";
+import { navBarButtons } from "../../../defs/navbarButtons";
 
 const NavbarDesktop = () => {
   const [compact, setCompact] = useState(false);
@@ -35,14 +36,14 @@ const NavbarDesktop = () => {
             <Typography
               className={styles.navbarMenu}
               variant={"menu"}
-              label={"IL CALISTHENICS"}
+              label={navBarButtons.CALISTHENICS}
             />
           </a>
           <a>
             <Typography
               className={styles.navbarMenu}
               variant={"menu"}
-              label={"IL COACH"}
+              label={navBarButtons.COACH}
             />
           </a>
           <div className={styles.logoContainer}>
@@ -62,14 +63,14 @@ const NavbarDesktop = () => {
             <Typography
               className={styles.navbarMenu}
               variant={"menu"}
-              label={"I CORSI"}
+              label={navBarButtons.COURSES}
             />
           </a>
           <a>
             <Typography
               className={styles.navbarMenu}
               variant={"menu"}
-              label={"DOVE SIAMO"}
+              label={navBarButtons.MAP}
             />
           </a>
         </div>
