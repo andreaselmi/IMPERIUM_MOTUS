@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./NavbarMobile.module.css";
+import styles from "./NavbarMobile.module.scss";
 import Container from "../../Container/Container";
 import Typography from "../../Typography/Typography";
 

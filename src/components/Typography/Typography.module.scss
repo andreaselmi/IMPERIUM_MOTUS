@@ -1,0 +1,42 @@
+@import "../../utils/theme/text";
+
+.heading {
+  font-size: var(--heading, 1.618rem);
+  font-family: var(--global-font-family-bold, "bisonbold");
+}
+
+.menu {
+  font-size: var(--menu, 1rem);
+  font-family: var(--global-font-family-bold, "bisonbold");
+}
+
+.pageTitle {
+  font-size: var(--page-title, 4.236rem);
+  font-family: var(--global-font-family-bold, "bisonbold");
+}
+
+.paragraph {
+  font-size: var(--paragraph, 1rem);
+  font-family: var(--global-font-family-regular, "inter");
+  font-weight: 400;
+
+}
+
+.sectionTitle {
+  font-size: var(--section-title, 2.618rem);
+  font-family: var(--global-font-family-bold, "bisonbold");
+}
+
+.smallParagraph {
+  font-size: var(--small-paragraph, 0.618rem);
+  font-family: var(--global-font-family-regular, "inter");
+  font-weight: 400;
+
+}
+
+.smallTitle {
+  font-size: var(--small-title, 0.75rem);
+  font-family: var(--global-font-family-regular, "inter");
+  font-weight: 500;
+
+}

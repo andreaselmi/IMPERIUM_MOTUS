@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./NavbarDesktop.module.css";
+import styles from "./NavbarDesktop.module.scss";
 import Typography from "../../Typography/Typography";
 import Container from "../../Container/Container";
 

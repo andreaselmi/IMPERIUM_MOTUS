@@ -3,7 +3,7 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 import Typography from "../../Typography/Typography";
 import Button from "../../Button/Button";
 import SectionContainer from "../SectionContainer/SectionContainer";
-import styles from "./CalisthenicsSection.module.css";
+import styles from "./CalisthenicsSection.module.scss";
 import calisthenics from "../../../assets/images/sections/calisthenicsSection.svg";
 
 //Utils

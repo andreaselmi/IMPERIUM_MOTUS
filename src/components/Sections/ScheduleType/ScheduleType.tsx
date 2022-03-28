@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "../../Typography/Typography";
-import styles from "./ScheduleType.module.css";
+import styles from "./ScheduleType.module.scss";
 
 interface ScheduleTypeProps {
   type: "small" | "calisthenics" | "open";

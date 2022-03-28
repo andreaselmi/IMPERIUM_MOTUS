@@ -3,7 +3,7 @@ import SectionContainer from "../SectionContainer/SectionContainer";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
 import courses from "../../../assets/images/sections/coursesSection.svg";
-import styles from "./Schedules.module.css";
+import styles from "./Schedules.module.scss";
 import ScheduleType from "../ScheduleType/ScheduleType";
 import Typography from "../../Typography/Typography";
 import Button from "../../Button/Button";

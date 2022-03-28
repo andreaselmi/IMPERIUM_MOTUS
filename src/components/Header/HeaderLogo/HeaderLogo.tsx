@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./HeaderLogo.module.css";
+import styles from "./HeaderLogo.module.scss";
 
 import header1 from "../../../assets/images/header/header1.svg";
 import header2 from "../../../assets/images/header/header2.svg";

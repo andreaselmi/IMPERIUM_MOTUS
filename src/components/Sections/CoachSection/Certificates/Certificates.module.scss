@@ -1,0 +1,74 @@
+@import "../../../../utils/theme/breakpoints";
+
+.certificateImgContainer {
+  height: 110px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+}
+
+
+.certificatesScrollableContainer {
+  max-width: 1092px;
+  margin: 0 auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  padding: 16px;
+
+  &.certificatesScrollableContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include respond-to("tabletBig") {
+    padding: 0 32px;
+  }
+
+  @include respond-to("desktopSmall") {
+    max-width: 896px;
+    padding: 0;
+  }
+
+  @include respond-to("desktopBig") {
+    max-width: 1200px;
+  }
+}
+
+
+.certificateText {
+  margin-top: 15px;
+  line-height: 130%;
+}
+
+.certificatesContentContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.certificatesContainer {
+  width: 1092px;
+  margin: auto;
+  padding: 32px;
+  border: 1px solid black;
+
+  @include respond-to("desktopSmall") {
+    width: auto;
+  }
+}
+
+.singleCertificateContainer {
+  width: 239px;
+  height: 171px;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to("desktopSmall") {
+    width: 200px;
+  }
+
+  @include respond-to("desktopBig") {
+    width: 251px;
+
+  }
+}

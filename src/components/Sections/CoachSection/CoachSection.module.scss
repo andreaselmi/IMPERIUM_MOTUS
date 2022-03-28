@@ -1,0 +1,75 @@
+@import "../../../utils/theme/colors";
+@import "../../../utils/theme/breakpoints";
+
+.button {
+  margin-top: 24px;
+
+  @include respond-to("desktopBig") {
+    margin-top: auto;
+
+  }
+
+}
+
+
+.headerContainer, .imageContainer, .textContainer {
+  grid-column: col-start / span 12;
+
+
+  &.textContainer {
+    @include respond-to("desktopSmall") {
+      grid-column: col-start / span 7;
+      grid-row: 2;
+    }
+
+    @include respond-to("desktopBig") {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &.imageContainer {
+    @include respond-to("desktopSmall") {
+      grid-column: col-start 8 / span 12;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    @include respond-to("desktopBig") {
+      grid-column: col-start 8 / span 12;
+      margin: 0;
+    }
+  }
+}
+
+
+.image {
+  width: 100%;
+  height: 100%;
+
+  @include respond-to("desktopSmall") {
+    width: 366px;
+    height: 566px;
+  }
+
+  @include respond-to("desktopBig") {
+    width: 385px;
+    height: 600px;
+  }
+}
+
+.imageContainer {
+  width: 100%;
+  margin: 24px 0;
+}
+
+.sectionContainer {
+  background-color: var(--global-background-color-neon, #E1FF2C);
+  padding-bottom: 80px;
+}
+
+.text {
+  line-height: 150%;
+}

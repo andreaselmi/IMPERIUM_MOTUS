@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../Container/Container";
 import Button from "../Button/Button";
 import HeaderLogo from "./HeaderLogo/HeaderLogo";
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { breakpoints } from "../../defs/breakpoints";
 
