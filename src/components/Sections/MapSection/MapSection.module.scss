@@ -4,7 +4,20 @@
   background-color: $global-background-color-dark;
 }
 
-.header {
+.locationStreetText {
+  font-weight: bold;
+}
+
+.header, .contactsContainer {
   grid-column: col-start / span 12;
+
+  &.contactsContainer {
+    margin: 24px 0;
+  }
+}
+
+.text {
   color: $global-color-light;
 }
+
+

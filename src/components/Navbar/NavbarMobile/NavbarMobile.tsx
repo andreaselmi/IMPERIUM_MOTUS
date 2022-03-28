@@ -18,7 +18,7 @@ const NavbarMobile = () => {
       className={`${styles.navBarContainer} ${isOpened && styles.navbarOpened}`}
     >
       <Container>
-        <nav className={styles.navbar}>
+        <nav>
           <div className={styles.collapseNavbarContainer}>
             <img src={Logo} alt={"Imperium motus logo"} />
             <a style={{ cursor: "pointer" }} onClick={() => toggleNavbar()}>
