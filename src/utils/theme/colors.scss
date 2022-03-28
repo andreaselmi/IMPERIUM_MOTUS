@@ -1,21 +1,19 @@
-:root {
-    --neon: #E1FF2C;
-    --black: #131313;
-    --white: #FFFFFF;
-    --grey: #757575;
-    --red: #E11900;
-    --orange: #FFA14F;
-    --green: #4CD60C;
+$neon: #E1FF2C;
+$black: #131313;
+$white: #FFFFFF;
+$grey: #757575;
+$red: #E11900;
+$orange: #FFA14F;
+$green: #4CD60C;
 
-    --global-color-success: var(--green);
-    --global-color-warning: var(--orange);
-    --global-color-danger: var(--red);
-    --global-color-neon: var(--neon);
-    --global-color-dark: var(--black);
-    --global-color-muted: var(--grey);
-    --global-color-light: var(--white);
+$global-color-success: $green;
+$global-color-warning: $orange;
+$global-color-danger: $red;
+$global-color-neon: $neon;
+$global-color-dark: $black;
+$global-color-muted: $grey;
+$global-color-light: $white;
 
-    --global-background-color-dark: var(--global-color-dark);
-    --global-background-color-light: var(--global-color-light);
-    --global-background-color-neon: var(--global-color-neon);
-}
+$global-background-color-dark: $global-color-dark;
+$global-background-color-light: $global-color-light;
+$global-background-color-neon: $global-color-neon;

@@ -8,7 +8,7 @@
 }
 
 .subTitle {
-  color: var(--global-color-muted, #757575);
+  color: $global-color-muted;
 }
 
 .typeBar {
@@ -17,15 +17,15 @@
 }
 
 .smallBar {
-  background-color: var(--global-color-neon, #E1FF2C);
+  background-color: $global-color-neon;
 }
 
 .calisthenicsBar {
-  background-color: var(--global-color-dark, #131313);
+  background-color: $global-color-dark;
 }
 
 .openBar {
-  background-color: var(--global-color-muted, #757575);
+  background-color: $global-color-muted;
 }
 
 .textContainer {

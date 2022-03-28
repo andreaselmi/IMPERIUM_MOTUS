@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--global-color-light, #FFFFFF);
+  background-color: $global-color-light;
   margin: 0;
   padding: 0;
 }
@@ -18,24 +18,24 @@
   display: flex;
 
   .primaryText {
-    color: var(--global-color-dark, #131313);
+    color: $global-color-dark;
   }
 
   .secondaryText {
-    color: var(--global-color-light, #FFFFFF);
+    color: $global-color-light;
   }
 }
 
 
 .primary {
   background-color: transparent;
-  border-color: var(--global-color-dark, #131313);
+  border-color: $global-color-dark;
 }
 
 
 .secondary {
-  background-color: var(--global-background-color-dark, #131313);
-  border-color: var(--global-color-light, #FFFFFF)
+  background-color: $global-background-color-dark;
+  border-color: $global-color-light
 }
 
 .separator {
@@ -44,11 +44,11 @@
 }
 
 .primarySeparator {
-  background-color: #131313;
+  background-color: $global-background-color-dark;
 }
 
 .secondarySeparator {
-  background-color: #FFFFFF;
+  background-color: $global-background-color-light;
 }
 
 

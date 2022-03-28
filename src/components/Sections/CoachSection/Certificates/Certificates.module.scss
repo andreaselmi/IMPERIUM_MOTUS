@@ -1,4 +1,5 @@
 @import "../../../../utils/theme/breakpoints";
+@import "../../../../utils/theme/colors";
 
 .certificateImgContainer {
   height: 110px;
@@ -50,7 +51,7 @@
   width: 1092px;
   margin: auto;
   padding: 32px;
-  border: 1px solid black;
+  border: 1px solid $global-color-dark;
 
   @include respond-to("desktopSmall") {
     width: auto;

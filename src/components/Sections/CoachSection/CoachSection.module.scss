@@ -6,11 +6,8 @@
 
   @include respond-to("desktopBig") {
     margin-top: auto;
-
   }
-
 }
-
 
 .headerContainer, .imageContainer, .textContainer {
   grid-column: col-start / span 12;
@@ -44,7 +41,6 @@
   }
 }
 
-
 .image {
   width: 100%;
   height: 100%;
@@ -66,7 +62,7 @@
 }
 
 .sectionContainer {
-  background-color: var(--global-background-color-neon, #E1FF2C);
+  background-color: $global-background-color-neon;
   padding-bottom: 80px;
 }
 

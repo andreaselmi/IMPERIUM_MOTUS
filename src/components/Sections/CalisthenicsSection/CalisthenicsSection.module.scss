@@ -8,7 +8,7 @@
 
 .bodyText {
   line-height: 150%;
-  color: var(--global-color-light);
+  color: $global-color-light
 }
 
 .container {
@@ -39,5 +39,5 @@
 }
 
 .sectionTitle {
-  color: white;
+  color: $global-color-light;
 }

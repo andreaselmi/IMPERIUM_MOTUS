@@ -40,7 +40,7 @@
 }
 
 .menuButton {
-  color: var(--global-color-light, #FFFFFF);
+  color: $global-color-light;
   margin-left: 32px;
 
 }
