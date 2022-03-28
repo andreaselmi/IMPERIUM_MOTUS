@@ -1,0 +1,3 @@
+.header, .scheduleTypesContainer {
+    grid-column: col-start / span 12;
+}
