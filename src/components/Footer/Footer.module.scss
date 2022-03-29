@@ -1,0 +1,29 @@
+@import "../../utils/theme/colors";
+
+.container {
+  background-color: $global-background-color-dark;
+}
+
+.footerContentContainer {
+  grid-column: col-start / span 12;
+  color: $global-color-muted;
+}
+
+.footerElement {
+  display: flex;
+  justify-content: center;
+}
+
+.logoContainer {
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+
+.textContainer {
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
