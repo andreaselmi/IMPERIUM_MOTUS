@@ -15,7 +15,7 @@
   grid-column: col-start / span 12;
 
   @include respond-to("desktopBig") {
-    grid-column: col-start 7 / span 12;
+    grid-column: col-start 7 / span 6;
   }
 }
 

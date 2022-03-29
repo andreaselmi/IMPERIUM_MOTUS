@@ -8,14 +8,10 @@ import instagramIcon from "../../../assets/icons/contacs/instagram.svg";
 
 import Typography from "../../Typography/Typography";
 
-interface ContactsProps {
-  className?: string;
-}
-
-const Contacts = ({ className }: ContactsProps) => {
+const Contacts = () => {
   return (
-    <div className={`${className}`}>
-      <div className={styles.contactField}>
+    <>
+      <div className={`${styles.contactField} ${styles.addressContainer}`}>
         <img
           className={styles.contactIcon}
           src={locationIcon}
@@ -28,11 +24,13 @@ const Contacts = ({ className }: ContactsProps) => {
             label={"Via Dei Bersaglieri, 24"}
           />
           <Typography
+            style={{ marginTop: 5 }}
             className={styles.text}
             variant={"paragraph"}
             label={"Castromediano"}
           />
           <Typography
+            style={{ marginTop: 5 }}
             className={styles.text}
             variant={"paragraph"}
             label={"Lecce"}
@@ -40,7 +38,7 @@ const Contacts = ({ className }: ContactsProps) => {
         </div>
       </div>
 
-      <div className={styles.contactField}>
+      <div className={`${styles.contactField} ${styles.phoneContainer}`}>
         <img
           className={styles.contactIcon}
           src={phoneIcon}
@@ -55,7 +53,7 @@ const Contacts = ({ className }: ContactsProps) => {
         </div>
       </div>
 
-      <div className={styles.contactField}>
+      <div className={`${styles.contactField} ${styles.emailContainer}`}>
         <img
           className={styles.contactIcon}
           src={emailIcon}
@@ -70,7 +68,7 @@ const Contacts = ({ className }: ContactsProps) => {
         </div>
       </div>
 
-      <div className={styles.contactField}>
+      <div className={`${styles.contactField} ${styles.facebookContainer}`}>
         <img
           className={styles.contactIcon}
           src={facebookIcon}
@@ -87,7 +85,7 @@ const Contacts = ({ className }: ContactsProps) => {
         </div>
       </div>
 
-      <div className={styles.contactField}>
+      <div className={`${styles.contactField} ${styles.instagramContainer}`}>
         <img
           className={styles.contactIcon}
           src={instagramIcon}
@@ -103,7 +101,7 @@ const Contacts = ({ className }: ContactsProps) => {
           </a>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

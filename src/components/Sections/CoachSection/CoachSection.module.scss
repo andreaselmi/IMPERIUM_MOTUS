@@ -28,14 +28,14 @@
 
   &.imageContainer {
     @include respond-to("desktopSmall") {
-      grid-column: col-start 8 / span 12;
+      grid-column: col-start 8 / span 4;
       margin: 0;
       display: flex;
       justify-content: center;
     }
 
     @include respond-to("desktopBig") {
-      grid-column: col-start 8 / span 12;
+      grid-column: col-start 8 / span 5;
       margin: 0;
     }
   }

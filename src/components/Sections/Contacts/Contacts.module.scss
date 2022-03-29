@@ -1,13 +1,15 @@
 @import "../../../utils/theme/colors";
+@import "../../../utils/theme/breakpoints";
 
 .contactField {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   margin-bottom: 24px;
+  grid-column: col-start / span 12;
+  align-items: center;
 
-  &:not(:first-child) {
-    align-items: center;
+  @include respond-to("desktopSmall") {
+    margin-bottom: 0;
   }
 
   .contactIcon {
@@ -18,6 +20,57 @@
 .locationStreetText {
   font-weight: bold;
 }
+
+.phoneContainer, .facebookContainer {
+  @include respond-to("desktopSmall") {
+    grid-column: col-start / span 6;
+  }
+
+  @include respond-to("desktopBig") {
+    grid-row: 2;
+  }
+
+  &.phoneContainer {
+    @include respond-to("desktopBig") {
+      grid-column: col-start 5 / span 4;
+    }
+  }
+
+  &.facebookContainer {
+    @include respond-to("desktopBig") {
+      grid-column: col-start 9 / span 4;
+    }
+  }
+
+}
+
+.emailContainer, .instagramContainer {
+  @include respond-to("desktopSmall") {
+    grid-column: col-start 7 / span 5;
+  }
+
+  &.emailContainer {
+    @include respond-to("desktopBig") {
+      grid-column: col-start 5 / span 4
+    }
+  }
+
+  &.instagramContainer {
+    @include respond-to("desktopBig") {
+      grid-column: col-start 9 / span 4;
+    }
+  }
+}
+
+.addressContainer {
+  align-items: flex-start;
+
+  @include respond-to("desktopBig") {
+    grid-column: col-start / span 4;
+    grid-row: 2/ 4;
+  }
+}
+
 
 .text {
   color: $global-color-light;

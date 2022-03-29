@@ -16,7 +16,7 @@ const MapSection = () => {
           label={"Vienici a trovare"}
         />
 
-        <Contacts className={styles.contactsContainer} />
+        <Contacts />
       </SectionContainer>
 
       <div className={styles.mapContainer}>
