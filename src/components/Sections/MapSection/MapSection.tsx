@@ -8,7 +8,7 @@ import mapHeader from "../../../assets/images/sections/mapSection.svg";
 const MapSection = () => {
   return (
     <div className={styles.container}>
-      <SectionContainer>
+      <SectionContainer style={{ paddingBottom: 0 }}>
         <SectionHeader
           className={`${styles.header} ${styles.text}`}
           imageSrc={mapHeader}

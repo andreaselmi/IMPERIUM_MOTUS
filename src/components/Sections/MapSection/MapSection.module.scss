@@ -11,8 +11,12 @@
 .header, .contactsContainer, .mapContainer {
   grid-column: col-start / span 12;
 
-  &.contactsContainer {
+  &.contactsContainer, {
     margin: 24px 0;
+  }
+
+  &.mapContainer {
+    margin-top: 24px;
   }
 }
 
