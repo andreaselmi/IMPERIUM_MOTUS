@@ -7,10 +7,11 @@ import styles from "./Schedules.module.scss";
 import ScheduleType from "../ScheduleType/ScheduleType";
 import Typography from "../../Typography/Typography";
 import Button from "../../Button/Button";
+import { navBarButtons } from "../../../defs/navbarButtons";
 
 const Schedules = () => {
   return (
-    <SectionContainer>
+    <SectionContainer id={navBarButtons.COURSES}>
       <SectionHeader
         className={styles.header}
         imageSrc={courses}

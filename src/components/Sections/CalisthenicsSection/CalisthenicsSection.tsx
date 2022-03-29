@@ -9,6 +9,7 @@ import calisthenics from "../../../assets/images/sections/calisthenicsSection.sv
 //Utils
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import { breakpoints } from "../../../defs/breakpoints";
+import { navBarButtons } from "../../../defs/navbarButtons";
 
 const CalisthenicsSection = () => {
   const { width } = useWindowDimensions();
@@ -35,7 +36,10 @@ const CalisthenicsSection = () => {
     : shortSecondText;
 
   return (
-    <SectionContainer className={styles.sectionContainer}>
+    <SectionContainer
+      id={navBarButtons.CALISTHENICS}
+      className={styles.sectionContainer}
+    >
       <div className={styles.container}>
         <SectionHeader
           titleClass={styles.sectionTitle}

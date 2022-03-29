@@ -7,10 +7,11 @@ import coachImg from "../../../assets/images/sections/coach.jpg";
 import Typography from "../../Typography/Typography";
 import Button from "../../Button/Button";
 import Certificates from "./Certificates/Certificates";
+import { navBarButtons } from "../../../defs/navbarButtons";
 
 const CoachSection = () => {
   return (
-    <div className={styles.sectionContainer}>
+    <div id={navBarButtons.COACH} className={styles.sectionContainer}>
       <SectionContainer>
         <div className={styles.headerContainer}>
           <SectionHeader

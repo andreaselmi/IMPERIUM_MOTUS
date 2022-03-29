@@ -4,10 +4,11 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 import Contacts from "../Contacts/Contacts";
 import styles from "./MapSection.module.scss";
 import mapHeader from "../../../assets/images/sections/mapSection.svg";
+import { navBarButtons } from "../../../defs/navbarButtons";
 
 const MapSection = () => {
   return (
-    <div className={styles.container}>
+    <div id={navBarButtons.MAP} className={styles.container}>
       <SectionContainer style={{ paddingBottom: 0 }}>
         <SectionHeader
           className={`${styles.header} ${styles.text}`}
