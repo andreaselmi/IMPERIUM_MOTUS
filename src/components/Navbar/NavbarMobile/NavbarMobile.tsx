@@ -35,7 +35,7 @@ const NavbarMobile = () => {
   };
 
   Events.scrollEvent.register("end", () => {
-    toggleNavbar();
+    if (window.scrollY !== 0) toggleNavbar();
   });
 
   return (
