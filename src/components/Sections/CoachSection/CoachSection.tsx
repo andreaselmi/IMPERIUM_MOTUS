@@ -8,14 +8,12 @@ import Typography from "../../Typography/Typography";
 import Button from "../../Button/Button";
 import Certificates from "./Certificates/Certificates";
 import { navBarButtons } from "../../../defs/navbarButtons";
+import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 
 const CoachSection = () => {
   return (
     <>
-      <span
-        style={{ position: "relative", top: -96 }}
-        id={navBarButtons.COACH}
-      />
+      <ScrollAnchor id={navBarButtons.COACH} />
       <div id={navBarButtons.COACH} className={styles.sectionContainer}>
         <SectionContainer>
           <div className={styles.headerContainer}>

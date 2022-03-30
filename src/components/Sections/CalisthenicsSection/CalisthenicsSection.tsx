@@ -10,6 +10,7 @@ import calisthenics from "../../../assets/images/sections/calisthenicsSection.sv
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import { breakpoints } from "../../../defs/breakpoints";
 import { navBarButtons } from "../../../defs/navbarButtons";
+import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 
 const CalisthenicsSection = () => {
   const { width } = useWindowDimensions();
@@ -37,10 +38,7 @@ const CalisthenicsSection = () => {
 
   return (
     <>
-      <span
-        style={{ position: "relative", top: -96 }}
-        id={navBarButtons.CALISTHENICS}
-      />
+      <ScrollAnchor id={navBarButtons.CALISTHENICS} />
       <SectionContainer className={styles.sectionContainer}>
         <div className={styles.container}>
           <SectionHeader

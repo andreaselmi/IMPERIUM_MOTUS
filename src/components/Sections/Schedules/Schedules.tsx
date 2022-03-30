@@ -8,14 +8,12 @@ import ScheduleType from "../ScheduleType/ScheduleType";
 import Typography from "../../Typography/Typography";
 import Button from "../../Button/Button";
 import { navBarButtons } from "../../../defs/navbarButtons";
+import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 
 const Schedules = () => {
   return (
     <>
-      <span
-        style={{ position: "relative", top: -96 }}
-        id={navBarButtons.COURSES}
-      />
+      <ScrollAnchor id={navBarButtons.COURSES} />
       <SectionContainer id={navBarButtons.COURSES}>
         <SectionHeader
           className={styles.header}

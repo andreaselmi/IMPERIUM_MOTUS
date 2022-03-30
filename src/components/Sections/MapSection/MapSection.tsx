@@ -5,11 +5,12 @@ import Contacts from "../Contacts/Contacts";
 import styles from "./MapSection.module.scss";
 import mapHeader from "../../../assets/images/sections/mapSection.svg";
 import { navBarButtons } from "../../../defs/navbarButtons";
+import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 
 const MapSection = () => {
   return (
     <>
-      <span id={navBarButtons.MAP} />
+      <ScrollAnchor id={navBarButtons.MAP} />
       <div className={styles.container}>
         <SectionContainer style={{ paddingBottom: 0 }}>
           <SectionHeader

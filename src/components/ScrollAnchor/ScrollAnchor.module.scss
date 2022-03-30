@@ -1,0 +1,14 @@
+@import "../../utils/theme/vars";
+
+.anchor {
+  position: relative;
+  top: -$navbar-mobile-height;
+}
+
+.mobileHeight {
+  top: -$navbar-mobile-height
+}
+
+.desktopHeight {
+  top: -$navbar-desktop-compact-height
+}

@@ -1,3 +1,5 @@
+@import "../../../utils/theme/vars";
+
 .logo {
   width: 75%;
   transition: all 1s;
@@ -31,7 +33,7 @@
 }
 
 .navbarContainer {
-  height: 160px;
+  height: $navbar-desktop-height;
   background-color: rgba(0, 0, 0, .8);
   backdrop-filter: blur(5px);
   position: fixed;
@@ -44,5 +46,5 @@
 }
 
 .compactNavbar {
-  height: 96px;
+  height: $navbar-desktop-compact-height;
 }
