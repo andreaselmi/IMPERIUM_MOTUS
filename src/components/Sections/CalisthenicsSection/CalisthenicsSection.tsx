@@ -85,7 +85,7 @@ const CalisthenicsSection = () => {
           </div>
         </div>
       </SectionContainer>
-      <Modal isOpen={showModal} />
+      <Modal closeModal={() => setShowModal(false)} isOpen={showModal} />
     </>
   );
 };

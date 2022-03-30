@@ -1,17 +1,35 @@
+@import "../../utils/theme/colors";
+
+.closeContainer {
+  position: relative;
+  top: -50px;
+  right: 0;
+  display: flex;
+  justify-content: right;
+  cursor: pointer;
+}
+
+.contentHeader, .content {
+  grid-column: col-start / span 12;
+
+  &.content {
+    line-height: 150%;
+  }
+}
+
+
 .modal {
-  width: 500px;
-  height: 200px;
-  overflow: hidden;
-  background-color: yellow;
+  width: 100%;
+  height: 50%;
+  background-color: $global-background-color-light;
   position: fixed;
-  bottom: -300px;
-  right: 20px;
+  bottom: -100%;
   transition: 1s;
   z-index: 1000;
 }
 
 .open {
-  bottom: 20px
+  bottom: 0
 }
 
 .overlay {
@@ -22,5 +40,11 @@
   right: 0;
   bottom: 0;
   z-index: 999;
+}
+
+.scrollable {
+  height: 100%;
+  overflow-y: scroll;
+  background-color: red;
 }
 
