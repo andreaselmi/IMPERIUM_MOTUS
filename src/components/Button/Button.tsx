@@ -9,11 +9,18 @@ interface ButtonProps {
   type?: "primary" | "secondary";
   label: string;
   className?: string;
+  onClick: () => void;
 }
 
-const Button = ({ className, label, type = "primary" }: ButtonProps) => {
+const Button = ({
+  className,
+  label,
+  onClick,
+  type = "primary",
+}: ButtonProps) => {
   return (
     <button
+      onClick={onClick}
       className={`${styles.container} ${
         type === "primary" ? styles.primary : styles.secondary
       } ${className}`}

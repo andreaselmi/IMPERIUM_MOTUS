@@ -47,7 +47,10 @@ const Schedules = () => {
         </div>
 
         <div className={styles.button}>
-          <Button label={"Prenota una lezione di prova"} />
+          <Button
+            onClick={() => console.log("prenota lezione")}
+            label={"Prenota una lezione di prova"}
+          />
         </div>
       </SectionContainer>
     </>

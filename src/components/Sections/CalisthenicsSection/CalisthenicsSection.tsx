@@ -8,9 +8,9 @@ import calisthenics from "../../../assets/images/sections/calisthenicsSection.sv
 
 //Utils
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
+import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import { breakpoints } from "../../../defs/breakpoints";
 import { navBarButtons } from "../../../defs/navbarButtons";
-import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 
 const CalisthenicsSection = () => {
   const { width } = useWindowDimensions();
@@ -63,7 +63,11 @@ const CalisthenicsSection = () => {
           </div>
 
           <div>
-            <Button type={"secondary"} label={"Perchè Calisthenics Garage?"} />
+            <Button
+              onClick={() => console.log("ciao")}
+              type={"secondary"}
+              label={"Perchè Calisthenics Garage?"}
+            />
           </div>
         </div>
       </SectionContainer>

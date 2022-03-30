@@ -25,7 +25,11 @@ const Header = () => {
           <HeaderLogo />
         </div>
 
-        <Button type={"secondary"} label={"Prenota una lezione di prova"} />
+        <Button
+          onClick={() => console.log("prenota lezione")}
+          type={"secondary"}
+          label={"Prenota una lezione di prova"}
+        />
       </Container>
     </header>
   );

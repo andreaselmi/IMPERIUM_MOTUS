@@ -50,6 +50,7 @@ const CoachSection = () => {
             />
 
             <Button
+              onClick={() => console.log("la mia storia")}
               className={styles.button}
               label={"Leggi la mia storia"}
               type={"primary"}
