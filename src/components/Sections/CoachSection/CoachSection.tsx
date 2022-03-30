@@ -1,14 +1,14 @@
 import React from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import SectionContainer from "../SectionContainer/SectionContainer";
-import styles from "./CoachSection.module.scss";
-import coachHeader from "../../../assets/images/sections/coachSection.svg";
-import coachImg from "../../../assets/images/sections/coach.jpg";
 import Typography from "../../Typography/Typography";
 import Button from "../../Button/Button";
 import Certificates from "./Certificates/Certificates";
-import { navBarButtons } from "../../../defs/navbarButtons";
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
+import styles from "./CoachSection.module.scss";
+import coachHeader from "../../../assets/images/sections/coachSection.svg";
+import coachImg from "../../../assets/images/sections/coach.jpg";
+import { navBarButtons } from "../../../defs/navbarButtons";
 
 const CoachSection = () => {
   return (

@@ -1,0 +1,26 @@
+.modal {
+  width: 500px;
+  height: 200px;
+  overflow: hidden;
+  background-color: yellow;
+  position: fixed;
+  bottom: -300px;
+  right: 20px;
+  transition: 1s;
+  z-index: 1000;
+}
+
+.open {
+  bottom: 20px
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+

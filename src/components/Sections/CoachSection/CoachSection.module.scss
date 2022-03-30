@@ -15,7 +15,7 @@
 
   &.textContainer {
     @include respond-to("desktopSmall") {
-      grid-column: col-start / span 7;
+      grid-column: col-start / span 6;
       grid-row: 2;
     }
 
