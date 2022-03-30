@@ -6,6 +6,8 @@ import Container from "../../Container/Container";
 import logo from "../../../assets/icons/logo.svg";
 import logoName from "../../../assets/icons/logoName.svg";
 import { navBarButtons } from "../../../defs/navbarButtons";
+import Scroller from "../../Scroller/Scroller";
+import { animateScroll as scroll } from "react-scroll/modules";
 
 const NavbarDesktop = () => {
   const [compact, setCompact] = useState(false);
@@ -32,21 +34,24 @@ const NavbarDesktop = () => {
     >
       <Container style={{ display: "flex", flex: 1 }}>
         <div className={styles.navbar}>
-          <a>
+          <Scroller path={navBarButtons.CALISTHENICS}>
             <Typography
               className={styles.navbarMenu}
               variant={"menu"}
               label={navBarButtons.CALISTHENICS}
             />
-          </a>
-          <a>
+          </Scroller>
+          <Scroller path={navBarButtons.COACH}>
             <Typography
               className={styles.navbarMenu}
               variant={"menu"}
               label={navBarButtons.COACH}
             />
-          </a>
-          <div className={styles.logoContainer}>
+          </Scroller>
+          <span
+            onClick={() => scroll.scrollToTop()}
+            className={styles.logoContainer}
+          >
             <img
               className={`${styles.logo} ${compact && styles.compactLogo}`}
               src={logo}
@@ -58,21 +63,21 @@ const NavbarDesktop = () => {
               src={logoName}
               alt={"Scritta Imperium Motus"}
             />
-          </div>
-          <a>
+          </span>
+          <Scroller path={navBarButtons.COURSES}>
             <Typography
               className={styles.navbarMenu}
               variant={"menu"}
               label={navBarButtons.COURSES}
             />
-          </a>
-          <a>
+          </Scroller>
+          <Scroller path={navBarButtons.MAP}>
             <Typography
               className={styles.navbarMenu}
               variant={"menu"}
               label={navBarButtons.MAP}
             />
-          </a>
+          </Scroller>
         </div>
       </Container>
     </div>

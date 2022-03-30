@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import Logo from "../../../assets/icons/logoHorizontal.svg";
 import styles from "./NavbarMobile.module.scss";
+import { animateScroll as scroll, Events } from "react-scroll";
 import Container from "../../Container/Container";
 import Typography from "../../Typography/Typography";
 import Scroller from "../../Scroller/Scroller";
-import { animateScroll as scroll, Events } from "react-scroll";
 
 const NavbarMobile = () => {
   const [isOpened, setIsOpened] = useState(false);

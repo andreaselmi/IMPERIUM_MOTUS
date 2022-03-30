@@ -11,42 +11,48 @@ import { navBarButtons } from "../../../defs/navbarButtons";
 
 const Schedules = () => {
   return (
-    <SectionContainer id={navBarButtons.COURSES}>
-      <SectionHeader
-        className={styles.header}
-        imageSrc={courses}
-        imageAlt={"I corsi"}
-        label={"Calendario Corsi"}
+    <>
+      <span
+        style={{ position: "relative", top: -96 }}
+        id={navBarButtons.COURSES}
       />
-      <div className={styles.scheduleTypesContainer}>
-        <ScheduleType
-          className={styles.scheduleType}
-          type={"small"}
-          title={"Small group"}
-          subTitle={"Lezione con massimo 6 persone"}
+      <SectionContainer id={navBarButtons.COURSES}>
+        <SectionHeader
+          className={styles.header}
+          imageSrc={courses}
+          imageAlt={"I corsi"}
+          label={"Calendario Corsi"}
         />
-        <ScheduleType
-          className={styles.scheduleType}
-          type={"calisthenics"}
-          title={"Calisthenics"}
-          subTitle={"Lezione con massimo 16 persone"}
-        />
-        <ScheduleType
-          className={styles.scheduleType}
-          type={"open"}
-          title={"Open"}
-          subTitle={"Studio Aperto"}
-        />
-      </div>
+        <div className={styles.scheduleTypesContainer}>
+          <ScheduleType
+            className={styles.scheduleType}
+            type={"small"}
+            title={"Small group"}
+            subTitle={"Lezione con massimo 6 persone"}
+          />
+          <ScheduleType
+            className={styles.scheduleType}
+            type={"calisthenics"}
+            title={"Calisthenics"}
+            subTitle={"Lezione con massimo 16 persone"}
+          />
+          <ScheduleType
+            className={styles.scheduleType}
+            type={"open"}
+            title={"Open"}
+            subTitle={"Studio Aperto"}
+          />
+        </div>
 
-      <div className={styles.calendarContainer} style={{ height: 300 }}>
-        <Typography variant={"pageTitle"} label={"Qui andrà il calendario"} />
-      </div>
+        <div className={styles.calendarContainer} style={{ height: 300 }}>
+          <Typography variant={"pageTitle"} label={"Qui andrà il calendario"} />
+        </div>
 
-      <div className={styles.button}>
-        <Button label={"Prenota una lezione di prova"} />
-      </div>
-    </SectionContainer>
+        <div className={styles.button}>
+          <Button label={"Prenota una lezione di prova"} />
+        </div>
+      </SectionContainer>
+    </>
   );
 };
 

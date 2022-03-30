@@ -36,37 +36,40 @@ const CalisthenicsSection = () => {
     : shortSecondText;
 
   return (
-    <SectionContainer
-      id={navBarButtons.CALISTHENICS}
-      className={styles.sectionContainer}
-    >
-      <div className={styles.container}>
-        <SectionHeader
-          titleClass={styles.sectionTitle}
-          imageSrc={calisthenics}
-          imageAlt={"Il Calisthenics"}
-          label={"Calisthenics garage"}
-        />
-
-        <div className={styles.body}>
-          <Typography
-            className={styles.bodyText}
-            variant={"paragraph"}
-            label={firstText}
+    <>
+      <span
+        style={{ position: "relative", top: -96 }}
+        id={navBarButtons.CALISTHENICS}
+      />
+      <SectionContainer className={styles.sectionContainer}>
+        <div className={styles.container}>
+          <SectionHeader
+            titleClass={styles.sectionTitle}
+            imageSrc={calisthenics}
+            imageAlt={"Il Calisthenics"}
+            label={"Calisthenics garage"}
           />
-          <br />
-          <Typography
-            className={styles.bodyText}
-            variant={"paragraph"}
-            label={secondText}
-          />
-        </div>
 
-        <div>
-          <Button type={"secondary"} label={"Perchè Calisthenics Garage?"} />
+          <div className={styles.body}>
+            <Typography
+              className={styles.bodyText}
+              variant={"paragraph"}
+              label={firstText}
+            />
+            <br />
+            <Typography
+              className={styles.bodyText}
+              variant={"paragraph"}
+              label={secondText}
+            />
+          </div>
+
+          <div>
+            <Button type={"secondary"} label={"Perchè Calisthenics Garage?"} />
+          </div>
         </div>
-      </div>
-    </SectionContainer>
+      </SectionContainer>
+    </>
   );
 };
 
