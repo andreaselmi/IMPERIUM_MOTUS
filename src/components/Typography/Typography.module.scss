@@ -19,7 +19,11 @@
   font-size: $paragraph;
   font-family: $global-font-family-regular;
   font-weight: 400;
+}
 
+.quotes {
+  font-size: $quotes;
+  font-family: $global-font-family-bold;
 }
 
 .sectionTitle {
@@ -31,12 +35,10 @@
   font-size: $small-paragraph;
   font-family: $global-font-family-regular;
   font-weight: 400;
-
 }
 
 .smallTitle {
   font-size: $small-title;
   font-family: $global-font-family-regular;
   font-weight: 500;
-
 }

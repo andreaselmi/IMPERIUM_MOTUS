@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Modal.module.scss";
 import closeIcon from "../../assets/icons/closeWhite.svg";
+import quotesIcon from "../../assets/icons/quotes.svg";
 import Typography from "../Typography/Typography";
 import Container from "../Container/Container";
 import Grid from "../Grid/Grid";
@@ -14,7 +15,7 @@ const Modal = ({ closeModal, isOpen }: ModalProps) => {
   return (
     <>
       <div className={`${isOpen ? styles.overlay : ""}`} />
-      <div className={`${styles.modal} ${isOpen ? styles.open : ""}`}>
+      <div className={`${styles.modalBack} ${isOpen ? styles.open : ""}`}>
         <Container>
           <span
             onClick={closeModal}
@@ -30,7 +31,11 @@ const Modal = ({ closeModal, isOpen }: ModalProps) => {
               />
             </div>
           </span>
-          <Grid>
+        </Container>
+      </div>
+      <div className={`${styles.modal} ${isOpen ? styles.open : ""}`}>
+        <Container>
+          <Grid className={styles.modalContentContainer}>
             <header className={styles.contentHeader}>
               <Typography
                 variant={"heading"}
@@ -63,6 +68,26 @@ const Modal = ({ closeModal, isOpen }: ModalProps) => {
               <br />
 
               <Typography variant={"paragraph"} label={"Ti aspetto."} />
+            </div>
+
+            <div className={styles.footer}>
+              <div className={styles.footerContentContainer}>
+                <div className={styles.footerTextContainer}>
+                  <img
+                    className={styles.quotes}
+                    src={quotesIcon}
+                    alt={"Virgolette"}
+                  />
+                  <Typography
+                    style={{ zIndex: 999 }}
+                    variant={"quotes"}
+                    label={
+                      "NON DEVI ESSERE BRAVO PER INIZIARE,\n" +
+                      "MA DEVI INIZIARE PER POTER ESSERE BRAVO."
+                    }
+                  />
+                </div>
+              </div>
             </div>
           </Grid>
         </Container>

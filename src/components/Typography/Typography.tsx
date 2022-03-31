@@ -9,7 +9,8 @@ interface TypographyProps {
     | "menu"
     | "paragraph"
     | "smallTitle"
-    | "smallParagraph";
+    | "smallParagraph"
+    | "quotes";
 
   label: string;
   className?: string;
@@ -62,6 +63,14 @@ const Typography = ({ className, variant, label, style }: TypographyProps) => {
       <p style={style} className={`${styles.smallParagraph} ${className}`}>
         {label}
       </p>
+    );
+  }
+
+  if (variant === "quotes") {
+    return (
+      <h2 style={style} className={`${styles.quotes} ${className}`}>
+        {label}
+      </h2>
     );
   }
 
