@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import Typography from "../../Typography/Typography";
 import Button from "../../Button/Button";
 import SectionContainer from "../SectionContainer/SectionContainer";
+import Modal from "../../Modal/Modal";
 import styles from "./CalisthenicsSection.module.scss";
 import calisthenics from "../../../assets/images/sections/calisthenicsSection.svg";
 
 //Utils
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
+import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import { breakpoints } from "../../../defs/breakpoints";
 import { navBarButtons } from "../../../defs/navbarButtons";
-import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 
 const CalisthenicsSection = () => {
   const { width } = useWindowDimensions();
+  const [showModal, setShowModal] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (showModal) {
+      const body = document.querySelector("body");
+      if (body) body.style.overflow = "hidden";
+    } else {
+      const body = document.querySelector("body");
+      if (body) body.style.overflow = "auto";
+    }
+  }, [showModal]);
 
   const shortFirstText =
     "In Imperium Motus offriamo a tutti la possibilità di diventare la versione migliore di se stessi con dei corsi per potenziare la muscolaturà, diventare piú elastici, perdere peso o semplicemente sentirsi bene con se stessi.";
@@ -63,10 +75,17 @@ const CalisthenicsSection = () => {
           </div>
 
           <div>
-            <Button type={"secondary"} label={"Perchè Calisthenics Garage?"} />
+            <Button
+              onClick={() => {
+                setShowModal((prevState) => !prevState);
+              }}
+              type={"secondary"}
+              label={"Perchè Calisthenics Garage?"}
+            />
           </div>
         </div>
       </SectionContainer>
+      <Modal closeModal={() => setShowModal(false)} isOpen={showModal} />
     </>
   );
 };
