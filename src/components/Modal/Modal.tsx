@@ -89,8 +89,7 @@ const Modal = ({ closeModal, isOpen }: ModalProps) => {
                     style={{ lineHeight: "150%" }}
                     variant={"quotes"}
                     label={
-                      "NON DEVI ESSERE BRAVO PER INIZIARE,\n" +
-                      "MA DEVI INIZIARE PER POTER ESSERE BRAVO."
+                      "NON DEVI ESSERE BRAVO PER INIZIARE MA DEVI INIZIARE PER POTER ESSERE BRAVO."
                     }
                   />
                 </div>
