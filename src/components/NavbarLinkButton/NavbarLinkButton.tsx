@@ -1,6 +1,6 @@
 import React from "react";
 import Scroller from "../Scroller/Scroller";
-import styles from "./NavbarLink.module.scss";
+import styles from "./NavbarLinkButton.module.scss";
 import Typography from "../Typography/Typography";
 import { textVariant } from "../../defs/textVariant";
 
