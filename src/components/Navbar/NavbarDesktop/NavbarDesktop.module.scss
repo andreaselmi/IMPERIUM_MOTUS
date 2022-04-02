@@ -1,8 +1,12 @@
 @import "../../../utils/theme/vars";
 
-.logo {
-  width: 75%;
-  transition: all 1s;
+.mark {
+  width: 53px;
+  margin-bottom: 16px;
+}
+
+.logoName {
+  width: 81px;
 }
 
 .compactLogoName {
@@ -26,6 +30,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  
+  img {
+    transition: all 1s;
+  }
 }
 
 .navbarMenu {
