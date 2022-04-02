@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 
 @font-face {
-  font-family: 'bisonbold';
+  font-family: 'Bison Bold';
   src: url('./utils/theme/fonts/bison-boldpersonaluse-webfont.woff2') format('woff2'),
   url('./utils/theme/fonts/bison-boldpersonaluse-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media only screen and (max-width: 575px) {
