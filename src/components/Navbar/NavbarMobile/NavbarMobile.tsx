@@ -6,6 +6,7 @@ import { animateScroll as scroll, Events } from "react-scroll";
 import Container from "../../Container/Container";
 import Typography from "../../Typography/Typography";
 import Scroller from "../../Scroller/Scroller";
+import { textVariant } from "../../../defs/textVariant";
 
 const NavbarMobile = () => {
   const [isOpened, setIsOpened] = useState(false);
@@ -62,7 +63,7 @@ const NavbarMobile = () => {
             >
               <Typography
                 className={styles.menuButton}
-                variant={"menu"}
+                variant={textVariant.menu}
                 label={"MENU"}
               />
             </span>
@@ -76,7 +77,7 @@ const NavbarMobile = () => {
               >
                 <Typography
                   className={styles.menuButton}
-                  variant={"menu"}
+                  variant={textVariant.menu}
                   label={navBarButtons.CALISTHENICS}
                 />
               </Scroller>
@@ -86,7 +87,7 @@ const NavbarMobile = () => {
               >
                 <Typography
                   className={styles.menuButton}
-                  variant={"menu"}
+                  variant={textVariant.menu}
                   label={navBarButtons.COACH}
                 />
               </Scroller>
@@ -99,7 +100,7 @@ const NavbarMobile = () => {
               >
                 <Typography
                   className={styles.menuButton}
-                  variant={"menu"}
+                  variant={textVariant.menu}
                   label={navBarButtons.COURSES}
                 />
               </Scroller>
@@ -109,7 +110,7 @@ const NavbarMobile = () => {
               >
                 <Typography
                   className={styles.menuButton}
-                  variant={"menu"}
+                  variant={textVariant.menu}
                   label={navBarButtons.MAP}
                 />
               </Scroller>

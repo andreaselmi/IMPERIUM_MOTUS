@@ -4,6 +4,7 @@ import Typography from "../Typography/Typography";
 
 import ArrowRightBlack from "../../assets/icons/arrowRightBlack.svg";
 import ArrowRightWhite from "../../assets/icons/arrowRightWhite.svg";
+import { textVariant } from "../../defs/textVariant";
 
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   type?: "primary" | "secondary";
@@ -29,7 +30,7 @@ const Button = ({
           className={
             type === "primary" ? styles.primaryText : styles.secondaryText
           }
-          variant={"menu"}
+          variant={textVariant.menu}
           label={label}
         />
       </div>

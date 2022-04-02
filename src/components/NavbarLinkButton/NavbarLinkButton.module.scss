@@ -1,0 +1,22 @@
+.navbarMenuButton:hover span {
+  opacity: 1;
+}
+
+.hoverElement {
+  background: url("../../assets/icons/hoverNavbar.svg") no-repeat center;
+  height: 13px;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  text-align: center;
+  margin-top: 6px;
+  transition: opacity 0.3s;
+}
+
+.navbarMenuButton {
+  position: relative;
+}
+
+.navbarMenu {
+  color: white
+}

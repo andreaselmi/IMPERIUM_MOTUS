@@ -1,4 +1,7 @@
 import React from "react";
+import Typography from "../Typography/Typography";
+import { textVariant } from "../../defs/textVariant";
+import styles from "./ScheduleSlot.module.scss";
 
 export enum scheduleSlotTime {
   half = 30,
@@ -13,7 +16,7 @@ interface ScheduleSlotProps {
   slotType: "empty" | "small" | "calisthenics" | "open";
 }
 
-const ScheduleSlot = ({ slotTime }: ScheduleSlotProps) => {
+const ScheduleSlot = ({ slotTime, slotType }: ScheduleSlotProps) => {
   const checkHeight = (val: scheduleSlotTime) => {
     if (val === 30) {
       return val;
@@ -24,7 +27,16 @@ const ScheduleSlot = ({ slotTime }: ScheduleSlotProps) => {
     return totalTimeHeight + (halfNumber - 1) * 3;
   };
 
-  return <div>Questo è un test {checkHeight(slotTime)}</div>;
+  if (slotType === "empty") {
+    return <div className={styles.emptyContainer} />;
+  }
+
+  return (
+    <div className={styles.container}>
+      <Typography variant={textVariant.label} label={"9:00 - 10:00"} />
+      <Typography variant={textVariant.smallParagraph} label={"Small group"} />
+    </div>
+  );
 };
 
 export default ScheduleSlot;

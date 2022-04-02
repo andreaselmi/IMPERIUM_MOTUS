@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styles from "./NavbarDesktop.module.scss";
-import Typography from "../../Typography/Typography";
 import Container from "../../Container/Container";
-
+import NavbarLinkButton from "../../NavbarLinkButton/NavbarLinkButton";
 import logo from "../../../assets/icons/logo.svg";
 import logoName from "../../../assets/icons/logoName.svg";
 import { navBarButtons } from "../../../defs/navbarButtons";
-import Scroller from "../../Scroller/Scroller";
 import { animateScroll as scroll } from "react-scroll/modules";
 
 const NavbarDesktop = () => {
@@ -34,50 +32,38 @@ const NavbarDesktop = () => {
     >
       <Container style={{ display: "flex", flex: 1 }}>
         <div className={styles.navbar}>
-          <Scroller path={navBarButtons.CALISTHENICS}>
-            <Typography
-              className={styles.navbarMenu}
-              variant={"menu"}
-              label={navBarButtons.CALISTHENICS}
-            />
-          </Scroller>
-          <Scroller path={navBarButtons.COACH}>
-            <Typography
-              className={styles.navbarMenu}
-              variant={"menu"}
-              label={navBarButtons.COACH}
-            />
-          </Scroller>
+          <NavbarLinkButton
+            path={navBarButtons.CALISTHENICS}
+            label={navBarButtons.CALISTHENICS}
+          />
+          <NavbarLinkButton
+            path={navBarButtons.COACH}
+            label={navBarButtons.COACH}
+          />
           <span
             onClick={() => scroll.scrollToTop()}
             className={styles.logoContainer}
           >
             <img
-              className={`${styles.logo} ${compact && styles.compactLogo}`}
+              className={`${styles.mark} ${compact && styles.compactLogo}`}
               src={logo}
               alt={"Logo di Imperium Motus"}
             />
 
             <img
-              className={`${styles.logo} ${compact && styles.compactLogoName}`}
+              className={`${styles.logoName} ${compact && styles.compactLogoName}`}
               src={logoName}
               alt={"Scritta Imperium Motus"}
             />
           </span>
-          <Scroller path={navBarButtons.COURSES}>
-            <Typography
-              className={styles.navbarMenu}
-              variant={"menu"}
-              label={navBarButtons.COURSES}
-            />
-          </Scroller>
-          <Scroller path={navBarButtons.MAP}>
-            <Typography
-              className={styles.navbarMenu}
-              variant={"menu"}
-              label={navBarButtons.MAP}
-            />
-          </Scroller>
+          <NavbarLinkButton
+            path={navBarButtons.COURSES}
+            label={navBarButtons.COURSES}
+          />
+          <NavbarLinkButton
+            path={navBarButtons.MAP}
+            label={navBarButtons.MAP}
+          />
         </div>
       </Container>
     </div>

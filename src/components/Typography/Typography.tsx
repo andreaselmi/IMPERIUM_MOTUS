@@ -1,24 +1,16 @@
 import React, { CSSProperties } from "react";
 import styles from "./Typography.module.scss";
+import { textVariant } from "../../defs/textVariant";
 
 interface TypographyProps {
-  variant:
-    | "pageTitle"
-    | "sectionTitle"
-    | "heading"
-    | "menu"
-    | "paragraph"
-    | "smallTitle"
-    | "smallParagraph"
-    | "quotes";
-
+  variant: textVariant;
   label: string;
   className?: string;
   style?: CSSProperties | undefined;
 }
 
 const Typography = ({ className, variant, label, style }: TypographyProps) => {
-  if (variant === "pageTitle") {
+  if (variant === textVariant.pageTitle) {
     return (
       <h1 style={style} className={`${styles.pageTitle} ${className}`}>
         {label}
@@ -26,7 +18,7 @@ const Typography = ({ className, variant, label, style }: TypographyProps) => {
     );
   }
 
-  if (variant === "sectionTitle") {
+  if (variant === textVariant.sectionTitle) {
     return (
       <h2 style={style} className={`${styles.sectionTitle} ${className}`}>
         {label}
@@ -34,7 +26,7 @@ const Typography = ({ className, variant, label, style }: TypographyProps) => {
     );
   }
 
-  if (variant === "heading") {
+  if (variant === textVariant.heading) {
     return (
       <h3 style={style} className={`${styles.heading} ${className}`}>
         {label}
@@ -42,7 +34,7 @@ const Typography = ({ className, variant, label, style }: TypographyProps) => {
     );
   }
 
-  if (variant === "menu") {
+  if (variant === textVariant.menu) {
     return (
       <p style={style} className={`${styles.menu} ${className}`}>
         {label}
@@ -50,7 +42,7 @@ const Typography = ({ className, variant, label, style }: TypographyProps) => {
     );
   }
 
-  if (variant === "smallTitle") {
+  if (variant === textVariant.smallTitle) {
     return (
       <h5 style={style} className={`${styles.smallTitle} ${className}`}>
         {label}
@@ -58,7 +50,7 @@ const Typography = ({ className, variant, label, style }: TypographyProps) => {
     );
   }
 
-  if (variant === "smallParagraph") {
+  if (variant === textVariant.smallParagraph) {
     return (
       <p style={style} className={`${styles.smallParagraph} ${className}`}>
         {label}
@@ -66,11 +58,19 @@ const Typography = ({ className, variant, label, style }: TypographyProps) => {
     );
   }
 
-  if (variant === "quotes") {
+  if (variant === textVariant.quotes) {
     return (
       <h2 style={style} className={`${styles.quotes} ${className}`}>
         {label}
       </h2>
+    );
+  }
+
+  if (variant === textVariant.label) {
+    return (
+      <p style={style} className={`${styles.label} ${className}`}>
+        {label}
+      </p>
     );
   }
 

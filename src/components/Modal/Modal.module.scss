@@ -5,10 +5,9 @@
 .closeContainer {
   position: relative;
   top: -50px;
-  right: 0;
-  display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   cursor: pointer;
+  display: flex;
 }
 
 .contentHeader {

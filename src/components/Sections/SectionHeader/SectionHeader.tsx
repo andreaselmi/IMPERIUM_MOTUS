@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "../../Typography/Typography";
 import styles from "./SectionHeader.module.scss";
+import { textVariant } from "../../../defs/textVariant";
 
 interface SectionHeaderProps {
   imageSrc: string;
@@ -27,7 +28,7 @@ const SectionHeader = ({
       <Typography
         className={titleClass}
         label={label}
-        variant={"sectionTitle"}
+        variant={textVariant.sectionTitle}
       />
     </header>
   );
