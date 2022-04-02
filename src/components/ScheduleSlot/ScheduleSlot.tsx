@@ -10,6 +10,7 @@ export enum scheduleSlotTime {
 
 interface ScheduleSlotProps {
   slotTime: scheduleSlotTime;
+  slotType: "empty" | "small" | "calisthenics" | "open";
 }
 
 const ScheduleSlot = ({ slotTime }: ScheduleSlotProps) => {
