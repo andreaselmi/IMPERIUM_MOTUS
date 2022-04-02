@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "./NavbarDesktop.module.scss";
-import Typography from "../../Typography/Typography";
 import Container from "../../Container/Container";
-
+import NavbarLink from "../../NavbarLink/NavbarLink";
 import logo from "../../../assets/icons/logo.svg";
 import logoName from "../../../assets/icons/logoName.svg";
 import { navBarButtons } from "../../../defs/navbarButtons";
-import Scroller from "../../Scroller/Scroller";
 import { animateScroll as scroll } from "react-scroll/modules";
-import { textVariant } from "../../../defs/textVariant";
 
 const NavbarDesktop = () => {
   const [compact, setCompact] = useState(false);
@@ -35,20 +32,11 @@ const NavbarDesktop = () => {
     >
       <Container style={{ display: "flex", flex: 1 }}>
         <div className={styles.navbar}>
-          <Scroller path={navBarButtons.CALISTHENICS}>
-            <Typography
-              className={styles.navbarMenu}
-              variant={textVariant.menu}
-              label={navBarButtons.CALISTHENICS}
-            />
-          </Scroller>
-          <Scroller path={navBarButtons.COACH}>
-            <Typography
-              className={styles.navbarMenu}
-              variant={textVariant.menu}
-              label={navBarButtons.COACH}
-            />
-          </Scroller>
+          <NavbarLink
+            path={navBarButtons.CALISTHENICS}
+            label={navBarButtons.CALISTHENICS}
+          />
+          <NavbarLink path={navBarButtons.COACH} label={navBarButtons.COACH} />
           <span
             onClick={() => scroll.scrollToTop()}
             className={styles.logoContainer}
@@ -65,20 +53,11 @@ const NavbarDesktop = () => {
               alt={"Scritta Imperium Motus"}
             />
           </span>
-          <Scroller path={navBarButtons.COURSES}>
-            <Typography
-              className={styles.navbarMenu}
-              variant={textVariant.menu}
-              label={navBarButtons.COURSES}
-            />
-          </Scroller>
-          <Scroller path={navBarButtons.MAP}>
-            <Typography
-              className={styles.navbarMenu}
-              variant={textVariant.menu}
-              label={navBarButtons.MAP}
-            />
-          </Scroller>
+          <NavbarLink
+            path={navBarButtons.COURSES}
+            label={navBarButtons.COURSES}
+          />
+          <NavbarLink path={navBarButtons.MAP} label={navBarButtons.MAP} />
         </div>
       </Container>
     </div>

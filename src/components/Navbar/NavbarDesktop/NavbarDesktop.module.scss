@@ -3,6 +3,7 @@
 .logo {
   width: 75%;
   transition: all 1s;
+  margin-top: 5px;
 }
 
 .compactLogoName {
@@ -12,6 +13,7 @@
 .compactLogo {
   transform: translate(0, 10px);
 }
+
 
 .logoContainer {
   cursor: pointer;
@@ -26,10 +28,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.navbarMenu {
-  color: white
 }
 
 .navbarContainer {
