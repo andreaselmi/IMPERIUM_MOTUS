@@ -7,6 +7,7 @@ import facebookIcon from "../../../assets/icons/contacs/facebook.svg";
 import instagramIcon from "../../../assets/icons/contacs/instagram.svg";
 
 import Typography from "../../Typography/Typography";
+import { textVariant } from "../../../defs/textVariant";
 
 const Contacts = () => {
   return (
@@ -20,19 +21,19 @@ const Contacts = () => {
         <div className={styles.locationTextContainer}>
           <Typography
             className={`${styles.text} ${styles.locationStreetText}`}
-            variant={"paragraph"}
+            variant={textVariant.paragraph}
             label={"Via Dei Bersaglieri, 24"}
           />
           <Typography
             style={{ marginTop: 5 }}
             className={styles.text}
-            variant={"paragraph"}
+            variant={textVariant.paragraph}
             label={"Castromediano"}
           />
           <Typography
             style={{ marginTop: 5 }}
             className={styles.text}
-            variant={"paragraph"}
+            variant={textVariant.paragraph}
             label={"Lecce"}
           />
         </div>
@@ -47,7 +48,7 @@ const Contacts = () => {
         <div className={styles.locationTextContainer}>
           <Typography
             className={`${styles.text}`}
-            variant={"paragraph"}
+            variant={textVariant.paragraph}
             label={"+39 366 3752677"}
           />
         </div>
@@ -62,7 +63,7 @@ const Contacts = () => {
         <div className={styles.locationTextContainer}>
           <Typography
             className={`${styles.text}`}
-            variant={"paragraph"}
+            variant={textVariant.paragraph}
             label={"info@imperium-motus.it"}
           />
         </div>
@@ -78,7 +79,7 @@ const Contacts = () => {
           <a>
             <Typography
               className={`${styles.text}`}
-              variant={"paragraph"}
+              variant={textVariant.paragraph}
               label={"Facebook"}
             />
           </a>
@@ -95,7 +96,7 @@ const Contacts = () => {
           <a>
             <Typography
               className={`${styles.text}`}
-              variant={"paragraph"}
+              variant={textVariant.paragraph}
               label={"Instagram"}
             />
           </a>

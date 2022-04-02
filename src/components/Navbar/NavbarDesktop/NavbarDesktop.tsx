@@ -8,6 +8,7 @@ import logoName from "../../../assets/icons/logoName.svg";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import Scroller from "../../Scroller/Scroller";
 import { animateScroll as scroll } from "react-scroll/modules";
+import { textVariant } from "../../../defs/textVariant";
 
 const NavbarDesktop = () => {
   const [compact, setCompact] = useState(false);
@@ -37,14 +38,14 @@ const NavbarDesktop = () => {
           <Scroller path={navBarButtons.CALISTHENICS}>
             <Typography
               className={styles.navbarMenu}
-              variant={"menu"}
+              variant={textVariant.menu}
               label={navBarButtons.CALISTHENICS}
             />
           </Scroller>
           <Scroller path={navBarButtons.COACH}>
             <Typography
               className={styles.navbarMenu}
-              variant={"menu"}
+              variant={textVariant.menu}
               label={navBarButtons.COACH}
             />
           </Scroller>
@@ -67,14 +68,14 @@ const NavbarDesktop = () => {
           <Scroller path={navBarButtons.COURSES}>
             <Typography
               className={styles.navbarMenu}
-              variant={"menu"}
+              variant={textVariant.menu}
               label={navBarButtons.COURSES}
             />
           </Scroller>
           <Scroller path={navBarButtons.MAP}>
             <Typography
               className={styles.navbarMenu}
-              variant={"menu"}
+              variant={textVariant.menu}
               label={navBarButtons.MAP}
             />
           </Scroller>

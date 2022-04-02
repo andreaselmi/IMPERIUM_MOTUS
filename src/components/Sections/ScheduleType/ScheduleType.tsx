@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "../../Typography/Typography";
 import styles from "./ScheduleType.module.scss";
+import { textVariant } from "../../../defs/textVariant";
 
 interface ScheduleTypeProps {
   type: "small" | "calisthenics" | "open";
@@ -27,10 +28,10 @@ const ScheduleType = ({
         }`}
       />
       <div className={styles.textContainer}>
-        <Typography variant={"smallTitle"} label={title} />
+        <Typography variant={textVariant.smallTitle} label={title} />
         <Typography
           className={styles.subTitle}
-          variant={"smallParagraph"}
+          variant={textVariant.smallParagraph}
           label={subTitle}
         />
       </div>

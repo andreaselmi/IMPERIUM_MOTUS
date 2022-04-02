@@ -9,6 +9,7 @@ import styles from "./CoachSection.module.scss";
 import coachHeader from "../../../assets/images/sections/coachSection.svg";
 import coachImg from "../../../assets/images/sections/coach.jpg";
 import { navBarButtons } from "../../../defs/navbarButtons";
+import { textVariant } from "../../../defs/textVariant";
 
 const CoachSection = () => {
   return (
@@ -35,7 +36,7 @@ const CoachSection = () => {
           <div className={styles.textContainer}>
             <Typography
               className={styles.text}
-              variant={"paragraph"}
+              variant={textVariant.paragraph}
               label={
                 "Alessandro Lupo, classe 1992, prima di tutto un atleta e per passione e professione faccio il personal trainer. Nel mio passato ho fatto molti sport: karate, calcio, kung fu, pallavolo, golf e il tennis che tutt’ora è una grande passione."
               }
@@ -43,7 +44,7 @@ const CoachSection = () => {
             <br />
             <Typography
               className={styles.text}
-              variant={"paragraph"}
+              variant={textVariant.paragraph}
               label={
                 "Una sera del 2012 un amico mi mostrò un video di Frank Medrano, quel giorno scoprì la passione per il Calisthenics. Rimasi così impressionato da mollare immediatamente la sala pesi, il giorno dopo alle 8:00 di mattina ero già al parco per fare il mio primo allenamento."
               }
