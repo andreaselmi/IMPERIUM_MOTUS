@@ -8,6 +8,11 @@
   font-style: normal;
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @media only screen and (max-width: 575px) {
   html {
     font-size: 18px;
