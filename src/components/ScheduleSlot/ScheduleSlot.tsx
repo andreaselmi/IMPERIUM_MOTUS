@@ -23,7 +23,7 @@ const ScheduleSlot = ({ slotTime }: ScheduleSlotProps) => {
     return totalTimeHeight + (halfNumber - 1) * 3;
   };
 
-  return <div>{checkHeight(slotTime)}</div>;
+  return <div>Questo è un test {checkHeight(slotTime)}</div>;
 };
 
 export default ScheduleSlot;
