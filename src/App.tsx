@@ -10,6 +10,7 @@ import ScheduleSlot, {
 function App() {
   return (
     <>
+      <h1>Test per Enrico</h1>
       <Navbar />
       <Header />
       <Body />
