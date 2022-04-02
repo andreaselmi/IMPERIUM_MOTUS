@@ -1,9 +1,14 @@
 @import "../../../utils/theme/vars";
 
-.logo {
-  width: 75%;
+.mark {
+  width: 53px;
+  margin-bottom: 16px;
   transition: all 1s;
-  margin-top: 5px;
+}
+
+.logoName {
+  width: 81px;
+  transition: all 0.5s;
 }
 
 .compactLogoName {
@@ -11,7 +16,7 @@
 }
 
 .compactLogo {
-  transform: translate(0, 10px);
+  transform: translate(0, 16px);
 }
 
 
@@ -45,4 +50,9 @@
 
 .compactNavbar {
   height: $navbar-desktop-compact-height;
+
+  .mark {
+    width: 38px;
+    margin: 0;
+  }
 }

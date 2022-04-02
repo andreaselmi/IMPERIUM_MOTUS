@@ -45,13 +45,13 @@ const NavbarDesktop = () => {
             className={styles.logoContainer}
           >
             <img
-              className={`${styles.logo} ${compact && styles.compactLogo}`}
+              className={`${styles.mark} ${compact && styles.compactLogo}`}
               src={logo}
               alt={"Logo di Imperium Motus"}
             />
 
             <img
-              className={`${styles.logo} ${compact && styles.compactLogoName}`}
+              className={`${styles.logoName} ${compact && styles.compactLogoName}`}
               src={logoName}
               alt={"Scritta Imperium Motus"}
             />
