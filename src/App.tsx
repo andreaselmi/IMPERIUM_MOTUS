@@ -10,11 +10,10 @@ import ScheduleSlot, {
 function App() {
   return (
     <>
-      <ScheduleSlot slotTime={scheduleSlotTime.hourHalf} />
-      {/*<Navbar />*/}
-      {/*<Header />*/}
-      {/*<Body />*/}
-      {/*<Footer />*/}
+      <Navbar />
+      <Header />
+      <Body />
+      <Footer />
     </>
   );
 }
