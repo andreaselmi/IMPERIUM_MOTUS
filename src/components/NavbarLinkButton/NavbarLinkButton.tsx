@@ -9,7 +9,7 @@ interface NavbarLinkProps {
   label: string;
 }
 
-const NavbarLink = ({ path, label }: NavbarLinkProps) => {
+const NavbarLinkButton = ({ path, label }: NavbarLinkProps) => {
   return (
     <Scroller className={styles.navbarMenuButton} path={path}>
       <Typography
@@ -22,4 +22,4 @@ const NavbarLink = ({ path, label }: NavbarLinkProps) => {
   );
 };
 
-export default NavbarLink;
+export default NavbarLinkButton;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./NavbarDesktop.module.scss";
 import Container from "../../Container/Container";
-import NavbarLink from "../../NavbarLink/NavbarLink";
+import NavbarLinkButton from "../../NavbarLinkButton/NavbarLinkButton";
 import logo from "../../../assets/icons/logo.svg";
 import logoName from "../../../assets/icons/logoName.svg";
 import { navBarButtons } from "../../../defs/navbarButtons";
@@ -32,11 +32,14 @@ const NavbarDesktop = () => {
     >
       <Container style={{ display: "flex", flex: 1 }}>
         <div className={styles.navbar}>
-          <NavbarLink
+          <NavbarLinkButton
             path={navBarButtons.CALISTHENICS}
             label={navBarButtons.CALISTHENICS}
           />
-          <NavbarLink path={navBarButtons.COACH} label={navBarButtons.COACH} />
+          <NavbarLinkButton
+            path={navBarButtons.COACH}
+            label={navBarButtons.COACH}
+          />
           <span
             onClick={() => scroll.scrollToTop()}
             className={styles.logoContainer}
@@ -53,11 +56,14 @@ const NavbarDesktop = () => {
               alt={"Scritta Imperium Motus"}
             />
           </span>
-          <NavbarLink
+          <NavbarLinkButton
             path={navBarButtons.COURSES}
             label={navBarButtons.COURSES}
           />
-          <NavbarLink path={navBarButtons.MAP} label={navBarButtons.MAP} />
+          <NavbarLinkButton
+            path={navBarButtons.MAP}
+            label={navBarButtons.MAP}
+          />
         </div>
       </Container>
     </div>
