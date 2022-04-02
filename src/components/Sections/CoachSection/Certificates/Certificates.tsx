@@ -5,6 +5,7 @@ import attestatoFGI from "../../../../assets/images/sections/attestato2.png";
 import attestatoTrainingLab from "../../../../assets/images/sections/attestato3.png";
 import attestatoMidea from "../../../../assets/images/sections/attestato4.png";
 import styles from "./Certificates.module.scss";
+import { textVariant } from "../../../../defs/textVariant";
 
 const Certificates = () => {
   return (
@@ -12,7 +13,7 @@ const Certificates = () => {
       <div className={styles.certificatesContainer}>
         <Typography
           style={{ marginBottom: 24 }}
-          variant={"heading"}
+          variant={textVariant.heading}
           label={"Attestati"}
         />
         <div className={styles.certificatesContentContainer}>
@@ -25,7 +26,7 @@ const Certificates = () => {
             </div>
             <Typography
               className={styles.certificateText}
-              variant={"smallTitle"}
+              variant={textVariant.smallTitle}
               label={"Istruttore Allenamento Calisthenico (AICS)"}
             />
           </div>
@@ -39,7 +40,7 @@ const Certificates = () => {
             </div>
             <Typography
               className={styles.certificateText}
-              variant={"smallTitle"}
+              variant={textVariant.smallTitle}
               label={"Master “L’ ABC della GINNASTICA”"}
             />
           </div>
@@ -52,7 +53,7 @@ const Certificates = () => {
             </div>
             <Typography
               className={styles.certificateText}
-              variant={"smallTitle"}
+              variant={textVariant.smallTitle}
               label={"Istruttore Functional Training"}
             />
           </div>
@@ -62,7 +63,7 @@ const Certificates = () => {
             </div>
             <Typography
               className={styles.certificateText}
-              variant={"smallTitle"}
+              variant={textVariant.smallTitle}
               label={"Istruttore Posturologia"}
             />
           </div>

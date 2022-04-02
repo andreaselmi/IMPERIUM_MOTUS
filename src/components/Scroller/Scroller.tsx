@@ -18,6 +18,7 @@ const Scroller: React.FC<ScrollerProps> = ({
   spy = true,
   duration = 500,
   children,
+  className,
 }) => {
   return (
     <Link
@@ -26,6 +27,7 @@ const Scroller: React.FC<ScrollerProps> = ({
       spy={spy}
       smooth={smooth}
       duration={duration}
+      className={className}
     >
       {children}
     </Link>

@@ -12,6 +12,7 @@ import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import { breakpoints } from "../../../defs/breakpoints";
 import { navBarButtons } from "../../../defs/navbarButtons";
+import { textVariant } from "../../../defs/textVariant";
 
 const CalisthenicsSection = () => {
   const { width } = useWindowDimensions();
@@ -63,13 +64,13 @@ const CalisthenicsSection = () => {
           <div className={styles.body}>
             <Typography
               className={styles.bodyText}
-              variant={"paragraph"}
+              variant={textVariant.paragraph}
               label={firstText}
             />
             <br />
             <Typography
               className={styles.bodyText}
-              variant={"paragraph"}
+              variant={textVariant.paragraph}
               label={secondText}
             />
           </div>

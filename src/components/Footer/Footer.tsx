@@ -4,6 +4,7 @@ import Grid from "../Grid/Grid";
 import styles from "./Footer.module.scss";
 import logo from "../../assets/icons/logoHorizontalWhite.svg";
 import Typography from "../Typography/Typography";
+import { textVariant } from "../../defs/textVariant";
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
             <div className={styles.textContainer}>
               <div className={styles.footerElement}>
                 <Typography
-                  variant={"smallParagraph"}
+                  variant={textVariant.smallParagraph}
                   label={
                     "Lupo Alessandro · Via A De Gasperi, 25 Cavallino 73020 (LE) · P.IVA 05198550757"
                   }
@@ -26,22 +27,22 @@ const Footer = () => {
 
               <div className={styles.footerElement}>
                 <Typography
-                  variant={"smallParagraph"}
+                  variant={textVariant.smallParagraph}
                   label={"Sito creato da"}
                 />
                 &nbsp;
                 <a>
                   <Typography
-                    variant={"smallParagraph"}
+                    variant={textVariant.smallParagraph}
                     label={"Enrico Capone"}
                   />
                 </a>
                 &nbsp;
-                <Typography variant={"smallParagraph"} label={"e"} />
+                <Typography variant={textVariant.smallParagraph} label={"e"} />
                 &nbsp;
                 <a>
                   <Typography
-                    variant={"smallParagraph"}
+                    variant={textVariant.smallParagraph}
                     label={"Andrea Selmi"}
                   />
                 </a>

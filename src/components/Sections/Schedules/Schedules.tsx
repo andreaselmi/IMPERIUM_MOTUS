@@ -9,6 +9,7 @@ import Typography from "../../Typography/Typography";
 import Button from "../../Button/Button";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
+import { textVariant } from "../../../defs/textVariant";
 
 const Schedules = () => {
   return (
@@ -43,7 +44,10 @@ const Schedules = () => {
         </div>
 
         <div className={styles.calendarContainer} style={{ height: 300 }}>
-          <Typography variant={"pageTitle"} label={"Qui andrà il calendario"} />
+          <Typography
+            variant={textVariant.pageTitle}
+            label={"Qui andrà il calendario"}
+          />
         </div>
 
         <div className={styles.button}>
