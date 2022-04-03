@@ -8,7 +8,7 @@ interface Props {
   lng: number;
 }
 
-const Marker = ({ text }: Props) => (
+const Marker = ({ lat, lng }: Props) => (
   <div>
     <div className={styles.pointer} />
   </div>
