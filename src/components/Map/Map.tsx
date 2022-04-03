@@ -20,7 +20,7 @@ const Map = () => {
       lat: 40.326572,
       lng: 18.181265,
     },
-    zoom: 20,
+    zoom: 15,
   };
   return (
     <GoogleMapReact

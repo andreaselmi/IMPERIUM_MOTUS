@@ -9,15 +9,25 @@
   font-weight: bold;
 }
 
-.header, .contactsContainer, .mapContainer {
+.mapContainer {
+  margin-top: 40px;
+  width: 100%;
+  height: 309px;
+
+  @include respond-to("tabletBig") {
+    height: 429px;
+  }
+
+  @include respond-to("desktopBig") {
+    height: 508px;
+  }
+}
+
+.header, .contactsContainer, {
   grid-column: col-start / span 12;
 
   &.contactsContainer, {
     margin: 24px 0;
-  }
-
-  &.mapContainer {
-    margin-top: 40px;
   }
 
   &.header {
