@@ -4,7 +4,6 @@ import styles from "./HeaderLogo.module.scss";
 import { ReactComponent as Calisthenics } from "../../../assets/images/header/header2.svg";
 
 import header1 from "../../../assets/images/header/header1.svg";
-import header2 from "../../../assets/images/header/header2.svg";
 import header3 from "../../../assets/images/header/header3.svg";
 
 const HeaderLogo = () => {
