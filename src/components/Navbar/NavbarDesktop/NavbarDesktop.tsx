@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import styles from "./NavbarDesktop.module.scss";
 import Container from "../../Container/Container";
 import NavbarLinkButton from "../../NavbarLinkButton/NavbarLinkButton";
-import logo from "../../../assets/icons/logo.svg";
-import logoName from "../../../assets/icons/logoName.svg";
+import { ReactComponent as Logo } from "../../../assets/icons/logo.svg";
+import { ReactComponent as LogoName } from "../../../assets/icons/logoName.svg";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import { animateScroll as scroll } from "react-scroll/modules";
 
@@ -44,16 +44,14 @@ const NavbarDesktop = () => {
             onClick={() => scroll.scrollToTop()}
             className={styles.logoContainer}
           >
-            <img
+            <Logo
               className={`${styles.mark} ${compact && styles.compactLogo}`}
-              src={logo}
-              alt={"Logo di Imperium Motus"}
             />
 
-            <img
-              className={`${styles.logoName} ${compact && styles.compactLogoName}`}
-              src={logoName}
-              alt={"Scritta Imperium Motus"}
+            <LogoName
+              className={`${styles.logoName} ${
+                compact && styles.compactLogoName
+              }`}
             />
           </span>
           <NavbarLinkButton

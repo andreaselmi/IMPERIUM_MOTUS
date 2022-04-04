@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./Button.module.scss";
 import Typography from "../Typography/Typography";
 
-import ArrowRightBlack from "../../assets/icons/arrowRightBlack.svg";
-import ArrowRightWhite from "../../assets/icons/arrowRightWhite.svg";
+import { ReactComponent as ArrowRightBlack } from "../../assets/icons/arrowRightBlack.svg";
+import { ReactComponent as ArrowRightWhite } from "../../assets/icons/arrowRightWhite.svg";
 import { textVariant } from "../../defs/textVariant";
 
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
@@ -42,10 +42,7 @@ const Button = ({
         }`}
       />
       <div className={styles.buttonSection}>
-        <img
-          alt={"Button arrow right icon"}
-          src={type === "primary" ? ArrowRightBlack : ArrowRightWhite}
-        />
+        {type === "primary" ? <ArrowRightBlack /> : <ArrowRightWhite />}
       </div>
     </button>
   );

@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./Contacts.module.scss";
-import locationIcon from "../../../assets/icons/contacs/location.svg";
-import phoneIcon from "../../../assets/icons/contacs/phone.svg";
-import emailIcon from "../../../assets/icons/contacs/email.svg";
-import facebookIcon from "../../../assets/icons/contacs/facebook.svg";
-import instagramIcon from "../../../assets/icons/contacs/instagram.svg";
+import { ReactComponent as LocationIcon } from "../../../assets/icons/contacs/location.svg";
+import { ReactComponent as PhoneIcon } from "../../../assets/icons/contacs/phone.svg";
+import { ReactComponent as EmailIcon } from "../../../assets/icons/contacs/email.svg";
+import { ReactComponent as FacebookIcon } from "../../../assets/icons/contacs/facebook.svg";
+import { ReactComponent as InstagramIcon } from "../../../assets/icons/contacs/instagram.svg";
 
 import Typography from "../../Typography/Typography";
 import { textVariant } from "../../../defs/textVariant";
@@ -13,11 +13,7 @@ const Contacts = () => {
   return (
     <>
       <div className={`${styles.contactField} ${styles.addressContainer}`}>
-        <img
-          className={styles.contactIcon}
-          src={locationIcon}
-          alt={"Location icon"}
-        />
+        <LocationIcon className={styles.contactIcon} />
         <div className={styles.locationTextContainer}>
           <Typography
             className={`${styles.text} ${styles.locationStreetText}`}
@@ -40,11 +36,8 @@ const Contacts = () => {
       </div>
 
       <div className={`${styles.contactField} ${styles.phoneContainer}`}>
-        <img
-          className={styles.contactIcon}
-          src={phoneIcon}
-          alt={"Phone Icon"}
-        />
+        <PhoneIcon className={styles.contactIcon} />
+
         <div className={styles.locationTextContainer}>
           <Typography
             className={`${styles.text}`}
@@ -55,11 +48,8 @@ const Contacts = () => {
       </div>
 
       <div className={`${styles.contactField} ${styles.emailContainer}`}>
-        <img
-          className={styles.contactIcon}
-          src={emailIcon}
-          alt={"Email icon"}
-        />
+        <EmailIcon className={styles.contactIcon} />
+
         <div className={styles.locationTextContainer}>
           <Typography
             className={`${styles.text}`}
@@ -70,11 +60,8 @@ const Contacts = () => {
       </div>
 
       <div className={`${styles.contactField} ${styles.facebookContainer}`}>
-        <img
-          className={styles.contactIcon}
-          src={facebookIcon}
-          alt={"Facebook icon"}
-        />
+        <FacebookIcon className={styles.contactIcon} />
+
         <div className={styles.locationTextContainer}>
           <a>
             <Typography
@@ -87,11 +74,7 @@ const Contacts = () => {
       </div>
 
       <div className={`${styles.contactField} ${styles.instagramContainer}`}>
-        <img
-          className={styles.contactIcon}
-          src={instagramIcon}
-          alt={"Instagram icon"}
-        />
+        <InstagramIcon className={styles.contactIcon} />
         <div className={styles.locationTextContainer}>
           <a>
             <Typography

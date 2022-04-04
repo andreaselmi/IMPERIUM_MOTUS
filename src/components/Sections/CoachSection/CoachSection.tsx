@@ -6,7 +6,7 @@ import Button from "../../Button/Button";
 import Certificates from "./Certificates/Certificates";
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import styles from "./CoachSection.module.scss";
-import coachHeader from "../../../assets/images/sections/coachSection.svg";
+import { ReactComponent as CoachHeader } from "../../../assets/images/sections/coachSection.svg";
 import coachImg from "../../../assets/images/sections/coach.jpg";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import { textVariant } from "../../../defs/textVariant";
@@ -19,7 +19,7 @@ const CoachSection = () => {
         <SectionContainer>
           <div className={styles.headerContainer}>
             <SectionHeader
-              imageSrc={coachHeader}
+              SvgComponent={<CoachHeader />}
               imageAlt={"Il Coach"}
               label={"Alessandro Lupo"}
             />

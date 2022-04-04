@@ -4,8 +4,8 @@ import styles from "./SectionHeader.module.scss";
 import { textVariant } from "../../../defs/textVariant";
 
 interface SectionHeaderProps {
-  imageSrc: string;
-  imageAlt: string;
+  SvgComponent?: React.SVGProps<SVGSVGElement>;
+  imageAlt?: string;
   label: string;
   titleClass?: string;
   className?: string;
@@ -16,14 +16,14 @@ const SectionHeader = ({
   className,
   imageAlt,
   imageContainerClassName,
-  imageSrc,
   label,
   titleClass,
+  SvgComponent,
 }: SectionHeaderProps) => {
   return (
     <header style={{ position: "relative", zIndex: 1 }} className={className}>
       <div className={`${styles.imageContainer} ${imageContainerClassName}`}>
-        <img className={styles.image} alt={imageAlt} src={imageSrc} />
+        <span className={styles.image}>{SvgComponent}</span>
       </div>
       <Typography
         className={titleClass}

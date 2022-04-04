@@ -3,7 +3,7 @@ import SectionContainer from "../SectionContainer/SectionContainer";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import Contacts from "../Contacts/Contacts";
 import styles from "./MapSection.module.scss";
-import mapHeader from "../../../assets/images/sections/mapSection.svg";
+import { ReactComponent as MapHeader } from "../../../assets/images/sections/mapSection.svg";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import Map from "../../Map/Map";
@@ -16,7 +16,7 @@ const MapSection = () => {
         <SectionContainer style={{ paddingBottom: 0 }}>
           <SectionHeader
             className={`${styles.header} ${styles.text}`}
-            imageSrc={mapHeader}
+            SvgComponent={<MapHeader />}
             imageAlt={"Dove Siamo"}
             label={"Vienici a trovare"}
           />

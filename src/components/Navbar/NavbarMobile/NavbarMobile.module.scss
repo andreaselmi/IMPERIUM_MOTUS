@@ -1,5 +1,6 @@
 @import "../../../utils/theme/colors";
 
+
 .collapseMenuLink {
   cursor: pointer;
 }
@@ -29,6 +30,10 @@
   width: 100%;
   z-index: 999;
   transition: all .350s
+}
+
+.navBarMenuButton {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .navbarOpened {

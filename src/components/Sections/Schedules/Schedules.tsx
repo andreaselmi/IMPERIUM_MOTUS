@@ -2,7 +2,7 @@ import React from "react";
 import SectionContainer from "../SectionContainer/SectionContainer";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
-import courses from "../../../assets/images/sections/coursesSection.svg";
+import { ReactComponent as Courses } from "../../../assets/images/sections/coursesSection.svg";
 import styles from "./Schedules.module.scss";
 import ScheduleType from "../ScheduleType/ScheduleType";
 import Typography from "../../Typography/Typography";
@@ -18,7 +18,7 @@ const Schedules = () => {
       <SectionContainer id={navBarButtons.COURSES}>
         <SectionHeader
           className={styles.header}
-          imageSrc={courses}
+          SvgComponent={<Courses />}
           imageAlt={"I corsi"}
           label={"Calendario Corsi"}
         />

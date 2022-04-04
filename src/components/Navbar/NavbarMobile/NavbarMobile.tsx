@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { navBarButtons } from "../../../defs/navbarButtons";
-import Logo from "../../../assets/icons/logoHorizontal.svg";
+import { ReactComponent as Logo } from "../../../assets/icons/logoHorizontal.svg";
 import styles from "./NavbarMobile.module.scss";
 import { animateScroll as scroll, Events } from "react-scroll";
 import Container from "../../Container/Container";
@@ -47,7 +47,7 @@ const NavbarMobile = () => {
         <nav>
           <div className={styles.collapseNavbarContainer}>
             <span role={"button"} onClick={() => scroll.scrollToTop()}>
-              <img src={Logo} alt={"Imperium motus logo"} />
+              <Logo />
             </span>
 
             <span

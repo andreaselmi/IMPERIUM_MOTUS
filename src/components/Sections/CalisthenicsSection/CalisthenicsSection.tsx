@@ -5,7 +5,7 @@ import Button from "../../Button/Button";
 import SectionContainer from "../SectionContainer/SectionContainer";
 import Modal from "../../Modal/Modal";
 import styles from "./CalisthenicsSection.module.scss";
-import calisthenics from "../../../assets/images/sections/calisthenicsSection.svg";
+import { ReactComponent as Calisthenics } from "../../../assets/images/sections/calisthenicsSection.svg";
 
 //Utils
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
@@ -55,8 +55,8 @@ const CalisthenicsSection = () => {
       <SectionContainer className={styles.sectionContainer}>
         <div className={styles.container}>
           <SectionHeader
+            SvgComponent={<Calisthenics />}
             titleClass={styles.sectionTitle}
-            imageSrc={calisthenics}
             imageAlt={"Il Calisthenics"}
             label={"Calisthenics garage"}
           />

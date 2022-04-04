@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../Container/Container";
 import Grid from "../Grid/Grid";
 import styles from "./Footer.module.scss";
-import logo from "../../assets/icons/logoHorizontalWhite.svg";
+import { ReactComponent as Logo } from "../../assets/icons/logoHorizontalWhite.svg";
 import Typography from "../Typography/Typography";
 import { textVariant } from "../../defs/textVariant";
 
@@ -13,7 +13,7 @@ const Footer = () => {
         <Grid>
           <div className={styles.footerContentContainer}>
             <div className={`${styles.footerElement} ${styles.logoContainer}`}>
-              <img alt={"Logo Imperium motus esteso"} src={logo} />
+              <Logo />
             </div>
             <div className={styles.textContainer}>
               <div className={styles.footerElement}>
