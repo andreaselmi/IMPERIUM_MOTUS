@@ -8,13 +8,16 @@ interface Props {
   lng: number;
 }
 
-const Marker = ({ lat, lng }: Props) => (
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Marker = ({ text, lng, lat }: Props) => (
   <div>
     <div className={styles.pointer} />
   </div>
 );
 
 const Map = () => {
+  const googleApiKey = process.env.REACT_APP_GOOGLE_API_KEY;
+
   const defaultProps = {
     center: {
       lat: 40.326572,
@@ -22,9 +25,9 @@ const Map = () => {
     },
     zoom: 15,
   };
-  return (
+  return googleApiKey ? (
     <GoogleMapReact
-      bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_API_KEY! }}
+      bootstrapURLKeys={{ key: googleApiKey }}
       defaultCenter={defaultProps.center}
       defaultZoom={defaultProps.zoom}
       options={{
@@ -222,7 +225,7 @@ const Map = () => {
         text="My Marker"
       />
     </GoogleMapReact>
-  );
+  ) : null;
 };
 
 export default Map;
