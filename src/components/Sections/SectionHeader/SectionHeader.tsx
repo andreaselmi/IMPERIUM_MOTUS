@@ -14,7 +14,6 @@ interface SectionHeaderProps {
 
 const SectionHeader = ({
   className,
-  imageAlt,
   imageContainerClassName,
   label,
   titleClass,
