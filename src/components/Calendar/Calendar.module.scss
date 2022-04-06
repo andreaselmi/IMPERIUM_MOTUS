@@ -1,4 +1,5 @@
 @import "../../utils/theme/colors";
+@import "../../utils/theme/breakpoints";
 
 .calendarGrid {
   height: 755px;
@@ -9,6 +10,7 @@
 
 
 .container {
+  margin: auto;
   max-width: 896px;
   height: 879px;
   overflow-x: scroll;
@@ -16,6 +18,19 @@
   padding-bottom: 17px;
   padding-left: 20px;
   padding-right: 20px;
+
+  @include respond-to("desktopBig") {
+    max-width: 1140px;
+  }
+
+  .contentContainer {
+    display: flex;
+    min-width: 896px;
+
+    @include respond-to("desktopBig") {
+      min-width: 1140px;
+    }
+  }
 }
 
 .daysContainer {

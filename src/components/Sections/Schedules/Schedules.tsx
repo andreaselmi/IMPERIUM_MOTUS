@@ -11,6 +11,7 @@ import { navBarButtons } from "../../../defs/navbarButtons";
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import { textVariant } from "../../../defs/textVariant";
 import Calendar from "../../Calendar/Calendar";
+import Container from "../../Container/Container";
 
 const Schedules = () => {
   return (
@@ -44,6 +45,7 @@ const Schedules = () => {
           />
         </div>
       </SectionContainer>
+
       <Calendar />
 
       <div className={styles.button}>

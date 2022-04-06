@@ -7,7 +7,7 @@ import CalendarSlot, { ScheduleDayType } from "./CalendarSlot/CalendarSlot";
 const Calendar = () => {
   return (
     <div className={styles.container}>
-      <div style={{ display: "flex", minWidth: 896 }}>
+      <div className={styles.contentContainer}>
         <div className={styles.hoursContainer}>
           <div className={styles.hours}>
             <Typography
