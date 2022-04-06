@@ -7,7 +7,7 @@ import { ScheduleSlotTime } from "../../../defs/calendarSlotData";
 type ScheduleDayType = "lun" | "mar" | "mer" | "gio" | "ven" | "sab";
 
 interface CalendarSlotProps extends React.HTMLAttributes<HTMLDivElement> {
-  slotTime?: ScheduleSlotTime;
+  slotTime: ScheduleSlotTime;
   slotType: "empty" | "small" | "calisthenics" | "open";
   hoursLabel: string;
   day: ScheduleDayType;
@@ -82,7 +82,7 @@ const CalendarSlot = ({
   return (
     <div
       className={`${styles.container} ${checkContainerStyle()} ${checkDay()}`}
-      style={{ gridRow: `${start}/span ${checkSpan(slotTime!)}` }}
+      style={{ gridRow: `${start}/span ${checkSpan(slotTime)}` }}
       {...restProps}
     >
       <Typography
