@@ -5,13 +5,10 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 import { ReactComponent as Courses } from "../../../assets/images/sections/coursesSection.svg";
 import styles from "./Schedules.module.scss";
 import ScheduleType from "../ScheduleType/ScheduleType";
-import Typography from "../../Typography/Typography";
 import Button from "../../Button/Button";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
-import { textVariant } from "../../../defs/textVariant";
 import Calendar from "../../Calendar/Calendar";
-import Container from "../../Container/Container";
 
 const Schedules = () => {
   return (
