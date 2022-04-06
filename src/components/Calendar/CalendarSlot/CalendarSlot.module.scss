@@ -1,0 +1,64 @@
+@import "../../../utils/theme/colors";
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 4px;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+
+  &.calisthenics {
+    background-color: $global-background-color-dark;
+    color: $global-color-light;
+  }
+
+  &.open {
+    background-color: #C0C0C0;
+  }
+
+  &.small {
+    background-color: $global-background-color-neon;
+  }
+
+  &.mon {
+    grid-column: 1/2;
+  }
+
+  &.tue {
+    grid-column: 2/3;
+  }
+
+  &.wed {
+    grid-column: 3/4;
+  }
+
+  &.thu {
+    grid-column: 4/5;
+  }
+
+  &.fri {
+    grid-column: 5/6;
+  }
+
+  &.sat {
+    grid-column: 6/7;
+  }
+}
+
+.label {
+  color: $global-color-muted;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+

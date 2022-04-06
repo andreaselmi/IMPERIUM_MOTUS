@@ -1,0 +1,115 @@
+@import "../../utils/theme/colors";
+@import "../../utils/theme/breakpoints";
+
+.backgroundGrid {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .separator {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.calendarGrid {
+  height: 755px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.container {
+  margin: auto;
+  max-width: 896px;
+  min-height: 879px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 17px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include respond-to("desktopBig") {
+    max-width: 1140px;
+  }
+
+  .contentContainer {
+    display: flex;
+    min-width: 896px;
+    height: 862px;
+
+    @include respond-to("desktopBig") {
+      min-width: 1140px;
+    }
+  }
+}
+
+.daysHeaderContainer {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.daysContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hours {
+  height: 775px;
+  padding-top: 87px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  top: 5px;
+}
+
+.hoursContainer {
+  width: 65px;
+  height: 100%;
+}
+
+.hourText {
+  color: $global-color-muted;
+}
+
+.singleDayContainer {
+  height: 99px;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.scheduleGrid {
+  padding-top: 2px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(26, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 3px;
+}
+
+.slotContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
