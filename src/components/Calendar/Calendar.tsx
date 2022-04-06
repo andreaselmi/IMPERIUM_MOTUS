@@ -85,12 +85,36 @@ const Calendar = () => {
         </div>
         <div className={styles.slotContainer}>
           <div className={styles.daysHeaderContainer}>
-            <div className={styles.singleDayContainer}>Lun</div>
-            <div className={styles.singleDayContainer}>Mar</div>
-            <div className={styles.singleDayContainer}>Mer</div>
-            <div className={styles.singleDayContainer}>Gio</div>
-            <div className={styles.singleDayContainer}>Ven</div>
-            <div className={styles.singleDayContainer}>Sab</div>
+            <Typography
+              variant={textVariant.heading}
+              className={styles.singleDayContainer}
+              label={"Lun"}
+            />
+            <Typography
+              variant={textVariant.heading}
+              className={styles.singleDayContainer}
+              label={"Mar"}
+            />
+            <Typography
+              variant={textVariant.heading}
+              className={styles.singleDayContainer}
+              label={"Mer"}
+            />
+            <Typography
+              variant={textVariant.heading}
+              className={styles.singleDayContainer}
+              label={"Gio"}
+            />
+            <Typography
+              variant={textVariant.heading}
+              className={styles.singleDayContainer}
+              label={"Ven"}
+            />
+            <Typography
+              variant={textVariant.heading}
+              className={styles.singleDayContainer}
+              label={"Sab"}
+            />
           </div>
 
           <div className={styles.scheduleGrid}>

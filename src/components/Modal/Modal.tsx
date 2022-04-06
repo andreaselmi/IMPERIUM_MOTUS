@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Modal.module.scss";
 import closeIcon from "../../assets/icons/closeWhite.svg";
 import quotesIcon from "../../assets/icons/quotes.svg";
@@ -13,9 +13,22 @@ interface ModalProps {
 }
 
 const Modal = ({ closeModal, isOpen }: ModalProps) => {
+  const handleUserKeyPress = (event: KeyboardEvent) => {
+    if (event.key === "Escape" || event.key === "Esc") {
+      closeModal();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleUserKeyPress);
+
+    return () => {
+      window.removeEventListener("keydown", handleUserKeyPress);
+    };
+  }, []);
   return (
     <>
-      <div className={`${isOpen ? styles.overlay : ""}`} />
+      <div onClick={closeModal} className={`${isOpen ? styles.overlay : ""}`} />
       <div className={`${styles.modalBack} ${isOpen ? styles.open : ""}`}>
         <Container>
           <span
