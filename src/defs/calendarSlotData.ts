@@ -124,7 +124,7 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 20,
   },
   {
-    id: "13",
+    id: "300",
     type: "calisthenics",
     day: "mar",
     duration: ScheduleSlotTime.hourHalf,
@@ -280,7 +280,7 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 16,
   },
   {
-    id: "17",
+    id: "30",
     type: "calisthenics",
     day: "ven",
     duration: ScheduleSlotTime.hourHalf,
@@ -288,7 +288,7 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 20,
   },
   {
-    id: "30",
+    id: "31",
     type: "calisthenics",
     day: "ven",
     duration: ScheduleSlotTime.hourHalf,
@@ -299,7 +299,7 @@ const calendarSlotData: CalendarSlotType[] = [
 
   //sabato
   {
-    id: "39",
+    id: "32",
     type: "open",
     day: "sab",
     duration: ScheduleSlotTime.fourHours,
