@@ -82,10 +82,8 @@ const Calendar = () => {
             />
           </div>
         </div>
-        <div style={{ display: "flex", flex: 1, flexDirection: "column" }}>
-          <div
-            style={{ display: "flex", flex: 1, justifyContent: "space-around" }}
-          >
+        <div className={styles.slotContainer}>
+          <div className={styles.daysHeaderContainer}>
             <div className={styles.singleDayContainer}>Lun</div>
             <div className={styles.singleDayContainer}>Mar</div>
             <div className={styles.singleDayContainer}>Mer</div>
@@ -95,6 +93,22 @@ const Calendar = () => {
           </div>
 
           <div className={styles.scheduleGrid}>
+            <div className={styles.backgroundGrid}>
+              <div className={styles.separator} />
+              <div className={styles.separator} />
+              <div className={styles.separator} />
+              <div className={styles.separator} />
+              <div className={styles.separator} />
+              <div className={styles.separator} />
+              <div className={styles.separator} />
+              <div className={styles.separator} />
+              <div className={styles.separator} />
+              <div className={styles.separator} />
+              <div className={styles.separator} />
+              <div className={styles.separator} />
+              <div className={styles.separator} />
+              <div className={styles.separator} />
+            </div>
             {/* Lunedì */}
             <CalendarSlot
               day={ScheduleDayType.lun}
