@@ -2,35 +2,24 @@ import React from "react";
 import Typography from "../../Typography/Typography";
 import { textVariant } from "../../../defs/textVariant";
 import styles from "./CalendarSlot.module.scss";
+import { ScheduleSlotTime } from "../../../defs/calendarSlotData";
 
-export enum ScheduleSlotTime {
-  half = 30,
-  hour = 60,
-  hourHalf = 90,
-  twoHour = 120,
-  twoHalfHour = 150,
-}
-
-export enum ScheduleDayType {
-  lun = "lun",
-  mar = "mar",
-  mer = "mer",
-  gio = "gio",
-  ven = "ven",
-  sab = "sab",
-}
+type ScheduleDayType = "lun" | "mar" | "mer" | "gio" | "ven" | "sab";
 
 interface CalendarSlotProps extends React.HTMLAttributes<HTMLDivElement> {
-  // slotTime: scheduleSlotTime;
+  slotTime?: ScheduleSlotTime;
   slotType: "empty" | "small" | "calisthenics" | "open";
   hoursLabel: string;
   day: ScheduleDayType;
+  start: number;
 }
 
 const CalendarSlot = ({
   day,
   hoursLabel,
   slotType,
+  slotTime,
+  start,
   ...restProps
 }: CalendarSlotProps) => {
   if (slotType === "empty") {
@@ -55,26 +44,43 @@ const CalendarSlot = ({
 
   const checkDay = () => {
     switch (day) {
-      case ScheduleDayType.lun:
+      case "lun":
         return styles.mon;
-      case ScheduleDayType.mar:
+      case "mar":
         return styles.tue;
-      case ScheduleDayType.mer:
+      case "mer":
         return styles.wed;
-      case ScheduleDayType.gio:
+      case "gio":
         return styles.thu;
-      case ScheduleDayType.ven:
+      case "ven":
         return styles.fri;
-      case ScheduleDayType.sab:
+      case "sab":
         return styles.sat;
       default:
         return styles.mon;
+    }
+  };
+  const checkSpan = (time: ScheduleSlotTime) => {
+    switch (time) {
+      case ScheduleSlotTime.half:
+        return 1;
+      case ScheduleSlotTime.hour:
+        return 2;
+      case ScheduleSlotTime.hourHalf:
+        return 3;
+      case ScheduleSlotTime.twoHour:
+        return 4;
+      case ScheduleSlotTime.twoHalfHour:
+        return 5;
+      case ScheduleSlotTime.fourHours:
+        return 8;
     }
   };
 
   return (
     <div
       className={`${styles.container} ${checkContainerStyle()} ${checkDay()}`}
+      style={{ gridRow: `${start}/span ${checkSpan(slotTime!)}` }}
       {...restProps}
     >
       <Typography
