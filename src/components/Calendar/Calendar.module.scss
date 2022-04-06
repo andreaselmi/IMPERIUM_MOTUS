@@ -1,0 +1,66 @@
+@import "../../utils/theme/colors";
+
+.calendarGrid {
+  height: 755px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.container {
+  max-width: 896px;
+  height: 879px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 17px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.daysContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hours {
+  height: 775px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  top: 5px;
+}
+
+.hoursContainer {
+  width: 65px;
+  height: 100%;
+  padding-top: 88px;
+}
+
+.hourText {
+  color: $global-color-muted;
+}
+
+.singleDayContainer {
+  height: 99px;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.scheduleGrid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(26, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 3px;
+}

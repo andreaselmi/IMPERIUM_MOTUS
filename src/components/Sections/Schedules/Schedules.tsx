@@ -10,6 +10,7 @@ import Button from "../../Button/Button";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import { textVariant } from "../../../defs/textVariant";
+import Calendar from "../../Calendar/Calendar";
 
 const Schedules = () => {
   return (
@@ -42,21 +43,15 @@ const Schedules = () => {
             subTitle={"Studio Aperto"}
           />
         </div>
-
-        <div className={styles.calendarContainer} style={{ height: 300 }}>
-          <Typography
-            variant={textVariant.pageTitle}
-            label={"Qui andrà il calendario"}
-          />
-        </div>
-
-        <div className={styles.button}>
-          <Button
-            onClick={() => console.log("prenota lezione")}
-            label={"Prenota una lezione di prova"}
-          />
-        </div>
       </SectionContainer>
+      <Calendar />
+
+      <div className={styles.button}>
+        <Button
+          onClick={() => console.log("prenota lezione")}
+          label={"Prenota una lezione di prova"}
+        />
+      </div>
     </>
   );
 };
