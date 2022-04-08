@@ -10,23 +10,6 @@
   display: flex;
 }
 
-.contentHeader {
-  grid-column: col-start / span 12;
-
-  @include respond-to("desktopSmall") {
-    grid-column: col-start 2 / span 10;
-  }
-}
-
-.footer {
-  grid-column: col-start 2 / span 11;
-  margin: 56px 0 80px 0;
-
-  @include respond-to("desktopBig") {
-    grid-column: col-start 3 / span 9;
-  }
-}
-
 .modal {
   width: 100%;
   height: calc(100% - #{$modal-top-margin});
@@ -76,39 +59,3 @@
   overflow-y: scroll;
   background-color: red;
 }
-
-.quotes {
-  position: absolute;
-  left: -40px;
-  top: -10px;
-}
-
-.firstSectionText, .secondSectionText {
-
-  grid-column: col-start / span 12;
-
-  &.firstSectionText {
-    @include respond-to("desktopSmall") {
-      grid-column: col-start 1 / span 11;
-    }
-  }
-
-  &.secondSectionText {
-    @include respond-to("desktopSmall") {
-      grid-column: col-start 2 / span 11;
-    }
-  }
-}
-
-
-.footerContentContainer {
-  background-color: #E1FF2C;
-}
-
-.footerTextContainer {
-  position: relative;
-  top: -40px;
-  left: 20px
-}
-
-
