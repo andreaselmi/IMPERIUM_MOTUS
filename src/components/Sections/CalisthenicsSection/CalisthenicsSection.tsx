@@ -13,6 +13,7 @@ import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import { breakpoints } from "../../../defs/breakpoints";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import { textVariant } from "../../../defs/textVariant";
+import ModalCalisthenicsContent from "../../Modal/ModalCalisthenicsContent/ModalCalisthenicsContent";
 
 const CalisthenicsSection = () => {
   const { width } = useWindowDimensions();
@@ -86,7 +87,9 @@ const CalisthenicsSection = () => {
           </div>
         </div>
       </SectionContainer>
-      <Modal closeModal={() => setShowModal(false)} isOpen={showModal} />
+      <Modal closeModal={() => setShowModal(false)} isOpen={showModal}>
+        <ModalCalisthenicsContent />
+      </Modal>
     </>
   );
 };

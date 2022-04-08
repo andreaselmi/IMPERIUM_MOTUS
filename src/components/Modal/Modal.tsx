@@ -1,19 +1,17 @@
 import React, { useEffect } from "react";
 import styles from "./Modal.module.scss";
 import closeIcon from "../../assets/icons/closeWhite.svg";
-import quotesIcon from "../../assets/icons/quotes.svg";
 import Typography from "../Typography/Typography";
 import Container from "../Container/Container";
 import Grid from "../Grid/Grid";
 import { textVariant } from "../../defs/textVariant";
-import ModalCalisthenics from "./ModalCalisthenics/ModalCalisthenics";
 
 interface ModalProps {
   isOpen: boolean;
   closeModal: () => void;
 }
 
-const Modal = ({ closeModal, isOpen }: ModalProps) => {
+const Modal: React.FC<ModalProps> = ({ children, closeModal, isOpen }) => {
   const handleUserKeyPress = (event: KeyboardEvent) => {
     if (event.key === "Escape" || event.key === "Esc") {
       closeModal();
@@ -51,9 +49,7 @@ const Modal = ({ closeModal, isOpen }: ModalProps) => {
       </div>
       <div className={`${styles.modal} ${isOpen ? styles.open : ""}`}>
         <Container>
-          <Grid className={styles.modalContentContainer}>
-            <ModalCalisthenics />
-          </Grid>
+          <Grid className={styles.modalContentContainer}>{children}</Grid>
         </Container>
       </div>
     </>

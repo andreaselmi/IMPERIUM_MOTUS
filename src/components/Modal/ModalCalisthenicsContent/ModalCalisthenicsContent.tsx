@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./ModalCalisthenics.module.scss";
+import styles from "./ModalCalisthenicsContent.module.scss";
 import Typography from "../../Typography/Typography";
 import { textVariant } from "../../../defs/textVariant";
 import quotesIcon from "../../../assets/icons/quotes.svg";
 
-const ModalCalisthenics = () => {
+const ModalCalisthenicsContent = () => {
   return (
     <>
       <header className={styles.contentHeader}>
@@ -70,4 +70,4 @@ const ModalCalisthenics = () => {
   );
 };
 
-export default ModalCalisthenics;
+export default ModalCalisthenicsContent;
