@@ -59,11 +59,17 @@ const Contacts = () => {
         <EmailIcon className={styles.contactIcon} />
 
         <div className={styles.locationTextContainer}>
-          <Typography
-            className={`${styles.text}`}
-            variant={textVariant.paragraph}
-            label={"info@imperium-motus.it"}
-          />
+          <a
+            href={"mailto:info@imperium-motus.it"}
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
+            <Typography
+              className={`${styles.text}`}
+              variant={textVariant.paragraph}
+              label={"info@imperium-motus.it"}
+            />
+          </a>
         </div>
       </div>
 
