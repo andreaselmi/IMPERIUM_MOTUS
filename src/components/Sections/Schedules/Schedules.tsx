@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SectionContainer from "../SectionContainer/SectionContainer";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
@@ -9,8 +9,12 @@ import Button from "../../Button/Button";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import Calendar from "../../Calendar/Calendar";
+import Modal from "../../Modal/Modal";
+import ModalCoachContent from "../../Modal/ModalCoachContent/ModalCoachContent";
+import ModalScheduleContent from "../../Modal/ModalScheduleContent/ModalScheduleContent";
 
 const Schedules = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
       <ScrollAnchor id={navBarButtons.COURSES} />
@@ -47,10 +51,13 @@ const Schedules = () => {
 
       <div className={styles.button}>
         <Button
-          onClick={() => console.log("prenota lezione")}
+          onClick={() => setShowModal(true)}
           label={"Prenota una lezione di prova"}
         />
       </div>
+      <Modal isOpen={showModal} closeModal={() => setShowModal(false)}>
+        <ModalScheduleContent />
+      </Modal>
     </>
   );
 };

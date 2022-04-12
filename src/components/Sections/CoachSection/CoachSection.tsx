@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import SectionContainer from "../SectionContainer/SectionContainer";
 import Typography from "../../Typography/Typography";
@@ -10,8 +10,11 @@ import { ReactComponent as CoachHeader } from "../../../assets/images/sections/c
 import coachImg from "../../../assets/images/sections/coach.jpg";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import { textVariant } from "../../../defs/textVariant";
+import Modal from "../../Modal/Modal";
+import ModalCoachContent from "../../Modal/ModalCoachContent/ModalCoachContent";
 
 const CoachSection = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
       <ScrollAnchor id={navBarButtons.COACH} />
@@ -51,7 +54,7 @@ const CoachSection = () => {
             />
 
             <Button
-              onClick={() => console.log("la mia storia")}
+              onClick={() => setShowModal(true)}
               className={styles.button}
               label={"Leggi la mia storia"}
               type={"primary"}
@@ -59,6 +62,10 @@ const CoachSection = () => {
           </div>
         </SectionContainer>
         <Certificates />
+
+        <Modal isOpen={showModal} closeModal={() => setShowModal(false)}>
+          <ModalCoachContent />
+        </Modal>
       </div>
     </>
   );
