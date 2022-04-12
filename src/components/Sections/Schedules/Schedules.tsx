@@ -10,7 +10,6 @@ import { navBarButtons } from "../../../defs/navbarButtons";
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import Calendar from "../../Calendar/Calendar";
 import Modal from "../../Modal/Modal";
-import ModalCoachContent from "../../Modal/ModalCoachContent/ModalCoachContent";
 import ModalScheduleContent from "../../Modal/ModalScheduleContent/ModalScheduleContent";
 
 const Schedules = () => {
@@ -18,7 +17,10 @@ const Schedules = () => {
   return (
     <>
       <ScrollAnchor id={navBarButtons.COURSES} />
-      <SectionContainer id={navBarButtons.COURSES}>
+      <SectionContainer
+        style={{ paddingBottom: 35 }}
+        id={navBarButtons.COURSES}
+      >
         <SectionHeader
           className={styles.header}
           SvgComponent={<Courses />}
