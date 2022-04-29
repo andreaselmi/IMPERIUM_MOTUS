@@ -1,7 +1,8 @@
 import React from "react";
+import ModalHeader from "../ModalHeader/ModalHeader";
 
 const ModalCoachContent = () => {
-  return <div>Sono il contenuto del modale Coach</div>;
+  return <ModalHeader title={"Il coach"} />;
 };
 
 export default ModalCoachContent;

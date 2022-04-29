@@ -1,18 +1,14 @@
 import React from "react";
-import styles from "./ModalCalisthenicsContent.module.scss";
 import Typography from "../../Typography/Typography";
+import ModalHeader from "../ModalHeader/ModalHeader";
+import ModalFooter from "../ModalFooter/ModalFooter";
+import styles from "./ModalCalisthenicsContent.module.scss";
 import { textVariant } from "../../../defs/textVariant";
-import quotesIcon from "../../../assets/icons/quotes.svg";
 
 const ModalCalisthenicsContent = () => {
   return (
     <>
-      <header className={styles.contentHeader}>
-        <Typography
-          variant={textVariant.heading}
-          label={"Perché CALISTHENICS GARAGE?"}
-        />
-      </header>
+      <ModalHeader title={"Perchè CALISTHENICS GARAGE?"} />
 
       <div className={styles.firstSectionText}>
         <Typography
@@ -48,24 +44,11 @@ const ModalCalisthenicsContent = () => {
         <Typography variant={textVariant.paragraph} label={"Ti aspetto."} />
       </div>
 
-      <div className={styles.footer}>
-        <div className={styles.footerContentContainer}>
-          <div className={styles.footerTextContainer}>
-            <img
-              className={styles.quotes}
-              src={quotesIcon}
-              alt={"Virgolette"}
-            />
-            <Typography
-              style={{ lineHeight: "150%" }}
-              variant={textVariant.quotes}
-              label={
-                "NON DEVI ESSERE BRAVO PER INIZIARE MA DEVI INIZIARE PER POTER ESSERE BRAVO."
-              }
-            />
-          </div>
-        </div>
-      </div>
+      <ModalFooter
+        label={
+          "NON DEVI ESSERE BRAVO PER INIZIARE MA DEVI INIZIARE PER POTER ESSERE BRAVO."
+        }
+      />
     </>
   );
 };

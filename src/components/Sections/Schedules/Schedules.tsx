@@ -10,7 +10,7 @@ import { navBarButtons } from "../../../defs/navbarButtons";
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import Calendar from "../../Calendar/Calendar";
 import Modal from "../../Modal/Modal";
-import ModalScheduleContent from "../../Modal/ModalScheduleContent/ModalScheduleContent";
+import TrialLessonModal from "../../Modal/TrialLessonModal/TrialLessonModal";
 
 const Schedules = () => {
   const [showModal, setShowModal] = useState(false);
@@ -60,7 +60,7 @@ const Schedules = () => {
         />
       </div>
       <Modal isOpen={showModal} closeModal={() => setShowModal(false)}>
-        <ModalScheduleContent />
+        <TrialLessonModal />
       </Modal>
     </>
   );

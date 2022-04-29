@@ -6,7 +6,7 @@ import styles from "./Header.module.scss";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { breakpoints } from "../../defs/breakpoints";
 import Modal from "../Modal/Modal";
-import ModalHeaderContent from "../Modal/ModalHeaderContent/ModalHeaderContent";
+import TrialLessonModal from "../Modal/TrialLessonModal/TrialLessonModal";
 
 const Header = () => {
   const { width } = useWindowDimensions();
@@ -36,7 +36,7 @@ const Header = () => {
       </Container>
 
       <Modal isOpen={showModal} closeModal={() => setShowModal(false)}>
-        <ModalHeaderContent />
+        <TrialLessonModal />
       </Modal>
     </header>
   );
