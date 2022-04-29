@@ -6,9 +6,10 @@ import { textVariant } from "../../../defs/textVariant";
 
 interface ModalFooterProps {
   label: string;
+  footerText?: string;
 }
 
-const ModalFooter = ({ label }: ModalFooterProps) => {
+const ModalFooter = ({ footerText, label }: ModalFooterProps) => {
   return (
     <div className={styles.footer}>
       <div className={styles.footerContentContainer}>
@@ -21,6 +22,9 @@ const ModalFooter = ({ label }: ModalFooterProps) => {
           />
         </div>
       </div>
+      {footerText && (
+        <p style={{ marginLeft: 20, marginTop: 10 }}>{footerText}</p>
+      )}
     </div>
   );
 };
