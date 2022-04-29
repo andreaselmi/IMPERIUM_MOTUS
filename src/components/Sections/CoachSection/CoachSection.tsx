@@ -40,18 +40,37 @@ const CoachSection = () => {
             <Typography
               className={styles.text}
               variant={textVariant.paragraph}
+              label={""}
+            >
+              <p>
+                Ciao, sono{" "}
+                <span style={{ fontWeight: "bold" }}>Alessandro Lupo</span>,
+                giovane atleta e Istruttore di{" "}
+                <span style={{ fontWeight: "bold" }}>Calisthenics</span>.
+              </p>
+            </Typography>
+            <br />
+            <Typography
+              className={styles.text}
+              variant={textVariant.paragraph}
               label={
-                "Alessandro Lupo, classe 1992, prima di tutto un atleta e per passione e professione faccio il personal trainer. Nel mio passato ho fatto molti sport: karate, calcio, kung fu, pallavolo, golf e il tennis che tutt’ora è una grande passione."
+                "Ho scoperto questa disciplina nel 2012 all'età di 21 anni da autodidatta dopo aver trascorso in sala pesi molti anni e dopo aver provato vari sport nell’ arco della mia adolescenza."
               }
             />
             <br />
             <Typography
               className={styles.text}
               variant={textVariant.paragraph}
-              label={
-                "Una sera del 2012 un amico mi mostrò un video di Frank Medrano, quel giorno scoprì la passione per il Calisthenics. Rimasi così impressionato da mollare immediatamente la sala pesi, il giorno dopo alle 8:00 di mattina ero già al parco per fare il mio primo allenamento."
-              }
-            />
+              label={""}
+            >
+              <p>
+                Ho frequentato l&apos;Università degli Studi di L&apos;Aquila
+                iscrivendomi alla facoltà di{" "}
+                <span style={{ fontWeight: "bold" }}>Scienze Motorie</span> per
+                arricchire le mie conoscenze e per fare della mia passione anche
+                una professione.
+              </p>
+            </Typography>
 
             <Button
               onClick={() => setShowModal(true)}
