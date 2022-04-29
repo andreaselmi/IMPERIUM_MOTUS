@@ -8,15 +8,12 @@ import styles from "./CalisthenicsSection.module.scss";
 import { ReactComponent as Calisthenics } from "../../../assets/images/sections/calisthenicsSection.svg";
 
 //Utils
-import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
-import { breakpoints } from "../../../defs/breakpoints";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import { textVariant } from "../../../defs/textVariant";
 import ModalCalisthenicsContent from "../../Modal/ModalCalisthenicsContent/ModalCalisthenicsContent";
 
 const CalisthenicsSection = () => {
-  const { width } = useWindowDimensions();
   const [showModal, setShowModal] = useState<boolean>(false);
 
   useEffect(() => {
