@@ -12,8 +12,10 @@ const ModalCoachContent = () => {
       <div className={styles.firstSectionText}>
         <Typography variant={textVariant.paragraph} label={""}>
           <p>
-            Ciao, sono Alessandro Lupo, giovane atleta e Istruttore di
-            Calisthenics.
+            Ciao, sono{" "}
+            <span style={{ fontWeight: "bold" }}>Alessandro Lupo</span>, giovane
+            atleta e Istruttore di{" "}
+            <span style={{ fontWeight: "bold" }}>Calisthenics</span>.
           </p>
 
           <br />
@@ -27,12 +29,13 @@ const ModalCoachContent = () => {
           <Typography variant={textVariant.paragraph} label={""}>
             <p>
               Ho frequentato l&apos;Università degli Studi di L&apos;Aquila
-              iscrivendomi alla facoltà di Scienze Motorie per arricchire le mie
-              conoscenze e per fare della mia passione anche una professione. Da
-              sempre appassionato al mondo della ginnastica artistica, al primo
-              anno di università iniziai ad approcciarmi all&apo;allenamento
-              calistenico, perché mi dava la sensazione di poter superare
-              qualsiasi limite mentale.
+              iscrivendomi alla facoltà di{" "}
+              <span style={{ fontWeight: "bold" }}>Scienze Motorie</span> per
+              arricchire le mie conoscenze e per fare della mia passione anche
+              una professione. Da sempre appassionato al mondo della ginnastica
+              artistica, al primo anno di università iniziai ad approcciarmi
+              all&apo;allenamento calistenico, perché mi dava la sensazione di
+              poter superare qualsiasi limite mentale.
             </p>
           </Typography>
           <br />
@@ -46,16 +49,18 @@ const ModalCoachContent = () => {
         </Typography>{" "}
         <Typography variant={textVariant.paragraph} label={""}>
           <p>
-            Sono ormai più di nove anni che pratico questo sport, diventato
-            ormai una disciplina sempre più diffusa e sempre più studiata tanto
-            che si sono migliorate tantissimo le tecniche di allenamento
-            eliminando tante controindicazioni presenti in passato. É un tipo di
-            allenamento adatto a tutti che prevede il raggiungimento di abilità
-            atletiche a corpo libero volto al potenziamento della forza, della
-            resistenza, dell&apos;equilibrio, e delle abilità isometriche oltre
-            che dinamiche; mi ha insegnato quanto funzionale può essere il
-            nostro corpo e che non c’è nulla che realmente non si può fare con
-            disciplina, impegno e dedizione.
+            <span style={{ fontWeight: "bold" }}>
+              Sono ormai più di nove anni che pratico questo sport
+            </span>
+            , diventato ormai una disciplina sempre più diffusa e sempre più
+            studiata tanto che si sono migliorate tantissimo le tecniche di
+            allenamento eliminando tante controindicazioni presenti in passato.
+            É un tipo di allenamento adatto a tutti che prevede il
+            raggiungimento di abilità atletiche a corpo libero volto al
+            potenziamento della forza, della resistenza, dell&apos;equilibrio, e
+            delle abilità isometriche oltre che dinamiche; mi ha insegnato
+            quanto funzionale può essere il nostro corpo e che non c’è nulla che
+            realmente non si può fare con disciplina, impegno e dedizione.
           </p>
         </Typography>
       </div>
@@ -66,10 +71,11 @@ const ModalCoachContent = () => {
             Dopo anni di sacrifici, e grazie al supporto e alla fiducia che sin
             da sempre i miei allievi hanno riposto in me, ho avuto finalmente la
             possibilità di realizzare il sogno di aprire il mio primo studio di
-            Personal Trainer. Mi auguro, perciò, che questo sia uno stimolo per
-            chi vorrà darsi un&apos;occasione e la possibilità di mettere alla
-            prova il proprio corpo superando i propri limiti e che possa
-            affiancarmi in questo mio percorso di vita.
+            <span style={{ fontWeight: "bold" }}> Personal Trainer</span>. Mi
+            auguro, perciò, che questo sia uno stimolo per chi vorrà darsi
+            un&apos;occasione e la possibilità di mettere alla prova il proprio
+            corpo superando i propri limiti e che possa affiancarmi in questo
+            mio percorso di vita.
           </p>
         </Typography>
         <br />
