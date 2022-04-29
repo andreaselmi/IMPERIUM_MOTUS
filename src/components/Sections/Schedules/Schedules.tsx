@@ -32,19 +32,21 @@ const Schedules = () => {
             className={styles.scheduleType}
             type={"small"}
             title={"Small group"}
-            subTitle={"Lezione con massimo 6 persone"}
+            subTitle={
+              "Lezioni di massimo 6 persone. Personalizzabili in base alle esigenze di ogni allievo/a"
+            }
           />
           <ScheduleType
             className={styles.scheduleType}
             type={"calisthenics"}
             title={"Calisthenics"}
-            subTitle={"Lezione con massimo 16 persone"}
+            subTitle={"Lezione di gruppo di Calishtenics."}
           />
           <ScheduleType
             className={styles.scheduleType}
             type={"open"}
             title={"Open"}
-            subTitle={"Studio Aperto"}
+            subTitle={"Studio aperto solo su prenotazione per gli iscritti."}
           />
         </div>
       </SectionContainer>
