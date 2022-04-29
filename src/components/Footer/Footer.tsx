@@ -31,7 +31,12 @@ const Footer = () => {
                   label={"Sito creato da"}
                 />
                 &nbsp;
-                <a>
+                <a
+                  href={"https://www.linkedin.com/in/enriii/"}
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                  className={styles.footerLinkText}
+                >
                   <Typography
                     variant={textVariant.smallParagraph}
                     label={"Enrico Capone"}
@@ -40,7 +45,12 @@ const Footer = () => {
                 &nbsp;
                 <Typography variant={textVariant.smallParagraph} label={"e"} />
                 &nbsp;
-                <a>
+                <a
+                  className={styles.footerLinkText}
+                  href={"https://www.linkedin.com/in/andrea-selmi"}
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                >
                   <Typography
                     variant={textVariant.smallParagraph}
                     label={"Andrea Selmi"}

@@ -13,6 +13,7 @@ import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import { breakpoints } from "../../../defs/breakpoints";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import { textVariant } from "../../../defs/textVariant";
+import ModalCalisthenicsContent from "../../Modal/ModalCalisthenicsContent/ModalCalisthenicsContent";
 
 const CalisthenicsSection = () => {
   const { width } = useWindowDimensions();
@@ -27,27 +28,6 @@ const CalisthenicsSection = () => {
       if (body) body.style.overflow = "auto";
     }
   }, [showModal]);
-
-  const shortFirstText =
-    "In Imperium Motus offriamo a tutti la possibilità di diventare la versione migliore di se stessi con dei corsi per potenziare la muscolaturà, diventare piú elastici, perdere peso o semplicemente sentirsi bene con se stessi.";
-  const longFirstText =
-    "Il termine calistenia deriva dal greco Kalòs (bello) e Sthenos (forza) e già l'analisi etimologica lascia intendere come la pratica dell'allenamento calistenico abbia tra i suoi obiettivi il miglioramento sia della performance del soggetto che del suo aspetto fisico con il massimo controllo del proprio corpo.";
-  const shortSecondText =
-    "In Imperium Motus offriamo a tutti la possibilità di diventare la versione migliore di se stessi.";
-  const longSecondText =
-    "Il Calisthenics è l'arte di usare il proprio peso corporeo come resistenza per allenarsi e sviluppare il fisico tramite il sistema di allenamento basato sulla ginnastica a corpo libero, includendo tutti quegli esercizi ginnici atti a sviluppare la bellezza, la forza e l'eleganza dei movimenti.";
-
-  const firstText = width
-    ? width >= breakpoints.DESKTOPBIG
-      ? longFirstText
-      : shortFirstText
-    : shortFirstText;
-
-  const secondText = width
-    ? width >= breakpoints.DESKTOPBIG
-      ? longSecondText
-      : shortSecondText
-    : shortSecondText;
 
   return (
     <>
@@ -65,13 +45,33 @@ const CalisthenicsSection = () => {
             <Typography
               className={styles.bodyText}
               variant={textVariant.paragraph}
-              label={firstText}
+              label={""}
+            >
+              <p>
+                <span style={{ fontWeight: "bold" }}>Imperium Motus</span>, che
+                in latino sta a significare{" "}
+                <span style={{ fontStyle: "italic" }}>
+                  Controllo del movimento
+                </span>{" "}
+                nasce proprio dalla filosofia del{" "}
+                <span style={{ fontWeight: "bold" }}>Calisthenics</span>.
+              </p>
+            </Typography>
+            <br />
+            <Typography
+              className={styles.bodyText}
+              variant={textVariant.paragraph}
+              label={
+                "Il termine calistenia deriva dal greco Kalòs (bello) e Sthenos (forza) e già l'analisi etimologica lascia intendere come la pratica dell'allenamento calistenico abbia tra i suoi obiettivi il miglioramento sia della performance del soggetto che del suo aspetto fisico con il massimo controllo del proprio corpo."
+              }
             />
             <br />
             <Typography
               className={styles.bodyText}
               variant={textVariant.paragraph}
-              label={secondText}
+              label={
+                "Il Calisthenics è l'arte di usare il proprio peso corporeo come resistenza per allenarsi e sviluppare il fisico tramite il sistema di allenamento basato sulla ginnastica a corpo libero, includendo tutti quegli esercizi ginnici atti a sviluppare la bellezza, la forza e l'eleganza dei movimenti."
+              }
             />
           </div>
 
@@ -86,7 +86,9 @@ const CalisthenicsSection = () => {
           </div>
         </div>
       </SectionContainer>
-      <Modal closeModal={() => setShowModal(false)} isOpen={showModal} />
+      <Modal closeModal={() => setShowModal(false)} isOpen={showModal}>
+        <ModalCalisthenicsContent />
+      </Modal>
     </>
   );
 };

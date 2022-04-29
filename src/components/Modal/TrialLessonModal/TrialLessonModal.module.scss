@@ -1,0 +1,30 @@
+@import "../../../utils/theme/text";
+
+.formContainer {
+  margin-top: 40px;
+  grid-column: col-start /12;
+}
+
+.form {
+  margin: auto;
+  max-width: 600px;
+}
+
+.input {
+  font-family: $global-font-family-regular;
+  padding: 14px 16px;
+  width: 100%;
+  border: 1px solid #CBCBCB;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+.label {
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.textArea {
+  resize: none;
+  height: 146px
+}

@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../Container/Container";
 import Button from "../Button/Button";
 import HeaderLogo from "./HeaderLogo/HeaderLogo";
 import styles from "./Header.module.scss";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { breakpoints } from "../../defs/breakpoints";
+import Modal from "../Modal/Modal";
+import TrialLessonModal from "../Modal/TrialLessonModal/TrialLessonModal";
 
 const Header = () => {
   const { width } = useWindowDimensions();
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <header style={{ backgroundColor: "#121212", display: "flex" }}>
@@ -26,11 +29,15 @@ const Header = () => {
         </div>
 
         <Button
-          onClick={() => console.log("prenota lezione")}
+          onClick={() => setShowModal(true)}
           type={"secondary"}
           label={"Prenota una lezione di prova"}
         />
       </Container>
+
+      <Modal isOpen={showModal} closeModal={() => setShowModal(false)}>
+        <TrialLessonModal />
+      </Modal>
     </header>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import SectionContainer from "../SectionContainer/SectionContainer";
 import Typography from "../../Typography/Typography";
@@ -10,8 +10,11 @@ import { ReactComponent as CoachHeader } from "../../../assets/images/sections/c
 import coachImg from "../../../assets/images/sections/coach.jpg";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import { textVariant } from "../../../defs/textVariant";
+import Modal from "../../Modal/Modal";
+import ModalCoachContent from "../../Modal/ModalCoachContent/ModalCoachContent";
 
 const CoachSection = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
       <ScrollAnchor id={navBarButtons.COACH} />
@@ -37,21 +40,40 @@ const CoachSection = () => {
             <Typography
               className={styles.text}
               variant={textVariant.paragraph}
+              label={""}
+            >
+              <p>
+                Ciao, sono{" "}
+                <span style={{ fontWeight: "bold" }}>Alessandro Lupo</span>,
+                giovane atleta e Istruttore di{" "}
+                <span style={{ fontWeight: "bold" }}>Calisthenics</span>.
+              </p>
+            </Typography>
+            <br />
+            <Typography
+              className={styles.text}
+              variant={textVariant.paragraph}
               label={
-                "Alessandro Lupo, classe 1992, prima di tutto un atleta e per passione e professione faccio il personal trainer. Nel mio passato ho fatto molti sport: karate, calcio, kung fu, pallavolo, golf e il tennis che tutt’ora è una grande passione."
+                "Ho scoperto questa disciplina nel 2012 all'età di 21 anni da autodidatta dopo aver trascorso in sala pesi molti anni e dopo aver provato vari sport nell’ arco della mia adolescenza."
               }
             />
             <br />
             <Typography
               className={styles.text}
               variant={textVariant.paragraph}
-              label={
-                "Una sera del 2012 un amico mi mostrò un video di Frank Medrano, quel giorno scoprì la passione per il Calisthenics. Rimasi così impressionato da mollare immediatamente la sala pesi, il giorno dopo alle 8:00 di mattina ero già al parco per fare il mio primo allenamento."
-              }
-            />
+              label={""}
+            >
+              <p>
+                Ho frequentato l&apos;Università degli Studi di L&apos;Aquila
+                iscrivendomi alla facoltà di{" "}
+                <span style={{ fontWeight: "bold" }}>Scienze Motorie</span> per
+                arricchire le mie conoscenze e per fare della mia passione anche
+                una professione.
+              </p>
+            </Typography>
 
             <Button
-              onClick={() => console.log("la mia storia")}
+              onClick={() => setShowModal(true)}
               className={styles.button}
               label={"Leggi la mia storia"}
               type={"primary"}
@@ -59,6 +81,10 @@ const CoachSection = () => {
           </div>
         </SectionContainer>
         <Certificates />
+
+        <Modal isOpen={showModal} closeModal={() => setShowModal(false)}>
+          <ModalCoachContent />
+        </Modal>
       </div>
     </>
   );

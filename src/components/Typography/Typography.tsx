@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, ReactElement, ReactNode } from "react";
 import styles from "./Typography.module.scss";
 import { textVariant } from "../../defs/textVariant";
 
@@ -7,9 +7,24 @@ interface TypographyProps {
   label: string;
   className?: string;
   style?: CSSProperties | undefined;
+  children?: ReactNode;
 }
 
-const Typography = ({ className, variant, label, style }: TypographyProps) => {
+const Typography = ({
+  className,
+  children,
+  variant,
+  label,
+  style,
+}: TypographyProps) => {
+  if (children) {
+    return (
+      <div style={style} className={`${styles[variant]} ${className}`}>
+        {children}
+      </div>
+    );
+  }
+
   if (variant === textVariant.pageTitle) {
     return (
       <h1 style={style} className={`${styles.pageTitle} ${className}`}>

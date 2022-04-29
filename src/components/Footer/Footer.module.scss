@@ -2,6 +2,7 @@
 
 .container {
   background-color: $global-background-color-dark;
+  padding-bottom: 30px;
 }
 
 .footerContentContainer {
@@ -12,6 +13,21 @@
 .footerElement {
   display: flex;
   justify-content: center;
+}
+
+.footerLinkText {
+  text-decoration: underline;
+  cursor: pointer;
+
+  /* visited link */
+  &:visited {
+    color: $global-color-muted;;
+  }
+
+  /* selected link */
+  &:active {
+    color: $global-color-neon;
+  }
 }
 
 .logoContainer {
@@ -27,3 +43,5 @@
   align-items: center;
   text-align: center;
 }
+
+

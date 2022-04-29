@@ -2,6 +2,7 @@
 @import "../../../../utils/theme/colors";
 
 .certificateImgContainer {
+  background-color: red;
   height: 110px;
   width: 160px;
   display: flex;
@@ -26,10 +27,11 @@
     padding: 0 32px;
   }
 
-  @include respond-to("desktopSmall") {
-    max-width: 896px;
-    padding: 0;
-  }
+  // ok for 4- certificates / bad for 5+
+  //@include respond-to("desktopSmall") {
+  //  max-width: 1200px;
+  //  padding: 0;
+  //}
 
   @include respond-to("desktopBig") {
     max-width: 1200px;
@@ -53,7 +55,7 @@
   padding: 32px;
   border: 1px solid $global-color-dark;
 
-  @include respond-to("desktopSmall") {
+  @include respond-to("desktopBig") {
     width: auto;
   }
 }
@@ -70,6 +72,5 @@
 
   @include respond-to("desktopBig") {
     width: 251px;
-
   }
 }

@@ -1,0 +1,18 @@
+@import "../../../utils/theme/breakpoints";
+
+.firstSectionText, .secondSectionText {
+
+  grid-column: col-start / span 12;
+
+  &.firstSectionText {
+    @include respond-to("desktopSmall") {
+      grid-column: col-start 1 / span 11;
+    }
+  }
+
+  &.secondSectionText {
+    @include respond-to("desktopSmall") {
+      grid-column: col-start 2 / span 11;
+    }
+  }
+}
