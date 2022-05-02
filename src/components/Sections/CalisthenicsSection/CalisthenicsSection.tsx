@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import Typography from "../../Typography/Typography";
 import Button from "../../Button/Button";
@@ -12,9 +12,14 @@ import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import { textVariant } from "../../../defs/textVariant";
 import ModalCalisthenicsContent from "../../Modal/ModalCalisthenicsContent/ModalCalisthenicsContent";
+import { useAppDispatch } from "../../../store/store";
+import changeActiveSection from "../../../utils/changeActiveSection";
 
 const CalisthenicsSection = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
+
+  const refDiv = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (showModal) {
@@ -26,8 +31,14 @@ const CalisthenicsSection = () => {
     }
   }, [showModal]);
 
+  useEffect(() => {
+    window.addEventListener("scroll", () =>
+      changeActiveSection(refDiv.current, "Calisthenics", dispatch)
+    );
+  }, []);
+
   return (
-    <>
+    <div ref={refDiv}>
       <ScrollAnchor id={navBarButtons.CALISTHENICS} />
       <SectionContainer className={styles.sectionContainer}>
         <div className={styles.container}>
@@ -86,7 +97,7 @@ const CalisthenicsSection = () => {
       <Modal closeModal={() => setShowModal(false)} isOpen={showModal}>
         <ModalCalisthenicsContent />
       </Modal>
-    </>
+    </div>
   );
 };
 

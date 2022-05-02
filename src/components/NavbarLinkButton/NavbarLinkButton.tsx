@@ -7,9 +7,10 @@ import { textVariant } from "../../defs/textVariant";
 interface NavbarLinkProps {
   path: string;
   label: string;
+  isActive: boolean;
 }
 
-const NavbarLinkButton = ({ path, label }: NavbarLinkProps) => {
+const NavbarLinkButton = ({ isActive, path, label }: NavbarLinkProps) => {
   return (
     <Scroller className={styles.navbarMenuButton} path={path}>
       <Typography
@@ -17,7 +18,10 @@ const NavbarLinkButton = ({ path, label }: NavbarLinkProps) => {
         variant={textVariant.menu}
         label={label}
       />
-      <span className={styles.hoverElement} />
+      <span
+        style={isActive ? { opacity: 1 } : {}}
+        className={styles.hoverElement}
+      />
     </Scroller>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SectionContainer from "../SectionContainer/SectionContainer";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
@@ -11,11 +11,22 @@ import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import Calendar from "../../Calendar/Calendar";
 import Modal from "../../Modal/Modal";
 import TrialLessonModal from "../../Modal/TrialLessonModal/TrialLessonModal";
+import { useAppDispatch } from "../../../store/store";
+import changeActiveSection from "../../../utils/changeActiveSection";
 
 const Schedules = () => {
   const [showModal, setShowModal] = useState(false);
+
+  const refDiv = useRef<HTMLDivElement>(null);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () =>
+      changeActiveSection(refDiv.current, "Courses", dispatch)
+    );
+  }, []);
   return (
-    <>
+    <div ref={refDiv}>
       <ScrollAnchor id={navBarButtons.COURSES} />
       <SectionContainer
         style={{ paddingBottom: 35 }}
@@ -62,7 +73,7 @@ const Schedules = () => {
       <Modal isOpen={showModal} closeModal={() => setShowModal(false)}>
         <TrialLessonModal />
       </Modal>
-    </>
+    </div>
   );
 };
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import SectionContainer from "../SectionContainer/SectionContainer";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import Contacts from "../Contacts/Contacts";
@@ -7,10 +7,20 @@ import { ReactComponent as MapHeader } from "../../../assets/images/sections/map
 import { navBarButtons } from "../../../defs/navbarButtons";
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import Map from "../../Map/Map";
+import { useAppDispatch } from "../../../store/store";
+import changeActiveSection from "../../../utils/changeActiveSection";
 
 const MapSection = () => {
+  const refDiv = useRef<HTMLDivElement>(null);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () =>
+      changeActiveSection(refDiv.current, "Map", dispatch)
+    );
+  }, []);
   return (
-    <>
+    <div ref={refDiv}>
       <ScrollAnchor id={navBarButtons.MAP} />
       <div className={styles.container}>
         <SectionContainer style={{ paddingBottom: 0 }}>
@@ -28,7 +38,7 @@ const MapSection = () => {
           <Map />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

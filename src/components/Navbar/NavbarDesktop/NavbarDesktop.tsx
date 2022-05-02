@@ -6,9 +6,11 @@ import { ReactComponent as Logo } from "../../../assets/icons/logo.svg";
 import { ReactComponent as LogoName } from "../../../assets/icons/logoName.svg";
 import { navBarButtons } from "../../../defs/navbarButtons";
 import { animateScroll as scroll } from "react-scroll/modules";
+import { useAppSelector } from "../../../store/store";
 
 const NavbarDesktop = () => {
   const [compact, setCompact] = useState(false);
+  const activeSection = useAppSelector((state) => state.activeSection);
 
   const onScroll = () => {
     if (window.scrollY == 0) {
@@ -35,10 +37,12 @@ const NavbarDesktop = () => {
           <NavbarLinkButton
             path={navBarButtons.CALISTHENICS}
             label={navBarButtons.CALISTHENICS}
+            isActive={activeSection === "Calisthenics"}
           />
           <NavbarLinkButton
             path={navBarButtons.COACH}
             label={navBarButtons.COACH}
+            isActive={activeSection === "Coach"}
           />
           <span
             onClick={() => scroll.scrollToTop()}
@@ -57,10 +61,12 @@ const NavbarDesktop = () => {
           <NavbarLinkButton
             path={navBarButtons.COURSES}
             label={navBarButtons.COURSES}
+            isActive={activeSection === "Courses"}
           />
           <NavbarLinkButton
             path={navBarButtons.MAP}
             label={navBarButtons.MAP}
+            isActive={activeSection === "Map"}
           />
         </div>
       </Container>
