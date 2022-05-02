@@ -29,7 +29,9 @@ const Header = () => {
         </div>
 
         <Button
-          onClick={() => setShowModal(true)}
+          onClick={() => {
+            setShowModal(true);
+          }}
           type={"secondary"}
           label={"Prenota una lezione di prova"}
         />

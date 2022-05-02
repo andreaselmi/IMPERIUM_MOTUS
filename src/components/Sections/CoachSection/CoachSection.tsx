@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import SectionContainer from "../SectionContainer/SectionContainer";
 import Typography from "../../Typography/Typography";
@@ -12,11 +12,22 @@ import { navBarButtons } from "../../../defs/navbarButtons";
 import { textVariant } from "../../../defs/textVariant";
 import Modal from "../../Modal/Modal";
 import ModalCoachContent from "../../Modal/ModalCoachContent/ModalCoachContent";
+import changeActiveSection from "../../../utils/changeActiveSection";
+import { useAppDispatch } from "../../../store/store";
 
 const CoachSection = () => {
   const [showModal, setShowModal] = useState(false);
+  const refDiv = useRef<HTMLDivElement>(null);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () =>
+      changeActiveSection(refDiv.current, "Coach", dispatch)
+    );
+  }, []);
+
   return (
-    <>
+    <div ref={refDiv}>
       <ScrollAnchor id={navBarButtons.COACH} />
       <div id={navBarButtons.COACH} className={styles.sectionContainer}>
         <SectionContainer>
@@ -86,7 +97,7 @@ const CoachSection = () => {
           <ModalCoachContent />
         </Modal>
       </div>
-    </>
+    </div>
   );
 };
 
