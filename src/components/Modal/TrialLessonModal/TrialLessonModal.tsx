@@ -2,15 +2,26 @@ import React, { FormEvent, useState } from "react";
 import ModalHeader from "../ModalHeader/ModalHeader";
 import styles from "./TrialLessonModal.module.scss";
 import Button from "../../Button/Button";
+import axios from "axios";
 
 const TrialLessonModal = () => {
   const [fname, setFname] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [info, setInfo] = useState("");
 
-  const onSubmittingForm = (e: FormEvent) => {
+  const onSubmittingForm = async (e: FormEvent) => {
     e.preventDefault();
-    console.log(fname, phoneNumber, info);
+    try {
+      const res = await axios.post("http://localhost:3000/mail", {
+        name: fname,
+        phone: phoneNumber,
+        info,
+      });
+
+      console.log(res.data);
+    } catch (e) {
+      console.log(e, "errore");
+    }
   };
 
   return (
