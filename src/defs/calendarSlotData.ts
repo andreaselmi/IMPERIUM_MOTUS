@@ -1,4 +1,4 @@
-export type SlotType = "empty" | "small" | "calisthenics" | "open";
+export type SlotType = "empty" | "small" | "calisthenics" | "open" | "appointment";
 
 export enum ScheduleSlotTime {
   half = 30,
@@ -88,7 +88,7 @@ const calendarSlotData: CalendarSlotType[] = [
     type: "calisthenics",
     day: "mar",
     duration: ScheduleSlotTime.hourHalf,
-    hoursLabel: "10:30 - 11:30",
+    hoursLabel: "10:30 - 12:00",
     start: 4,
   },
   {
@@ -200,7 +200,7 @@ const calendarSlotData: CalendarSlotType[] = [
     type: "calisthenics",
     day: "gio",
     duration: ScheduleSlotTime.hourHalf,
-    hoursLabel: "10:30 - 11:30",
+    hoursLabel: "10:30 - 12:00",
     start: 4,
   },
   {
@@ -300,10 +300,10 @@ const calendarSlotData: CalendarSlotType[] = [
   //sabato
   {
     id: "32",
-    type: "open",
+    type: "appointment",
     day: "sab",
     duration: ScheduleSlotTime.fourHours,
-    hoursLabel: "20:00 - 21:30",
+    hoursLabel: "9:00 - 13:00",
     start: 1,
   },
 ];

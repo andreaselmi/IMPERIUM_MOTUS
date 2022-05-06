@@ -5,7 +5,7 @@
   margin-top: 24px;
 
   @include respond-to("desktopBig") {
-    margin-top: auto;
+    margin-top: 40px;
   }
 }
 
@@ -64,6 +64,19 @@
 .sectionContainer {
   background-color: $global-background-color-neon;
   padding-bottom: 80px;
+
+  & > section {
+    padding-bottom: 40px;
+
+    @include respond-to("desktopBig") {
+      padding-bottom: 0;
+    }
+
+  }
+
+  @include respond-to("desktopBig") {
+    padding-bottom: 148px;
+  }
 }
 
 .text {

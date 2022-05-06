@@ -1,3 +1,9 @@
+@import "../../../utils/theme/breakpoints";
+
 .container {
     padding: 80px 0;
+    
+    @include respond-to("desktopBig") {
+    padding: 148px 0;
+    }
 }
