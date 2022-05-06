@@ -8,7 +8,7 @@ type ScheduleDayType = "lun" | "mar" | "mer" | "gio" | "ven" | "sab";
 
 interface CalendarSlotProps extends React.HTMLAttributes<HTMLDivElement> {
   slotTime: ScheduleSlotTime;
-  slotType: "empty" | "small" | "calisthenics" | "open";
+  slotType: "empty" | "small" | "calisthenics" | "open" | "appointment";
   hoursLabel: string;
   day: ScheduleDayType;
   start: number;
@@ -31,6 +31,8 @@ const CalendarSlot = ({
       return "Small group";
     } else if (slotType === "calisthenics") {
       return "Calisthenics";
+    } else if  (slotType === "appointment") {
+      return "Su appuntamento";
     } else return "Open";
   };
 

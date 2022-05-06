@@ -12,7 +12,7 @@ interface Props {
 const Marker = ({ text, lng, lat }: Props) => (
   <a
     href={
-      "https://www.google.it/maps/place/Via+dei+Bersaglieri,+24,+73020+Castromediano+LE/@40.3265808,18.1790638,17z/data=!3m1!4b1!4m5!3m4!1s0x13442f72df4eea97:0xdc63e72b808839d5!8m2!3d40.3265808!4d18.1812525"
+      "https://goo.gl/maps/g81WA3pPd42nMjSWA"
     }
     target={"_blank"}
     rel="noreferrer"
