@@ -65,8 +65,13 @@
   background-color: $global-background-color-neon;
   padding-bottom: 80px;
 
-  &.container {
-    padding-bottom: 0;
+  & > section {
+    padding-bottom: 40px;
+
+    @include respond-to("desktopBig") {
+      padding-bottom: 0;
+    }
+
   }
 
   @include respond-to("desktopBig") {
