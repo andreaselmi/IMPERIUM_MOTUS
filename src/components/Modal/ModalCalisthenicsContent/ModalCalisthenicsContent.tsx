@@ -21,7 +21,7 @@ const ModalCalisthenicsContent = () => {
         <Typography
           variant={textVariant.paragraph}
           label={
-            'Negli anni mi sono fatto seguire sempre da vari Coach per poter imparare e migliorare sempre nuove tecniche di allenamento. Tutto ciò che imparavo sia dai trainer e sia dai tantissimi libri letti negli ultimi anni lo tramandavo ai miei compagni nei vari parchi attrezzati. C’era talmente tanta voglia di imparare, che ci si allenava in qualunque condizione metereologica, freddo, caldo, pioggia o neve. A volte però l’attrezzatura a disposizione era poca o rotta, cosi decisi di allestire il mio garage con attrezzatura fai da te, qualche ruota e corda recuperata qua e la, panche di legno costruite con il nonno e la home gym è fatta."'
+            'Negli anni mi sono fatto seguire sempre da vari Coach per poter imparare e migliorare sempre nuove tecniche di allenamento. Tutto ciò che imparavo sia dai trainer e sia dai tantissimi libri letti negli ultimi anni lo tramandavo ai miei compagni nei vari parchi attrezzati. C’era talmente tanta voglia di imparare, che ci si allenava in qualunque condizione metereologica, freddo, caldo, pioggia o neve. A volte però l’attrezzatura a disposizione era poca o rotta, cosi decisi di allestire il mio garage con attrezzatura fai da te, qualche ruota e corda recuperata qua e la, panche di legno costruite con il nonno e la home gym è fatta.'
           }
         />
       </div>
@@ -41,7 +41,6 @@ const ModalCalisthenicsContent = () => {
           }
         />
         <br />
-        <Typography variant={textVariant.paragraph} label={"Ti aspetto."} />
       </div>
 
       <ModalFooter
