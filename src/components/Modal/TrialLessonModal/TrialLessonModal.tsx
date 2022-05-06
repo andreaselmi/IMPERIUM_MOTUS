@@ -2,15 +2,32 @@ import React, { FormEvent, useState } from "react";
 import ModalHeader from "../ModalHeader/ModalHeader";
 import styles from "./TrialLessonModal.module.scss";
 import Button from "../../Button/Button";
+import axios from "axios";
+
+const mailUrl = process.env.REACT_APP_SERVER_MAIL;
 
 const TrialLessonModal = () => {
   const [fname, setFname] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [info, setInfo] = useState("");
 
-  const onSubmittingForm = (e: FormEvent) => {
+  const onSubmittingForm = async (e: FormEvent) => {
     e.preventDefault();
-    console.log(fname, phoneNumber, info);
+    if (mailUrl) {
+      try {
+        const res = await axios.post(mailUrl, {
+          name: fname,
+          phone: phoneNumber,
+          info,
+        });
+
+        console.log(res.data);
+      } catch (e) {
+        console.log(e, "errore");
+      }
+    } else {
+      console.log("L'invio non è disponibile");
+    }
   };
 
   return (
