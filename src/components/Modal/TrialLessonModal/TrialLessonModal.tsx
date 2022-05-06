@@ -27,7 +27,6 @@ const TrialLessonModal = () => {
       }
     } else {
       console.log("L'invio non è disponibile");
-      console.log("l'url è", mailUrl);
     }
   };
 
