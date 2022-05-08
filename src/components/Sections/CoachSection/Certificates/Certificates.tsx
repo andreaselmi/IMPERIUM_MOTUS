@@ -23,13 +23,13 @@ const Certificates = () => {
               <img
                 style={{ height: "100%", width: "100%" }}
                 src={attestatoBurningGate}
-                alt={"Logo Attestato Istruttore Calisthenico (AICS)"}
+                alt={"Logo Burningate Calisthenics Evolution skills"}
               />
             </div>
             <Typography
               className={styles.certificateText}
               variant={textVariant.smallTitle}
-              label={"Istruttore Allenamento Calisthenico (AICS)"}
+              label={"Allenamento base Calisthenics"}
             />
           </div>
           <div className={styles.singleCertificateContainer}>
@@ -37,7 +37,21 @@ const Certificates = () => {
               <img
                 style={{ height: "100%", width: "100%" }}
                 src={attestatoAICS}
-                alt={"Logo federazione Ginnastica Italiana"}
+                alt={"Logo Associazione Italiana Cultura Sport"}
+              />
+            </div>
+            <Typography
+              className={styles.certificateText}
+              variant={textVariant.smallTitle}
+              label={"Istruttore Allenamento Calisthenico"}
+            />
+          </div>
+          <div className={styles.singleCertificateContainer}>
+            <div className={styles.certificateImgContainer}>
+              <img
+                style={{ height: 101, width: 101 }}
+                src={attestatoFGI}
+                alt={"Logo Federazione Ginnastica d'Italia"}
               />
             </div>
             <Typography
@@ -49,8 +63,8 @@ const Certificates = () => {
           <div className={styles.singleCertificateContainer}>
             <div className={styles.certificateImgContainer}>
               <img
-                style={{ height: 101, width: 101 }}
-                src={attestatoFGI}
+                style={{ height: "100%", width: "100%" }}
+                src={attestatoTrainingLab}
                 alt={"Logo Training Lab Italia"}
               />
             </div>
@@ -64,22 +78,8 @@ const Certificates = () => {
             <div className={styles.certificateImgContainer}>
               <img
                 style={{ height: "100%", width: "100%" }}
-                src={attestatoTrainingLab}
-                alt={"Logo Midea"}
-              />
-            </div>
-            <Typography
-              className={styles.certificateText}
-              variant={textVariant.smallTitle}
-              label={"Istruttore Posturologia"}
-            />
-          </div>
-          <div className={styles.singleCertificateContainer}>
-            <div className={styles.certificateImgContainer}>
-              <img
-                style={{ height: "100%", width: "100%" }}
                 src={attestatoMidea}
-                alt={"Logo Midea"}
+                alt={"Logo Centro di Chinesiologia Midea"}
               />
             </div>
             <Typography

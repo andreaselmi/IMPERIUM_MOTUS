@@ -32,7 +32,7 @@ const Footer = () => {
                 />
                 &nbsp;
                 <a
-                  href={"https://www.linkedin.com/in/enriii/"}
+                  href={"https://www.enricocapone.com"}
                   target={"_blank"}
                   rel={"noreferrer"}
                   className={styles.footerLinkText}
