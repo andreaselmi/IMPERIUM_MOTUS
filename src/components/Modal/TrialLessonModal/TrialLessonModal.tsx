@@ -3,6 +3,9 @@ import ModalHeader from "../ModalHeader/ModalHeader";
 import styles from "./TrialLessonModal.module.scss";
 import Button from "../../Button/Button";
 import axios from "axios";
+import Lottie from "lottie-react";
+
+import loader from "../../../assets/loader/loader.json";
 
 const mailUrl = process.env.REACT_APP_SERVER_MAIL;
 
@@ -10,6 +13,7 @@ const TrialLessonModal = () => {
   const [fname, setFname] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [info, setInfo] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const [fnameError, setFNameError] = useState(false);
   const [phoneNumberError, setPhoneNumberError] = useState(false);
@@ -38,6 +42,7 @@ const TrialLessonModal = () => {
 
   const onSubmittingForm = async (e: FormEvent) => {
     e.preventDefault();
+    setLoading(true);
     if (mailUrl) {
       try {
         const res = await axios.post(mailUrl, {
@@ -46,11 +51,16 @@ const TrialLessonModal = () => {
           info,
         });
 
+        setLoading(false);
         console.log(res.data);
       } catch (e) {
+        setLoading(false);
+
         console.log(e, "errore");
       }
     } else {
+      setLoading(false);
+
       console.log("L'invio non è disponibile");
     }
   };
@@ -60,6 +70,16 @@ const TrialLessonModal = () => {
       <ModalHeader title={"Prenota una lezione di prova"} />
       <div className={styles.formContainer}>
         <form onSubmit={validateForm} className={styles.form}>
+          {loading && (
+            <div className={styles.loaderContainer}>
+              <Lottie
+                className={styles.loader}
+                animationData={loader}
+                autoplay={true}
+                loop={true}
+              />
+            </div>
+          )}
           <label className={styles.label} htmlFor="fname">
             Nome e Cognome
           </label>
