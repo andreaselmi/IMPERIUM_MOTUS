@@ -24,6 +24,13 @@
   max-width: 600px;
 }
 
+.formErrorContainer {
+  border: 1px solid #E11900;
+  display: flex;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
 .input {
   font-family: $global-font-family-regular;
   padding: 14px 16px;

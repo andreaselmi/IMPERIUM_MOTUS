@@ -10,6 +10,7 @@ import Typography from "../../Typography/Typography";
 import { textVariant } from "../../../defs/textVariant";
 
 import { ReactComponent as CheckIcon } from "../../../assets/icons/check.svg";
+import { ReactComponent as CloseIcon } from "../../../assets/icons/closeRed.svg";
 
 const mailUrl = process.env.REACT_APP_SERVER_MAIL;
 
@@ -19,6 +20,7 @@ const TrialLessonModal = () => {
   const [info, setInfo] = useState("");
   const [loading, setLoading] = useState(false);
   const [showSuccessMsg, setShowSuccessMsg] = useState(false);
+  const [formError, setFormError] = useState(false);
 
   const [fnameError, setFNameError] = useState(false);
   const [phoneNumberError, setPhoneNumberError] = useState(false);
@@ -26,6 +28,9 @@ const TrialLessonModal = () => {
 
   const validateForm = async (e: FormEvent) => {
     let error;
+    if (formError) {
+      setFormError(false);
+    }
     e.preventDefault();
     if (fname === "") {
       setFNameError(true);
@@ -62,11 +67,11 @@ const TrialLessonModal = () => {
         setShowSuccessMsg(true);
       } catch (e) {
         setLoading(false);
-        console.log(e, "errore");
+        setFormError(true);
       }
     } else {
       setLoading(false);
-      console.log("L'invio non è disponibile");
+      setFormError(true);
     }
   };
 
@@ -170,6 +175,19 @@ const TrialLessonModal = () => {
             id="moreInfo"
             value={info}
           />
+
+          {formError && (
+            <div className={styles.formErrorContainer}>
+              <CloseIcon style={{ marginRight: 16 }} />
+              <Typography
+                style={{ color: "#E11900" }}
+                variant={textVariant.smallParagraph}
+                label={
+                  "Si è verificato un errore nell’invio della richiesta, per favore riprova"
+                }
+              />
+            </div>
+          )}
 
           <Button label={"Prenota una lezione di prova"} />
         </form>
