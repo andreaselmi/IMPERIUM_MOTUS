@@ -11,6 +11,27 @@ const TrialLessonModal = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [info, setInfo] = useState("");
 
+  const [fnameError, setFNameError] = useState(false);
+  const [phoneNumberError, setPhoneNumberError] = useState(false);
+  const [infoError, setInfoError] = useState(false);
+
+  const validateForm = (e: FormEvent) => {
+    e.preventDefault();
+    if (fname === "") {
+      setFNameError(true);
+    }
+    if (phoneNumber === "") {
+      setPhoneNumberError(true);
+    }
+    if (info === "") {
+      setInfoError(true);
+    }
+
+    if (!fnameError && !infoError && !phoneNumberError) {
+      return onSubmittingForm(e);
+    }
+  };
+
   const onSubmittingForm = async (e: FormEvent) => {
     e.preventDefault();
     if (mailUrl) {
@@ -34,14 +55,19 @@ const TrialLessonModal = () => {
     <>
       <ModalHeader title={"Prenota una lezione di prova"} />
       <div className={styles.formContainer}>
-        <form onSubmit={onSubmittingForm} className={styles.form}>
+        <form onSubmit={validateForm} className={styles.form}>
           <label className={styles.label} htmlFor="fname">
             Nome e Cognome
           </label>
           <br />
           <input
-            onChange={(e) => setFname(e.currentTarget.value)}
-            className={styles.input}
+            onChange={(e) => {
+              if (fnameError) {
+                setFNameError(false);
+              }
+              setFname(e.currentTarget.value);
+            }}
+            className={`${styles.input} ${fnameError && styles.inputError}`}
             placeholder={"Juri Chechi"}
             type="text"
             id="fname"
@@ -54,9 +80,17 @@ const TrialLessonModal = () => {
           <br />
 
           <input
-            onChange={(e) => setPhoneNumber(e.currentTarget.value)}
-            className={styles.input}
+            onChange={(e) => {
+              if (phoneNumberError) {
+                setPhoneNumberError(false);
+              }
+              setPhoneNumber(e.currentTarget.value);
+            }}
+            className={`${styles.input} ${
+              phoneNumberError && styles.inputError
+            }`}
             placeholder={"333 0000000"}
+            style={phoneNumberError ? { border: "1px solid #E11900" } : {}}
             type="tel"
             id="phonenumber"
             value={phoneNumber}
@@ -69,9 +103,15 @@ const TrialLessonModal = () => {
           <br />
 
           <textarea
-            onChange={(e) => setInfo(e.currentTarget.value)}
-            className={`${styles.input} ${styles.textArea}`}
+            onChange={(e) => {
+              if (infoError) {
+                setInfoError(false);
+              }
+              setInfo(e.currentTarget.value);
+            }}
+            className={`${styles.input} ${infoError && styles.inputError}`}
             placeholder={"Preferirei venire Venerdì alle 15:00"}
+            style={infoError ? { border: "1px solid #E11900" } : {}}
             id="moreInfo"
             value={info}
           />
