@@ -6,6 +6,8 @@ import axios from "axios";
 import Lottie from "lottie-react";
 
 import loader from "../../../assets/loader/loader.json";
+import Typography from "../../Typography/Typography";
+import { textVariant } from "../../../defs/textVariant";
 
 const mailUrl = process.env.REACT_APP_SERVER_MAIL;
 
@@ -70,13 +72,17 @@ const TrialLessonModal = () => {
       <ModalHeader title={"Prenota una lezione di prova"} />
       <div className={styles.formContainer}>
         <form onSubmit={validateForm} className={styles.form}>
-          {loading && (
+          {!loading && (
             <div className={styles.loaderContainer}>
               <Lottie
                 className={styles.loader}
                 animationData={loader}
                 autoplay={true}
                 loop={true}
+              />
+              <Typography
+                variant={textVariant.paragraph}
+                label={"Invio in corso..."}
               />
             </div>
           )}
