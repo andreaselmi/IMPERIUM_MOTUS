@@ -15,20 +15,24 @@ const TrialLessonModal = () => {
   const [phoneNumberError, setPhoneNumberError] = useState(false);
   const [infoError, setInfoError] = useState(false);
 
-  const validateForm = (e: FormEvent) => {
+  const validateForm = async (e: FormEvent) => {
+    let error;
     e.preventDefault();
     if (fname === "") {
       setFNameError(true);
+      error = true;
     }
     if (phoneNumber === "") {
       setPhoneNumberError(true);
+      error = true;
     }
     if (info === "") {
       setInfoError(true);
+      error = true;
     }
 
-    if (!fnameError && !infoError && !phoneNumberError) {
-      return onSubmittingForm(e);
+    if (!error) {
+      await onSubmittingForm(e);
     }
   };
 
