@@ -1,6 +1,17 @@
 @import "../../../utils/theme/text";
 @import "../../../utils/theme/breakpoints";
 
+.checkIconContainer {
+  width: 90px;
+  height: 90px;
+  background-color: #4CD60C;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
 .formContainer {
   position: relative;
   margin-top: 40px;
@@ -55,6 +66,12 @@
     width: 70%;
     height: 70%;
   }
+
+}
+
+.successContainer {
+  background-color: white;
+  text-align: center;
 
 }
 

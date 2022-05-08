@@ -9,6 +9,8 @@ import loader from "../../../assets/loader/loader.json";
 import Typography from "../../Typography/Typography";
 import { textVariant } from "../../../defs/textVariant";
 
+import { ReactComponent as CheckIcon } from "../../../assets/icons/check.svg";
+
 const mailUrl = process.env.REACT_APP_SERVER_MAIL;
 
 const TrialLessonModal = () => {
@@ -16,6 +18,7 @@ const TrialLessonModal = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [info, setInfo] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showSuccessMsg, setShowSuccessMsg] = useState(false);
 
   const [fnameError, setFNameError] = useState(false);
   const [phoneNumberError, setPhoneNumberError] = useState(false);
@@ -44,6 +47,7 @@ const TrialLessonModal = () => {
 
   const onSubmittingForm = async (e: FormEvent) => {
     e.preventDefault();
+    setShowSuccessMsg(false);
     setLoading(true);
     if (mailUrl) {
       try {
@@ -55,14 +59,13 @@ const TrialLessonModal = () => {
 
         setLoading(false);
         console.log(res.data);
+        setShowSuccessMsg(true);
       } catch (e) {
         setLoading(false);
-
         console.log(e, "errore");
       }
     } else {
       setLoading(false);
-
       console.log("L'invio non è disponibile");
     }
   };
@@ -72,7 +75,7 @@ const TrialLessonModal = () => {
       <ModalHeader title={"Prenota una lezione di prova"} />
       <div className={styles.formContainer}>
         <form onSubmit={validateForm} className={styles.form}>
-          {!loading && (
+          {loading && (
             <div className={styles.loaderContainer}>
               <Lottie
                 className={styles.loader}
@@ -83,6 +86,28 @@ const TrialLessonModal = () => {
               <Typography
                 variant={textVariant.paragraph}
                 label={"Invio in corso..."}
+              />
+            </div>
+          )}
+
+          {showSuccessMsg && (
+            <div
+              style={{ backgroundColor: "white" }}
+              className={`${styles.loaderContainer} ${styles.successContainer}`}
+            >
+              <div className={styles.checkIconContainer}>
+                <CheckIcon style={{ width: 64, height: 64 }} />
+              </div>
+              <Typography
+                style={{ fontWeight: "bold" }}
+                variant={textVariant.paragraph}
+                label={"Grazie per la richiesta"}
+              />
+              <Typography
+                variant={textVariant.paragraph}
+                label={
+                  "Ti ricontatteremo a breve per confermare giorno e orario"
+                }
               />
             </div>
           )}
