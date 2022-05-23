@@ -31,7 +31,7 @@ const CalendarSlot = ({
       return "Small group";
     } else if (slotType === "calisthenics") {
       return "Calisthenics";
-    } else if  (slotType === "appointment") {
+    } else if (slotType === "appointment") {
       return "Su appuntamento";
     } else return "Open";
   };
@@ -88,11 +88,12 @@ const CalendarSlot = ({
       {...restProps}
     >
       <Typography
-        className={styles.label}
+        className={`${styles.label} ${styles.text}`}
         variant={textVariant.label}
         label={hoursLabel}
       />
       <Typography
+        className={styles.text}
         variant={textVariant.smallParagraph}
         label={checkSlotTitle()}
       />

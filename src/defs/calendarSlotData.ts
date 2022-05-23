@@ -1,4 +1,9 @@
-export type SlotType = "empty" | "small" | "calisthenics" | "open" | "appointment";
+export type SlotType =
+  | "empty"
+  | "small"
+  | "calisthenics"
+  | "open"
+  | "appointment";
 
 export enum ScheduleSlotTime {
   half = 30,
