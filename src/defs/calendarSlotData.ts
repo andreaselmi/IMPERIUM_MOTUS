@@ -1,8 +1,8 @@
 export type SlotType =
   | "empty"
-  | "small"
+  | "functionalTraining"
   | "calisthenics"
-  | "open"
+  | "personal"
   | "appointment";
 
 export enum ScheduleSlotTime {
@@ -12,7 +12,9 @@ export enum ScheduleSlotTime {
   twoHour = 120,
   twoHalfHour = 150,
   threeHours = 180,
+  threeHalfHour = 210,
   fourHours = 240,
+  sixHalfHour = 390,
 }
 
 type ScheduleDayType = "lun" | "mar" | "mer" | "gio" | "ven" | "sab";
@@ -30,10 +32,10 @@ const calendarSlotData: CalendarSlotType[] = [
   // Lunedì
   {
     id: "1",
-    type: "small",
+    type: "personal",
     day: "lun",
-    duration: ScheduleSlotTime.threeHours,
-    hoursLabel: "9:00 - 12:00",
+    duration: ScheduleSlotTime.threeHalfHour,
+    hoursLabel: "9:00 - 12:30",
     start: 1,
   },
   {
@@ -54,14 +56,22 @@ const calendarSlotData: CalendarSlotType[] = [
   },
   {
     id: "4",
-    type: "open",
+    type: "functionalTraining",
     day: "lun",
-    duration: ScheduleSlotTime.hourHalf,
-    hoursLabel: "16:30 - 18:00",
+    duration: ScheduleSlotTime.hour,
+    hoursLabel: "16:30 - 17:30",
     start: 16,
   },
   {
     id: "5",
+    type: "functionalTraining",
+    day: "lun",
+    duration: ScheduleSlotTime.hour,
+    hoursLabel: "17:30 - 18:30",
+    start: 18,
+  },
+  {
+    id: "6",
     type: "calisthenics",
     day: "lun",
     duration: ScheduleSlotTime.hourHalf,
@@ -69,7 +79,7 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 20,
   },
   {
-    id: "6",
+    id: "7",
     type: "calisthenics",
     day: "lun",
     duration: ScheduleSlotTime.hourHalf,
@@ -81,31 +91,39 @@ const calendarSlotData: CalendarSlotType[] = [
   // Martedì
 
   {
-    id: "7",
-    type: "small",
+    id: "8",
+    type: "functionalTraining",
     day: "mar",
-    duration: ScheduleSlotTime.hourHalf,
-    hoursLabel: "9:00 - 10:30",
+    duration: ScheduleSlotTime.hour,
+    hoursLabel: "9:00 - 10:00",
     start: 1,
   },
   {
-    id: "8",
-    type: "calisthenics",
-    day: "mar",
-    duration: ScheduleSlotTime.hourHalf,
-    hoursLabel: "10:30 - 12:00",
-    start: 4,
-  },
-  {
     id: "9",
-    type: "small",
+    type: "functionalTraining",
     day: "mar",
-    duration: ScheduleSlotTime.twoHour,
-    hoursLabel: "13:00 - 15:00",
-    start: 9,
+    duration: ScheduleSlotTime.hour,
+    hoursLabel: "10:00 - 11:00",
+    start: 3,
   },
   {
     id: "10",
+    type: "calisthenics",
+    day: "mar",
+    duration: ScheduleSlotTime.hourHalf,
+    hoursLabel: "11:00 - 12:30",
+    start: 5,
+  },
+  {
+    id: "11",
+    type: "calisthenics",
+    day: "mar",
+    duration: ScheduleSlotTime.hourHalf,
+    hoursLabel: "13:30 - 15:00",
+    start: 10,
+  },
+  {
+    id: "12",
     type: "calisthenics",
     day: "mar",
     duration: ScheduleSlotTime.hourHalf,
@@ -113,15 +131,15 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 13,
   },
   {
-    id: "11",
-    type: "open",
+    id: "13",
+    type: "personal",
     day: "mar",
-    duration: ScheduleSlotTime.hourHalf,
-    hoursLabel: "16:30 - 18:00",
+    duration: ScheduleSlotTime.twoHour,
+    hoursLabel: "16:30 - 18:30",
     start: 16,
   },
   {
-    id: "12",
+    id: "14",
     type: "calisthenics",
     day: "mar",
     duration: ScheduleSlotTime.hourHalf,
@@ -129,7 +147,7 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 20,
   },
   {
-    id: "300",
+    id: "15",
     type: "calisthenics",
     day: "mar",
     duration: ScheduleSlotTime.hourHalf,
@@ -141,15 +159,15 @@ const calendarSlotData: CalendarSlotType[] = [
 
   // Mercoledi
   {
-    id: "13",
-    type: "small",
+    id: "16",
+    type: "personal",
     day: "mer",
-    duration: ScheduleSlotTime.threeHours,
-    hoursLabel: "9:00 - 12:00",
+    duration: ScheduleSlotTime.threeHalfHour,
+    hoursLabel: "9:00 - 12:30",
     start: 1,
   },
   {
-    id: "14",
+    id: "17",
     type: "calisthenics",
     day: "mer",
     duration: ScheduleSlotTime.hourHalf,
@@ -157,7 +175,7 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 10,
   },
   {
-    id: "15",
+    id: "18",
     type: "calisthenics",
     day: "mer",
     duration: ScheduleSlotTime.hourHalf,
@@ -165,15 +183,23 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 13,
   },
   {
-    id: "16",
-    type: "open",
+    id: "19",
+    type: "functionalTraining",
     day: "mer",
-    duration: ScheduleSlotTime.hourHalf,
-    hoursLabel: "16:30 - 18:00",
+    duration: ScheduleSlotTime.hour,
+    hoursLabel: "16:30 - 17:30",
     start: 16,
   },
   {
-    id: "17",
+    id: "20",
+    type: "functionalTraining",
+    day: "mer",
+    duration: ScheduleSlotTime.hour,
+    hoursLabel: "17:30 - 18:30",
+    start: 18,
+  },
+  {
+    id: "21",
     type: "calisthenics",
     day: "mer",
     duration: ScheduleSlotTime.hourHalf,
@@ -181,7 +207,7 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 20,
   },
   {
-    id: "18",
+    id: "22",
     type: "calisthenics",
     day: "mer",
     duration: ScheduleSlotTime.hourHalf,
@@ -193,31 +219,39 @@ const calendarSlotData: CalendarSlotType[] = [
   // Giovedi
 
   {
-    id: "19",
-    type: "small",
+    id: "23",
+    type: "functionalTraining",
     day: "gio",
-    duration: ScheduleSlotTime.hourHalf,
-    hoursLabel: "9:00 - 10:30",
+    duration: ScheduleSlotTime.hour,
+    hoursLabel: "9:00 - 10:00",
     start: 1,
   },
   {
-    id: "20",
+    id: "24",
+    type: "functionalTraining",
+    day: "gio",
+    duration: ScheduleSlotTime.hour,
+    hoursLabel: "10:00 - 11:00",
+    start: 3,
+  },
+  {
+    id: "25",
     type: "calisthenics",
     day: "gio",
     duration: ScheduleSlotTime.hourHalf,
-    hoursLabel: "10:30 - 12:00",
-    start: 4,
+    hoursLabel: "11:00 - 12:30",
+    start: 5,
   },
   {
-    id: "21",
-    type: "small",
+    id: "26",
+    type: "calisthenics",
     day: "gio",
-    duration: ScheduleSlotTime.twoHour,
-    hoursLabel: "13:00 - 15:00",
-    start: 9,
+    duration: ScheduleSlotTime.hourHalf,
+    hoursLabel: "13:30 - 15:00",
+    start: 10,
   },
   {
-    id: "22",
+    id: "27",
     type: "calisthenics",
     day: "gio",
     duration: ScheduleSlotTime.hourHalf,
@@ -225,11 +259,11 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 13,
   },
   {
-    id: "23",
-    type: "open",
+    id: "28",
+    type: "personal",
     day: "gio",
-    duration: ScheduleSlotTime.hourHalf,
-    hoursLabel: "16:30 - 18:00",
+    duration: ScheduleSlotTime.twoHour,
+    hoursLabel: "16:30 - 18:30",
     start: 16,
   },
   {
@@ -254,10 +288,10 @@ const calendarSlotData: CalendarSlotType[] = [
   // Venerdì
   {
     id: "26",
-    type: "small",
+    type: "personal",
     day: "ven",
-    duration: ScheduleSlotTime.threeHours,
-    hoursLabel: "9:00 - 12:00",
+    duration: ScheduleSlotTime.threeHalfHour,
+    hoursLabel: "9:00 - 12:30",
     start: 1,
   },
   {
@@ -278,11 +312,19 @@ const calendarSlotData: CalendarSlotType[] = [
   },
   {
     id: "29",
-    type: "open",
+    type: "functionalTraining",
     day: "ven",
-    duration: ScheduleSlotTime.hourHalf,
-    hoursLabel: "16:30 - 18:00",
+    duration: ScheduleSlotTime.hour,
+    hoursLabel: "16:30 - 17:30",
     start: 16,
+  },
+  {
+    id: "29",
+    type: "functionalTraining",
+    day: "ven",
+    duration: ScheduleSlotTime.hour,
+    hoursLabel: "17:30 - 18:30",
+    start: 18,
   },
   {
     id: "30",
@@ -305,11 +347,36 @@ const calendarSlotData: CalendarSlotType[] = [
   //sabato
   {
     id: "32",
+    type: "functionalTraining",
+    day: "sab",
+    duration: ScheduleSlotTime.hour,
+    hoursLabel: "9:00 - 10:00",
+    start: 1,
+  },
+  {
+    id: "33",
+    type: "functionalTraining",
+    day: "sab",
+    duration: ScheduleSlotTime.hour,
+    hoursLabel: "10:00 - 11:00",
+    start: 3,
+  },
+  {
+    id: "34",
+    type: "calisthenics",
+    day: "sab",
+    duration: ScheduleSlotTime.hourHalf,
+    hoursLabel: "11:00 - 12:30",
+    start: 5,
+  },
+
+  {
+    id: "32",
     type: "appointment",
     day: "sab",
-    duration: ScheduleSlotTime.fourHours,
-    hoursLabel: "9:00 - 13:00",
-    start: 1,
+    duration: ScheduleSlotTime.sixHalfHour,
+    hoursLabel: "13:30 - 20:00",
+    start: 10,
   },
 ];
 
