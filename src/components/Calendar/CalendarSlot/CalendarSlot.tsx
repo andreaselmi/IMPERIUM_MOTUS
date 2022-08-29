@@ -2,13 +2,13 @@ import React from "react";
 import Typography from "../../Typography/Typography";
 import { textVariant } from "../../../defs/textVariant";
 import styles from "./CalendarSlot.module.scss";
-import { ScheduleSlotTime } from "../../../defs/calendarSlotData";
+import { ScheduleSlotTime, SlotType } from "../../../defs/calendarSlotData";
 
 type ScheduleDayType = "lun" | "mar" | "mer" | "gio" | "ven" | "sab";
 
 interface CalendarSlotProps extends React.HTMLAttributes<HTMLDivElement> {
   slotTime: ScheduleSlotTime;
-  slotType: "empty" | "small" | "calisthenics" | "open" | "appointment";
+  slotType: SlotType;
   hoursLabel: string;
   day: ScheduleDayType;
   start: number;
@@ -27,17 +27,17 @@ const CalendarSlot = ({
   }
 
   const checkSlotTitle = () => {
-    if (slotType === "small") {
-      return "Small group";
+    if (slotType === "functionalTraining") {
+      return "Functional";
     } else if (slotType === "calisthenics") {
       return "Calisthenics";
     } else if (slotType === "appointment") {
-      return "Su appuntamento";
-    } else return "Open";
+      return "Solo su appuntamento";
+    } else return "Personal";
   };
 
   const checkContainerStyle = () => {
-    if (slotType === "small") {
+    if (slotType === "functionalTraining") {
       return styles.small;
     } else if (slotType === "calisthenics") {
       return styles.calisthenics;
@@ -76,8 +76,12 @@ const CalendarSlot = ({
         return 5;
       case ScheduleSlotTime.threeHours:
         return 6;
+      case ScheduleSlotTime.threeHalfHour:
+        return 7;
       case ScheduleSlotTime.fourHours:
         return 8;
+      case ScheduleSlotTime.sixHalfHour:
+        return 13;
     }
   };
 

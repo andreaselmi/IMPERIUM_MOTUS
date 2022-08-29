@@ -41,11 +41,10 @@ const Schedules = () => {
         <div className={styles.scheduleTypesContainer}>
           <ScheduleType
             className={styles.scheduleType}
-            type={"small"}
-            title={"Small group"}
-            subTitle={
-              "Lezioni di massimo 6 persone. Personalizzabili in base alle esigenze di ogni allievo/a"
-            }
+            type={"functionalTraining"}
+            title={"Functional training"}
+            subTitle={`Lezioni di massimo 8 persone. `}
+            paragraph={"Circuit training"}
           />
           <ScheduleType
             className={styles.scheduleType}
@@ -55,9 +54,9 @@ const Schedules = () => {
           />
           <ScheduleType
             className={styles.scheduleType}
-            type={"open"}
-            title={"Open"}
-            subTitle={"Studio aperto solo su prenotazione per gli iscritti."}
+            type={"personal"}
+            title={"Personal"}
+            subTitle={"Studio aperto solo su prenotazione."}
           />
         </div>
       </SectionContainer>
