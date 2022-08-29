@@ -4,14 +4,16 @@ import styles from "./ScheduleType.module.scss";
 import { textVariant } from "../../../defs/textVariant";
 
 interface ScheduleTypeProps {
-  type: "small" | "calisthenics" | "open";
+  type: "functionalTraining" | "calisthenics" | "personal";
   title: string;
   subTitle: string;
+  paragraph?: string;
   className?: string;
 }
 
 const ScheduleType = ({
   className,
+  paragraph,
   subTitle,
   title,
   type,
@@ -20,7 +22,7 @@ const ScheduleType = ({
     <div className={`${styles.container} ${className}`}>
       <div
         className={`${styles.typeBar} ${
-          type === "small"
+          type === "functionalTraining"
             ? styles.smallBar
             : type === "calisthenics"
             ? styles.calisthenicsBar
@@ -34,6 +36,13 @@ const ScheduleType = ({
           variant={textVariant.smallParagraph}
           label={subTitle}
         />
+        {paragraph ? (
+          <Typography
+            className={styles.subTitle}
+            variant={textVariant.smallParagraph}
+            label={paragraph}
+          />
+        ) : null}
       </div>
     </div>
   );
