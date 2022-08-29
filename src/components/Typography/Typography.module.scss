@@ -8,7 +8,8 @@
 .menu {
   font-size: $menu;
   font-family: $global-font-family-bold;
-  line-height: $small-paragraph * 1.4;
+  line-height: $menu * 1.4;
+
 }
 
 .pageTitle {
@@ -20,14 +21,15 @@
   font-size: $paragraph;
   font-family: $global-font-family-regular;
   font-weight: 400;
-  line-height: $small-paragraph * 1.5;
+  line-height: $paragraph * 1.5;
+
 
 }
 
 .quotes {
   font-size: $quotes;
   font-family: $global-font-family-bold;
-  line-height: $small-paragraph * 1.4;
+  line-height: $quotes * 1.4;
 }
 
 .sectionTitle {
@@ -40,19 +42,20 @@
   font-family: $global-font-family-regular;
   font-weight: 400;
   line-height: $small-paragraph * 1.4;
+
 }
 
 .smallTitle {
   font-size: $small-title;
   font-family: $global-font-family-regular;
   font-weight: 500;
-  line-height: $small-paragraph * 1.3;
+  line-height: $small-title * 1.3;
+
 
 }
 
 .label {
   font-size: $label;
   font-family: $global-font-family-regular;
-  //line-height: $small-paragraph * 1.4;
-  // TODO Fix lineHeight here if set calendar broke
+  line-height: $label * 1.4;
 }
