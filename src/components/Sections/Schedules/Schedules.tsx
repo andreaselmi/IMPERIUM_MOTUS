@@ -43,7 +43,7 @@ const Schedules = () => {
             className={styles.scheduleType}
             type={"functionalTraining"}
             title={"Functional training"}
-            subTitle={`Lezioni di massimo 8. `}
+            subTitle={`Lezioni di massimo 8 persone. `}
             paragraph={"Circuit training"}
           />
           <ScheduleType
