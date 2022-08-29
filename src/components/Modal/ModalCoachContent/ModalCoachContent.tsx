@@ -34,7 +34,7 @@ const ModalCoachContent = () => {
               arricchire le mie conoscenze e per fare della mia passione anche
               una professione. Da sempre appassionato al mondo della ginnastica
               artistica, al primo anno di università iniziai ad approcciarmi
-              all&apo;allenamento calistenico, perché mi dava la sensazione di
+              all&apos;allenamento calistenico, perché mi dava la sensazione di
               poter superare qualsiasi limite mentale.
             </p>
           </Typography>
