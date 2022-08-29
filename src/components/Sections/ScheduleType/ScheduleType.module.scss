@@ -1,8 +1,15 @@
 @import "../../../utils/theme/colors";
+@import "../../../utils/theme/breakpoints";
+
 
 .container {
   padding: 8px;
   align-items: center;
+  display: flex;
+
+  @include respond-to("tabletBig") {
+    flex: 1;
+  }
 }
 
 .subTitle {
@@ -12,7 +19,7 @@
 
 .typeBar {
   width: 6px;
-  height: 100%;
+
 }
 
 .smallBar {

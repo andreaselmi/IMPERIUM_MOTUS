@@ -20,29 +20,31 @@ const ScheduleType = ({
 }: ScheduleTypeProps) => {
   return (
     <div className={`${styles.container} ${className}`}>
-      <div
-        className={`${styles.typeBar} ${
-          type === "functionalTraining"
-            ? styles.smallBar
-            : type === "calisthenics"
-            ? styles.calisthenicsBar
-            : styles.openBar
-        }`}
-      />
-      <div className={styles.textContainer}>
-        <Typography variant={textVariant.smallTitle} label={title} />
-        <Typography
-          className={styles.subTitle}
-          variant={textVariant.smallParagraph}
-          label={subTitle}
+      <div style={{ display: "flex" }}>
+        <div
+          className={`${styles.typeBar} ${
+            type === "functionalTraining"
+              ? styles.smallBar
+              : type === "calisthenics"
+              ? styles.calisthenicsBar
+              : styles.openBar
+          }`}
         />
-        {paragraph ? (
+        <div className={styles.textContainer}>
+          <Typography variant={textVariant.smallTitle} label={title} />
           <Typography
             className={styles.subTitle}
             variant={textVariant.smallParagraph}
-            label={paragraph}
+            label={subTitle}
           />
-        ) : null}
+          {paragraph ? (
+            <Typography
+              className={styles.subTitle}
+              variant={textVariant.smallParagraph}
+              label={paragraph}
+            />
+          ) : null}
+        </div>
       </div>
     </div>
   );

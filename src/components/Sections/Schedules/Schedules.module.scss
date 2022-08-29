@@ -22,13 +22,12 @@
   margin-bottom: 40px;
 }
 
-.scheduleType {
-  @include respond-to("tabletBig") {
-    display: flex;
-    flex: 1;
-
-    &:not(:last-child) {
-      margin-right: 24px;
-    }
+@include respond-to("tabletBig") {
+  .scheduleType:not(:last-child) {
+    margin-right: 24px;
   }
 }
+
+
+
+
