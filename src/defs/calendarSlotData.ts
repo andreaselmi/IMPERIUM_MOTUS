@@ -371,7 +371,7 @@ const calendarSlotData: CalendarSlotType[] = [
   },
 
   {
-    id: "32",
+    id: "35",
     type: "appointment",
     day: "sab",
     duration: ScheduleSlotTime.sixHalfHour,
