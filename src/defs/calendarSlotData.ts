@@ -2,6 +2,7 @@ export type SlotType =
   | "empty"
   | "functionalTraining"
   | "calisthenics"
+  | "smallGroup"
   | "personal"
   | "appointment";
 
@@ -14,6 +15,7 @@ export enum ScheduleSlotTime {
   threeHours = 180,
   threeHalfHour = 210,
   fourHours = 240,
+  fiveHours = 300,
   sixHalfHour = 390,
 }
 
@@ -108,7 +110,7 @@ const calendarSlotData: CalendarSlotType[] = [
   },
   {
     id: "10",
-    type: "calisthenics",
+    type: "smallGroup",
     day: "mar",
     duration: ScheduleSlotTime.hourHalf,
     hoursLabel: "11:00 - 12:30",
@@ -116,7 +118,7 @@ const calendarSlotData: CalendarSlotType[] = [
   },
   {
     id: "11",
-    type: "calisthenics",
+    type: "smallGroup",
     day: "mar",
     duration: ScheduleSlotTime.hourHalf,
     hoursLabel: "13:30 - 15:00",
@@ -124,7 +126,7 @@ const calendarSlotData: CalendarSlotType[] = [
   },
   {
     id: "12",
-    type: "calisthenics",
+    type: "smallGroup",
     day: "mar",
     duration: ScheduleSlotTime.hourHalf,
     hoursLabel: "15:00 - 16:30",
@@ -140,7 +142,7 @@ const calendarSlotData: CalendarSlotType[] = [
   },
   {
     id: "14",
-    type: "calisthenics",
+    type: "smallGroup",
     day: "mar",
     duration: ScheduleSlotTime.hourHalf,
     hoursLabel: "18:30 - 20:00",
@@ -236,7 +238,7 @@ const calendarSlotData: CalendarSlotType[] = [
   },
   {
     id: "25",
-    type: "calisthenics",
+    type: "smallGroup",
     day: "gio",
     duration: ScheduleSlotTime.hourHalf,
     hoursLabel: "11:00 - 12:30",
@@ -244,7 +246,7 @@ const calendarSlotData: CalendarSlotType[] = [
   },
   {
     id: "26",
-    type: "calisthenics",
+    type: "smallGroup",
     day: "gio",
     duration: ScheduleSlotTime.hourHalf,
     hoursLabel: "13:30 - 15:00",
@@ -252,7 +254,7 @@ const calendarSlotData: CalendarSlotType[] = [
   },
   {
     id: "27",
-    type: "calisthenics",
+    type: "smallGroup",
     day: "gio",
     duration: ScheduleSlotTime.hourHalf,
     hoursLabel: "15:00 - 16:30",
@@ -268,7 +270,7 @@ const calendarSlotData: CalendarSlotType[] = [
   },
   {
     id: "24",
-    type: "calisthenics",
+    type: "smallGroup",
     day: "gio",
     duration: ScheduleSlotTime.hourHalf,
     hoursLabel: "18:30 - 20:00",
@@ -363,7 +365,7 @@ const calendarSlotData: CalendarSlotType[] = [
   },
   {
     id: "34",
-    type: "calisthenics",
+    type: "smallGroup",
     day: "sab",
     duration: ScheduleSlotTime.hourHalf,
     hoursLabel: "11:00 - 12:30",
@@ -372,11 +374,20 @@ const calendarSlotData: CalendarSlotType[] = [
 
   {
     id: "35",
+    type: "smallGroup",
+    day: "sab",
+    duration: ScheduleSlotTime.hourHalf,
+    hoursLabel: "13:30 - 15:00",
+    start: 10,
+  },
+
+  {
+    id: "36",
     type: "appointment",
     day: "sab",
-    duration: ScheduleSlotTime.sixHalfHour,
-    hoursLabel: "13:30 - 20:00",
-    start: 10,
+    duration: ScheduleSlotTime.fiveHours,
+    hoursLabel: "15:00 - 20:00",
+    start: 13,
   },
 ];
 
