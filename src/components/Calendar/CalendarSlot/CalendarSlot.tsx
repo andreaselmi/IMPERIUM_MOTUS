@@ -31,6 +31,8 @@ const CalendarSlot = ({
       return "Functional";
     } else if (slotType === "calisthenics") {
       return "Calisthenics";
+    } else if (slotType === "smallGroup") {
+      return "Small group";
     } else if (slotType === "appointment") {
       return "Solo su appuntamento";
     } else return "Personal";
@@ -38,9 +40,11 @@ const CalendarSlot = ({
 
   const checkContainerStyle = () => {
     if (slotType === "functionalTraining") {
-      return styles.small;
+      return styles.functional;
     } else if (slotType === "calisthenics") {
       return styles.calisthenics;
+    } else if (slotType === "smallGroup") {
+      return styles.small;
     } else return styles.open;
   };
 
@@ -80,6 +84,8 @@ const CalendarSlot = ({
         return 7;
       case ScheduleSlotTime.fourHours:
         return 8;
+      case ScheduleSlotTime.fiveHours:
+        return 10;
       case ScheduleSlotTime.sixHalfHour:
         return 13;
     }
