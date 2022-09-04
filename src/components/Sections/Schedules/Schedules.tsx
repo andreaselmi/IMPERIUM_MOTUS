@@ -41,6 +41,12 @@ const Schedules = () => {
         <div className={styles.scheduleTypesContainer}>
           <ScheduleType
             className={styles.scheduleType}
+            type={"smallGroup"}
+            title={"Small group"}
+            subTitle={`Lezioni Calisthenics di 6/8 persone.`}
+          />
+          <ScheduleType
+            className={styles.scheduleType}
             type={"functionalTraining"}
             title={"Functional training"}
             subTitle={`Lezioni di massimo 8 persone. `}
