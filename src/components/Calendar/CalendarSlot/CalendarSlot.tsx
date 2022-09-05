@@ -74,7 +74,7 @@ const CalendarSlot = ({
         return 2;
       case ScheduleSlotTime.hourHalf:
         return 3;
-      case ScheduleSlotTime.twoHour:
+      case ScheduleSlotTime.twoHours:
         return 4;
       case ScheduleSlotTime.twoHalfHour:
         return 5;
