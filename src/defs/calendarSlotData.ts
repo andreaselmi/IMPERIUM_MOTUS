@@ -10,7 +10,7 @@ export enum ScheduleSlotTime {
   half = 30,
   hour = 60,
   hourHalf = 90,
-  twoHour = 120,
+  twoHours = 120,
   twoHalfHour = 150,
   threeHours = 180,
   threeHalfHour = 210,
@@ -136,7 +136,7 @@ const calendarSlotData: CalendarSlotType[] = [
     id: "13",
     type: "personal",
     day: "mar",
-    duration: ScheduleSlotTime.twoHour,
+    duration: ScheduleSlotTime.twoHours,
     hoursLabel: "16:30 - 18:30",
     start: 16,
   },
@@ -186,22 +186,14 @@ const calendarSlotData: CalendarSlotType[] = [
   },
   {
     id: "19",
-    type: "functionalTraining",
+    type: "personal",
     day: "mer",
-    duration: ScheduleSlotTime.hour,
-    hoursLabel: "16:30 - 17:30",
+    duration: ScheduleSlotTime.twoHours,
+    hoursLabel: "16:30 - 18:30",
     start: 16,
   },
   {
     id: "20",
-    type: "functionalTraining",
-    day: "mer",
-    duration: ScheduleSlotTime.hour,
-    hoursLabel: "17:30 - 18:30",
-    start: 18,
-  },
-  {
-    id: "21",
     type: "calisthenics",
     day: "mer",
     duration: ScheduleSlotTime.hourHalf,
@@ -209,7 +201,7 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 20,
   },
   {
-    id: "22",
+    id: "21",
     type: "calisthenics",
     day: "mer",
     duration: ScheduleSlotTime.hourHalf,
@@ -221,7 +213,7 @@ const calendarSlotData: CalendarSlotType[] = [
   // Giovedi
 
   {
-    id: "23",
+    id: "22",
     type: "functionalTraining",
     day: "gio",
     duration: ScheduleSlotTime.hour,
@@ -229,7 +221,7 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 1,
   },
   {
-    id: "24",
+    id: "23",
     type: "functionalTraining",
     day: "gio",
     duration: ScheduleSlotTime.hour,
@@ -237,7 +229,7 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 3,
   },
   {
-    id: "25",
+    id: "24",
     type: "smallGroup",
     day: "gio",
     duration: ScheduleSlotTime.hourHalf,
@@ -245,7 +237,7 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 5,
   },
   {
-    id: "26",
+    id: "25",
     type: "smallGroup",
     day: "gio",
     duration: ScheduleSlotTime.hourHalf,
@@ -253,7 +245,7 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 10,
   },
   {
-    id: "27",
+    id: "26",
     type: "smallGroup",
     day: "gio",
     duration: ScheduleSlotTime.hourHalf,
@@ -261,15 +253,15 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 13,
   },
   {
-    id: "28",
+    id: "27",
     type: "personal",
     day: "gio",
-    duration: ScheduleSlotTime.twoHour,
+    duration: ScheduleSlotTime.twoHours,
     hoursLabel: "16:30 - 18:30",
     start: 16,
   },
   {
-    id: "24",
+    id: "28",
     type: "smallGroup",
     day: "gio",
     duration: ScheduleSlotTime.hourHalf,
@@ -277,7 +269,7 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 20,
   },
   {
-    id: "25",
+    id: "29",
     type: "calisthenics",
     day: "gio",
     duration: ScheduleSlotTime.hourHalf,
@@ -289,7 +281,7 @@ const calendarSlotData: CalendarSlotType[] = [
 
   // Venerdì
   {
-    id: "26",
+    id: "30",
     type: "personal",
     day: "ven",
     duration: ScheduleSlotTime.threeHalfHour,
@@ -305,7 +297,7 @@ const calendarSlotData: CalendarSlotType[] = [
     start: 10,
   },
   {
-    id: "28",
+    id: "31",
     type: "calisthenics",
     day: "ven",
     duration: ScheduleSlotTime.hourHalf,
