@@ -13,9 +13,18 @@ import Modal from "../../Modal/Modal";
 import TrialLessonModal from "../../Modal/TrialLessonModal/TrialLessonModal";
 import { useAppDispatch } from "../../../store/store";
 import changeActiveSection from "../../../utils/changeActiveSection";
+import useAnalyticsEventTracker from "../../../hooks/useAnalyticsEventTracker";
+import { GAEventCategory, ModalEventAction } from "../../../defs/analytics";
 
 const Schedules = () => {
   const [showModal, setShowModal] = useState(false);
+
+  const gaEventTracker = useAnalyticsEventTracker(GAEventCategory.MODAL);
+
+  const handleBookLesson = () => {
+    gaEventTracker(ModalEventAction.BOOK_TEST_CALENDAR);
+    setShowModal(true);
+  };
 
   const refDiv = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
@@ -71,7 +80,7 @@ const Schedules = () => {
 
       <div className={styles.button}>
         <Button
-          onClick={() => setShowModal(true)}
+          onClick={handleBookLesson}
           label={"Prenota una lezione di prova"}
         />
       </div>
