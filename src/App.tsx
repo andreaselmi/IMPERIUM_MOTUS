@@ -6,14 +6,13 @@ import Footer from "./components/Footer/Footer";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 import ReactGA from "react-ga";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-//@ts-ignore
-ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID);
+ReactGA.initialize("UA-242604338-1");
 
 function App() {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
+
   return (
     <Provider store={store}>
       <Navbar />
