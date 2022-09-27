@@ -14,10 +14,19 @@ import { textVariant } from "../../../defs/textVariant";
 import ModalCalisthenicsContent from "../../Modal/ModalCalisthenicsContent/ModalCalisthenicsContent";
 import { useAppDispatch } from "../../../store/store";
 import changeActiveSection from "../../../utils/changeActiveSection";
+import useAnalyticsEventTracker from "../../../hooks/useAnalyticsEventTracker";
+import { GAEventCategory, ModalEventAction } from "../../../defs/analytics";
 
 const CalisthenicsSection = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const dispatch = useAppDispatch();
+
+  const gaEventTracker = useAnalyticsEventTracker(GAEventCategory.MODAL);
+
+  const handleBookLesson = () => {
+    gaEventTracker(ModalEventAction.CALISTHENICS);
+    setShowModal(true);
+  };
 
   const refDiv = useRef<HTMLDivElement>(null);
 
@@ -85,9 +94,7 @@ const CalisthenicsSection = () => {
 
           <div>
             <Button
-              onClick={() => {
-                setShowModal((prevState) => !prevState);
-              }}
+              onClick={handleBookLesson}
               type={"secondary"}
               label={"Perchè Calisthenics Garage?"}
             />

@@ -7,10 +7,18 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { breakpoints } from "../../defs/breakpoints";
 import Modal from "../Modal/Modal";
 import TrialLessonModal from "../Modal/TrialLessonModal/TrialLessonModal";
+import { GAEventCategory, ModalEventAction } from "../../defs/analytics";
+import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
 
 const Header = () => {
   const { width } = useWindowDimensions();
   const [showModal, setShowModal] = useState(false);
+  const gaEventTracker = useAnalyticsEventTracker(GAEventCategory.MODAL);
+
+  const handleBookLesson = () => {
+    gaEventTracker(ModalEventAction.BOOK_TEST_HEADER);
+    setShowModal(true);
+  };
 
   return (
     <header style={{ backgroundColor: "#121212", display: "flex" }}>
@@ -29,9 +37,7 @@ const Header = () => {
         </div>
 
         <Button
-          onClick={() => {
-            setShowModal(true);
-          }}
+          onClick={handleBookLesson}
           type={"secondary"}
           label={"Prenota una lezione di prova"}
         />

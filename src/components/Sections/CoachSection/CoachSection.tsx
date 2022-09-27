@@ -14,11 +14,20 @@ import Modal from "../../Modal/Modal";
 import ModalCoachContent from "../../Modal/ModalCoachContent/ModalCoachContent";
 import changeActiveSection from "../../../utils/changeActiveSection";
 import { useAppDispatch } from "../../../store/store";
+import useAnalyticsEventTracker from "../../../hooks/useAnalyticsEventTracker";
+import { GAEventCategory, ModalEventAction } from "../../../defs/analytics";
 
 const CoachSection = () => {
   const [showModal, setShowModal] = useState(false);
   const refDiv = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
+
+  const gaEventTracker = useAnalyticsEventTracker(GAEventCategory.MODAL);
+
+  const handleBookLesson = () => {
+    gaEventTracker(ModalEventAction.COACH_STORY);
+    setShowModal(true);
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", () =>
@@ -84,7 +93,7 @@ const CoachSection = () => {
             </Typography>
 
             <Button
-              onClick={() => setShowModal(true)}
+              onClick={handleBookLesson}
               className={styles.button}
               label={"Leggi la mia storia"}
               type={"primary"}
