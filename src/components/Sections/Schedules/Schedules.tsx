@@ -51,27 +51,32 @@ const Schedules = () => {
           <ScheduleType
             className={styles.scheduleType}
             type={"smallGroup"}
-            title={"Small group"}
-            subTitle={`Lezioni Calisthenics di 6 persone.`}
+            title={"Imperium Motus Class"}
+            subTitle={`Metodo Imperium Motus con massimo 6 persone`}
           />
           <ScheduleType
             className={styles.scheduleType}
             type={"functionalTraining"}
             title={"Functional training"}
-            subTitle={`Lezioni di massimo 8 persone. `}
-            paragraph={"Circuit training"}
+            subTitle={`Lezioni di 6/8 persone, Circuit training`}
           />
           <ScheduleType
             className={styles.scheduleType}
             type={"calisthenics"}
             title={"Calisthenics"}
-            subTitle={"Lezione di gruppo di Calishtenics."}
+            subTitle={"Lezione di gruppo di Calishtenics"}
           />
           <ScheduleType
             className={styles.scheduleType}
             type={"personal"}
             title={"Personal"}
             subTitle={"Studio aperto solo su prenotazione."}
+          />
+          <ScheduleType
+            className={styles.scheduleType}
+            type={"yoga"}
+            title={"Hatha Yoga"}
+            subTitle={"Lezione di gruppo di Yoga"}
           />
         </div>
       </SectionContainer>
