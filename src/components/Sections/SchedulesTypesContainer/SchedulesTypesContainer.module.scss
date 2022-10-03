@@ -1,0 +1,53 @@
+@import "../../../utils/theme/breakpoints";
+
+
+.scheduleTypesScrollableContainer {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  padding: 0 16px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scheduleTypesContent {
+    min-width: 1304px;
+    max-width: 1304px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    margin: auto;
+
+    @include respond-to("desktopBig"){
+      min-width: 1140px;
+      max-width: 1140px;
+    }
+
+    @include respond-to("tabletBig"){
+      min-width: 1140px;
+      max-width: 1140px;
+    }
+
+  }
+
+  .scheduleType {
+    display: flex;
+    flex:1;
+    @include respond-to("desktopBig"){
+      max-width: 208px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
