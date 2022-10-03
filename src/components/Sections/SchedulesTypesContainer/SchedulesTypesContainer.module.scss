@@ -4,8 +4,15 @@
 .scheduleTypesScrollableContainer {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  padding: 0 16px;
   overflow-y: scroll;
+
+  @include respond-to("desktopSmall"){
+    padding-left: 7%;
+  }
+
+  @include respond-to("desktopBig"){
+    padding-left: 0;
+  }
 
   &::-webkit-scrollbar {
     display: none;
