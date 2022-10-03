@@ -4,7 +4,12 @@ import styles from "./ScheduleType.module.scss";
 import { textVariant } from "../../../defs/textVariant";
 
 interface ScheduleTypeProps {
-  type: "functionalTraining" | "calisthenics" | "smallGroup" | "personal";
+  type:
+    | "functionalTraining"
+    | "calisthenics"
+    | "smallGroup"
+    | "personal"
+    | "yoga";
   title: string;
   subTitle: string;
   paragraph?: string;
@@ -29,6 +34,8 @@ const ScheduleType = ({
               ? styles.calisthenicsBar
               : type === "smallGroup"
               ? styles.smallBar
+              : type === "yoga"
+              ? styles.yogaBar
               : styles.openBar
           }`}
         />

@@ -2,54 +2,16 @@ import React from "react";
 import Typography from "../../Typography/Typography";
 import { textVariant } from "../../../defs/textVariant";
 import styles from "./CalendarSlot.module.scss";
-import { ScheduleSlotTime, SlotType } from "../../../defs/calendarSlotData";
-
-type ScheduleDayType = "lun" | "mar" | "mer" | "gio" | "ven" | "sab";
+import { CourseType } from "../../../defs/calendarDataTypes";
+import checkCoursePosition from "../../../utils/checkCoursePosition";
 
 interface CalendarSlotProps extends React.HTMLAttributes<HTMLDivElement> {
-  slotTime: ScheduleSlotTime;
-  slotType: SlotType;
-  hoursLabel: string;
-  day: ScheduleDayType;
-  start: number;
+  item: CourseType;
 }
 
-const CalendarSlot = ({
-  day,
-  hoursLabel,
-  slotType,
-  slotTime,
-  start,
-  ...restProps
-}: CalendarSlotProps) => {
-  if (slotType === "empty") {
-    return <div className={styles.container} {...restProps} />;
-  }
-
-  const checkSlotTitle = () => {
-    if (slotType === "functionalTraining") {
-      return "Functional";
-    } else if (slotType === "calisthenics") {
-      return "Calisthenics";
-    } else if (slotType === "smallGroup") {
-      return "Small group";
-    } else if (slotType === "appointment") {
-      return "Solo su appuntamento";
-    } else return "Personal";
-  };
-
-  const checkContainerStyle = () => {
-    if (slotType === "functionalTraining") {
-      return styles.functional;
-    } else if (slotType === "calisthenics") {
-      return styles.calisthenics;
-    } else if (slotType === "smallGroup") {
-      return styles.small;
-    } else return styles.open;
-  };
-
+const CalendarSlot = ({ item, ...restProps }: CalendarSlotProps) => {
   const checkDay = () => {
-    switch (day) {
+    switch (item.day) {
       case "lun":
         return styles.mon;
       case "mar":
@@ -66,46 +28,29 @@ const CalendarSlot = ({
         return styles.mon;
     }
   };
-  const checkSpan = (time: ScheduleSlotTime) => {
-    switch (time) {
-      case ScheduleSlotTime.half:
-        return 1;
-      case ScheduleSlotTime.hour:
-        return 2;
-      case ScheduleSlotTime.hourHalf:
-        return 3;
-      case ScheduleSlotTime.twoHours:
-        return 4;
-      case ScheduleSlotTime.twoHalfHour:
-        return 5;
-      case ScheduleSlotTime.threeHours:
-        return 6;
-      case ScheduleSlotTime.threeHalfHour:
-        return 7;
-      case ScheduleSlotTime.fourHours:
-        return 8;
-      case ScheduleSlotTime.fiveHours:
-        return 10;
-      case ScheduleSlotTime.sixHalfHour:
-        return 13;
-    }
-  };
 
   return (
     <div
-      className={`${styles.container} ${checkContainerStyle()} ${checkDay()}`}
-      style={{ gridRow: `${start}/span ${checkSpan(slotTime)}` }}
+      className={`${styles.container} ${checkDay()}`}
+      style={{
+        gridRow: `${checkCoursePosition(item.startHour)}/${checkCoursePosition(
+          item.endHour
+        )}`,
+        backgroundColor: item.type.color,
+      }}
       {...restProps}
     >
       <Typography
         className={`${styles.label} ${styles.text}`}
+        style={{ color: item.type.hoursLabelColor }}
         variant={textVariant.label}
-        label={hoursLabel}
+        label={`${item.startHour} - ${item.endHour}`}
       />
       <Typography
         className={styles.text}
+        style={{ color: item.type.labelColor }}
         variant={textVariant.smallParagraph}
-        label={checkSlotTitle()}
+        label={item.type.label}
       />
     </div>
   );

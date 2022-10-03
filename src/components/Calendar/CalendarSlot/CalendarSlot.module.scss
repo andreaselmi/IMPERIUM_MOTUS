@@ -12,22 +12,6 @@
   -moz-box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
 
-  &.calisthenics {
-    background-color: $global-background-color-dark;
-    color: $global-color-light;
-  }
-
-  &.open {
-    background-color: #C0C0C0;
-  }
-
-  &.small {
-    background-color: $global-background-color-neon;
-  }
-
-  &.functional {
-    background-color: $global-background-color-accent-purple;
-  }
 
   &.mon {
     grid-column: 1/2;
@@ -58,12 +42,6 @@
   color: $global-color-muted;
 }
 
-.functional {
-  .label {
-    color: $global-color-dark;
-    opacity: 0.6;
-  }
-}
 
 .text {
   text-align: center;

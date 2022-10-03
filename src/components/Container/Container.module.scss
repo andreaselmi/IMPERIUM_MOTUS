@@ -14,6 +14,8 @@
 
   @include respond-to("desktopSmall") {
     max-width: 896px;
+    padding: 0 0;
+
   }
 
   @include respond-to("desktopBig") {

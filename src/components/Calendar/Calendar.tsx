@@ -3,7 +3,7 @@ import styles from "./Calendar.module.scss";
 import Typography from "../Typography/Typography";
 import { textVariant } from "../../defs/textVariant";
 import CalendarSlot from "./CalendarSlot/CalendarSlot";
-import calendarSlotData from "../../defs/calendarSlotData";
+import calendarSlotData from "../../defs/calendarDataTypes";
 
 const Calendar = () => {
   return (
@@ -134,17 +134,9 @@ const Calendar = () => {
               <div className={styles.separator} />
               <div className={styles.separator} />
             </div>
-            {calendarSlotData.map((item) => {
-              return (
-                <CalendarSlot
-                  key={item.id}
-                  start={item.start}
-                  slotTime={item.duration}
-                  day={item.day}
-                  hoursLabel={item.hoursLabel}
-                  slotType={item.type}
-                />
-              );
+
+            {calendarSlotData.map((slot) => {
+              return <CalendarSlot key={slot.id} item={slot} />;
             })}
           </div>
         </div>

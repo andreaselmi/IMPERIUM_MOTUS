@@ -19,7 +19,6 @@
 
 .typeBar {
   width: 6px;
-
 }
 
 .smallBar {
@@ -34,8 +33,14 @@
   background-color: $global-color-dark;
 }
 
+.yogaBar {
+  background-color: #96ECFF;
+
+}
+
+//TODO add to design system
 .openBar {
-  background-color: $global-color-muted;
+  background-color: #C0C0C0;
 }
 
 .textContainer {

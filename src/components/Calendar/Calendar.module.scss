@@ -35,10 +35,14 @@
   overflow-y: hidden;
   padding: 0 20px 17px 20px;
 
-  @include respond-to("desktopBig") {
-    max-width: 1140px;
+  @include respond-to("desktopSmall"){
     padding-right: 0;
     padding-left: 0;
+  }
+
+  @include respond-to("desktopBig") {
+    max-width: 1140px;
+
   }
 
   .contentContainer {
