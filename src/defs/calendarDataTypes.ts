@@ -10,7 +10,7 @@ export enum CourseNameType {
 }
 
 export enum CourseLabel {
-  PERSONAL = "personal",
+  PERSONAL = "Personal",
   YOGA = "Hatha Yoga",
   CLASS = "I.M. Class",
   CALISTHENICS = "Calisthenics",
