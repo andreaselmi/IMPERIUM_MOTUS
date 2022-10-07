@@ -15,6 +15,7 @@ import changeActiveSection from "../../../utils/changeActiveSection";
 import useAnalyticsEventTracker from "../../../hooks/useAnalyticsEventTracker";
 import { GAEventCategory, ModalEventAction } from "../../../defs/analytics";
 import SchedulesTypesContainer from "../SchedulesTypesContainer/SchedulesTypesContainer";
+import { SiteSectionTypes } from "../../../defs/siteSection";
 
 const Schedules = () => {
   const [showModal, setShowModal] = useState(false);
@@ -31,7 +32,7 @@ const Schedules = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () =>
-      changeActiveSection(refDiv.current, "Courses", dispatch)
+      changeActiveSection(refDiv.current, SiteSectionTypes.COURSES, dispatch)
     );
   }, []);
   return (

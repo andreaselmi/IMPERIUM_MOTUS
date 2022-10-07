@@ -1,9 +1,10 @@
 import { setActiveSection } from "../store/activeSectionSlice";
 import { AppDispatch } from "../store/store";
+import { SiteSectionTypes } from "../defs/siteSection";
 
 const changeActiveSection = (
   element: HTMLDivElement | null,
-  activeSection: string,
+  activeSection: SiteSectionTypes,
   dispatch: AppDispatch
 ) => {
   if (!element) return;
@@ -12,7 +13,7 @@ const changeActiveSection = (
     dispatch(setActiveSection(activeSection));
   }
   if (window.scrollY <= 500) {
-    dispatch(setActiveSection(""));
+    dispatch(setActiveSection(null));
   }
 
   const rect = element.getBoundingClientRect();
