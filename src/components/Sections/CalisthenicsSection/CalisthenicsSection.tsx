@@ -16,6 +16,7 @@ import { useAppDispatch } from "../../../store/store";
 import changeActiveSection from "../../../utils/changeActiveSection";
 import useAnalyticsEventTracker from "../../../hooks/useAnalyticsEventTracker";
 import { GAEventCategory, ModalEventAction } from "../../../defs/analytics";
+import { SiteSectionTypes } from "../../../defs/siteSection";
 
 const CalisthenicsSection = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -42,7 +43,11 @@ const CalisthenicsSection = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () =>
-      changeActiveSection(refDiv.current, "Calisthenics", dispatch)
+      changeActiveSection(
+        refDiv.current,
+        SiteSectionTypes.CALISTHENICS,
+        dispatch
+      )
     );
   }, []);
 

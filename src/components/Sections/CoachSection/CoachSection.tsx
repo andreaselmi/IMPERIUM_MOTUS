@@ -16,6 +16,7 @@ import changeActiveSection from "../../../utils/changeActiveSection";
 import { useAppDispatch } from "../../../store/store";
 import useAnalyticsEventTracker from "../../../hooks/useAnalyticsEventTracker";
 import { GAEventCategory, ModalEventAction } from "../../../defs/analytics";
+import { SiteSectionTypes } from "../../../defs/siteSection";
 
 const CoachSection = () => {
   const [showModal, setShowModal] = useState(false);
@@ -31,7 +32,7 @@ const CoachSection = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () =>
-      changeActiveSection(refDiv.current, "Coach", dispatch)
+      changeActiveSection(refDiv.current, SiteSectionTypes.COACH, dispatch)
     );
   }, []);
 
