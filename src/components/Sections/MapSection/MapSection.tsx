@@ -9,6 +9,7 @@ import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import Map from "../../Map/Map";
 import { useAppDispatch } from "../../../store/store";
 import changeActiveSection from "../../../utils/changeActiveSection";
+import { SiteSectionTypes } from "../../../defs/siteSection";
 
 const MapSection = () => {
   const refDiv = useRef<HTMLDivElement>(null);
@@ -16,7 +17,7 @@ const MapSection = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () =>
-      changeActiveSection(refDiv.current, "Map", dispatch)
+      changeActiveSection(refDiv.current, SiteSectionTypes.MAP, dispatch)
     );
   }, []);
   return (

@@ -1,4 +1,5 @@
 @import "../../../utils/theme/colors";
+@import "../../../utils/theme/breakpoints";
 
 
 .collapseMenuLink {
@@ -29,7 +30,11 @@
   top: 0;
   width: 100%;
   z-index: 999;
-  transition: all .350s
+  transition: all .350s;
+
+  @include respond-to("desktopSmall"){
+    display: none;
+  }
 }
 
 .navBarMenuButton {
