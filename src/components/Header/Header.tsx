@@ -38,7 +38,7 @@ const Header = () => {
 
         <Button
           onClick={handleBookLesson}
-          type={"secondary"}
+          buttonType={"secondary"}
           label={"Prenota una lezione di prova"}
         />
       </Container>

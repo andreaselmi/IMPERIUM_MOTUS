@@ -100,7 +100,7 @@ const CalisthenicsSection = () => {
           <div>
             <Button
               onClick={handleBookLesson}
-              type={"secondary"}
+              buttonType={"secondary"}
               label={"Perchè Calisthenics Garage?"}
             />
           </div>
