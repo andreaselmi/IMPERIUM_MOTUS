@@ -37,11 +37,11 @@ const Schedules = () => {
   }, []);
   return (
     <div ref={refDiv}>
-      <ScrollAnchor id={navBarButtons.COURSES} />
+      <ScrollAnchor id={navBarButtons.SCHEDULES} />
 
       <SectionContainer
         style={{ paddingBottom: 35 }}
-        id={navBarButtons.COURSES}
+        id={navBarButtons.SCHEDULES}
       >
         <SectionHeader
           className={styles.header}

@@ -1,6 +1,6 @@
 export enum navBarButtons {
-  CALISTHENICS = "Il Calisthenics",
+  OUR_COURSES = "I nostri corsi",
   COACH = "Il coach",
-  COURSES = "I corsi",
+  SCHEDULES = "Gli orari",
   MAP = "Dove siamo",
 }
