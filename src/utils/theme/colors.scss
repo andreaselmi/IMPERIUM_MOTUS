@@ -1,6 +1,7 @@
 $neon: #E1FF2C;
 $neonPurple: #D45DFE;
 $black: #131313;
+$pureBlack: #000000;
 $white: #FFFFFF;
 $grey: #757575;
 $red: #E11900;
@@ -17,6 +18,7 @@ $global-color-muted: $grey;
 $global-color-light: $white;
 
 $global-background-color-dark: $global-color-dark;
+$global-background-color-black: $pureBlack;
 $global-background-color-light: $global-color-light;
 $global-background-color-neon: $global-color-neon;
 $global-background-color-accent-purple: $global-color-accent-purple;
