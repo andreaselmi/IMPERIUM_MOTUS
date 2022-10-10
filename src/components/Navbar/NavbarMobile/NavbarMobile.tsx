@@ -72,13 +72,13 @@ const NavbarMobile = () => {
           <div style={{ marginTop: 32 }}>
             <div className={styles.collapseMenuSection}>
               <Scroller
-                path={navBarButtons.CALISTHENICS}
+                path={navBarButtons.OUR_COURSES}
                 className={styles.collapseMenuLink}
               >
                 <Typography
                   className={styles.menuButton}
                   variant={textVariant.menu}
-                  label={navBarButtons.CALISTHENICS}
+                  label={navBarButtons.OUR_COURSES}
                 />
               </Scroller>
               <Scroller
@@ -95,13 +95,13 @@ const NavbarMobile = () => {
 
             <div className={styles.collapseMenuSection}>
               <Scroller
-                path={navBarButtons.COURSES}
+                path={navBarButtons.SCHEDULES}
                 className={styles.collapseMenuLink}
               >
                 <Typography
                   className={styles.menuButton}
                   variant={textVariant.menu}
-                  label={navBarButtons.COURSES}
+                  label={navBarButtons.SCHEDULES}
                 />
               </Scroller>
               <Scroller

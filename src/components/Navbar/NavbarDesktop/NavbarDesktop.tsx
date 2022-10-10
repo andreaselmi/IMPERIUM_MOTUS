@@ -35,8 +35,8 @@ const NavbarDesktop = () => {
       <Container style={{ display: "flex", flex: 1 }}>
         <div className={styles.navbar}>
           <NavbarLinkButton
-            path={navBarButtons.CALISTHENICS}
-            label={navBarButtons.CALISTHENICS}
+            path={navBarButtons.OUR_COURSES}
+            label={navBarButtons.OUR_COURSES}
             isActive={activeSection === "Calisthenics"}
           />
           <NavbarLinkButton
@@ -59,8 +59,8 @@ const NavbarDesktop = () => {
             />
           </span>
           <NavbarLinkButton
-            path={navBarButtons.COURSES}
-            label={navBarButtons.COURSES}
+            path={navBarButtons.SCHEDULES}
+            label={navBarButtons.SCHEDULES}
             isActive={activeSection === "Courses"}
           />
           <NavbarLinkButton

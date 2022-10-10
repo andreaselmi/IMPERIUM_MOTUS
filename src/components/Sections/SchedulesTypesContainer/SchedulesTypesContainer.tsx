@@ -15,7 +15,7 @@ const SchedulesTypesContainer = () => {
         <ScheduleType
           className={styles.scheduleType}
           type={"functionalTraining"}
-          title={"Functional training"}
+          title={"Ginnastica funzionale"}
           subTitle={`Lezioni di 6/8 persone, Circuit training`}
         />
         <ScheduleType
