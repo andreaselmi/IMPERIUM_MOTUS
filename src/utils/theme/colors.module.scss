@@ -22,3 +22,20 @@ $global-background-color-black: $pureBlack;
 $global-background-color-light: $global-color-light;
 $global-background-color-neon: $global-color-neon;
 $global-background-color-accent-purple: $global-color-accent-purple;
+
+:export {
+  success: $global-color-success;
+  warning: $global-color-warning;
+  danger:$global-color-danger;
+  neon: $global-color-neon;
+  purple: $global-color-accent-purple;
+  dark: $global-color-dark;
+  muted: $global-color-muted;
+  light: $global-color-light;
+
+  backgroundDark:$global-background-color-dark;
+  backgroundBlack: $global-background-color-black;
+  backgroundLigh: $global-background-color-light;
+  backgroundNeon: $global-background-color-neon;
+  backgroundPurple: $global-background-color-accent-purple;
+}

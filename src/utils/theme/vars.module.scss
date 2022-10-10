@@ -1,0 +1,12 @@
+$navbar-mobile-height: 96px;
+$navbar-desktop-height: 160px;
+$navbar-desktop-compact-height: 100px;
+$modal-top-margin: 152px;
+
+
+:export {
+navbarMobileHeight: $navbar-mobile-height;
+navbarDesktopHeight: $navbar-desktop-height;
+navbarDesktopCompactHeight: $navbar-desktop-compact-height;
+modalTopMargin: $modal-top-margin;
+}

@@ -1,4 +1,5 @@
-@import "../../utils/theme/breakpoints";
+@import "../../utils/theme/breakpoints.module";
+@import "../../utils/theme/colors.module";
 
 .container {
   min-height: 497px;
@@ -14,6 +15,10 @@
   @include respond-to("desktopSmall") {
     min-height: 750px;
   }
+}
+
+.header {
+  background-color: $global-color-dark;
 }
 
 .headerLogoContainer {

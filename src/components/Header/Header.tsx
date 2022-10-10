@@ -1,14 +1,20 @@
 import React, { useState } from "react";
+
+// Components
 import Container from "../Container/Container";
 import Button from "../Button/Button";
 import HeaderLogo from "./HeaderLogo/HeaderLogo";
-import styles from "./Header.module.scss";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
-import { breakpoints } from "../../defs/breakpoints";
 import Modal from "../Modal/Modal";
 import TrialLessonModal from "../Modal/TrialLessonModal/TrialLessonModal";
-import { GAEventCategory, ModalEventAction } from "../../defs/analytics";
+
+// Utils
+import styles from "./Header.module.scss";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
+
+// Defs
+import { GAEventCategory, ModalEventAction } from "../../defs/analytics";
+import { breakpoints } from "../../defs/breakpoints";
 
 const Header = () => {
   const { width } = useWindowDimensions();
@@ -21,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <header style={{ backgroundColor: "#121212", display: "flex" }}>
+    <header className={styles.header}>
       <Container
         style={
           width
