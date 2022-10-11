@@ -19,26 +19,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "paths": {
-      "@src/*": [
-        "src/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@icons/*": [
-        "src/assets/icons/*"
-      ],
-      "@defs/*": [
-        "src/defs/*"
-      ],
-      "@theme/*": [
-        "src/utils/theme/*"
-      ],
-      "@images/*": [
-        "src/assets/images/*"
-      ]
-    }
   },
   "include": [
     "src"

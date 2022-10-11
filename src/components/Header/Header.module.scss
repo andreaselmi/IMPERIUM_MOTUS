@@ -1,31 +1,135 @@
 @import "../../utils/theme/breakpoints.module";
 @import "../../utils/theme/colors.module";
-
-.container {
-  min-height: 497px;
-  align-items: center;
-  padding-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-
-  @include respond-to("tabletSmall") {
-    min-height: 588px;
-  }
-
-  @include respond-to("desktopSmall") {
-    min-height: 750px;
-  }
-}
+@import "../../utils/theme/vars.module";
 
 .header {
   background-color: $global-color-dark;
+  padding-top: $navbar-mobile-height +24px;
+  padding-bottom: 76px;
+
+  @include respond-to($desktopSmall){
+    padding-top: $navbar-desktop-height + 40px;
+
+  }
 }
 
-.headerLogoContainer {
-  display: flex;
-  flex: 1;
+.container {
   align-items: center;
+  display: grid;
 }
+
+.headerFirstSection, .headerSecondSection{
+  grid-column: col-start / span 12;
+  position: relative;
+  padding: 32px 24px;
+  border-radius: 2px;
+
+}
+
+.headerFirstSection {
+  max-height: 358px;
+  height: 358px;
+  background-image:
+          linear-gradient(to bottom, #000000,rgba(0,0,0,1),rgba(19, 19, 19, .6), rgba(19, 19, 19, 0)),
+          url('../../assets/images/header/headerbg.png');
+
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  @include respond-to($desktopSmall){
+    grid-column: col-start / span 8;
+    min-height: 354px;
+    max-height: 354px;
+    background-image:
+            linear-gradient(to bottom, #000000,rgba(0,0,0,1),rgba(19, 19, 19, .6), rgba(19, 19, 19, 0)),
+            linear-gradient(to right, #000000,rgba(0,0,0,1),rgba(19, 19, 19, .6), rgba(19, 19, 19, 0)),
+            url('../../assets/images/header/headerbg.png');
+  }
+
+  @include respond-to($desktopBig){
+    height: 410px;
+    max-height: 410px;
+  }
+
+  .headerFirstSectionImageContainer {
+    width: 75%;
+    max-width: 266px ;
+
+
+
+    @include respond-to($tabletSmall) {
+      max-width: 55%;
+    }
+
+    @include respond-to($desktopSmall) {
+      max-width: 50%;
+    }
+
+    @include respond-to($desktopBig) {
+      max-width: 60%;
+    }
+  }
+}
+
+
+
+.headerSecondSection {
+  max-height: 309px;
+  min-height: 309px;
+  background-color: $global-background-color-black;
+
+  @include respond-to($desktopSmall){
+    grid-column: col-start 9 / span 12;
+    margin-top: auto;
+  }
+
+  @include respond-to($desktopBig){
+    min-height: 360px;
+  }
+
+  .headerSecondSectionImageContainer {
+    width: 60%;
+    max-width: 266px;
+
+    @include respond-to($tabletSmall) {
+      max-width: 40%;
+    }
+
+    @include respond-to($desktopSmall) {
+      max-width: 60%;
+    }
+
+    @include respond-to($desktopBig) {
+      max-width: 65%;
+    }
+  }
+}
+
+.headerSecondSectionSideImage {
+  position: absolute;
+  width: 149px;
+  height: 238px;
+  bottom: 0;
+  right: 0;
+
+  @include respond-to($desktopBig){
+    right: 20px;
+  }
+
+}
+
+.headerButton {
+  position: absolute;
+  bottom: 24px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+
 
 
 
