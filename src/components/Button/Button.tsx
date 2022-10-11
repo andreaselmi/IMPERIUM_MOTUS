@@ -27,13 +27,7 @@ const Button = ({
         } ${className}`}
         {...restProps}
       >
-        <div className={styles.buttonSection}>
-          <Typography
-            className={styles.secondaryText}
-            variant={textVariant.menu}
-            label={label}
-          />
-        </div>
+        <Typography variant={textVariant.smallTitle} label={label} />
       </button>
     );
   } else
@@ -46,13 +40,7 @@ const Button = ({
         } ${className}`}
         {...restProps}
       >
-        <div className={styles.buttonSection}>
-          <Typography
-            className={styles.primaryText}
-            variant={textVariant.menu}
-            label={label}
-          />
-        </div>
+        <Typography variant={textVariant.smallTitle} label={label} />
       </button>
     );
 };

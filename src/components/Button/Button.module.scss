@@ -1,22 +1,21 @@
-@import "../../utils/theme/colors";
+@import "../../utils/theme/colors.module";
+@import "../../utils/theme/breakpoints.module";
 
 .container {
-  height: 48px;
+  height: 40px;
   border: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0;
-  padding: 0;
+  padding: 8px 16px;
   cursor: pointer;
+
+  @include respond-to($desktopSmall){
+    height: 48px;
+  }
 }
 
-.buttonSection {
-  padding: 16px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
 
 .primaryContainer {
  background-color: $global-background-color-dark;
