@@ -2,6 +2,10 @@
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
   gap: 16px;
+
+  & > * {
+    grid-column: col-start / span 12;
+  }
 }
 
 
