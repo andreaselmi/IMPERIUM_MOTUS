@@ -19,7 +19,6 @@
 }
 
 .headerFirstSection, .headerSecondSection{
-  grid-column: col-start / span 12;
   position: relative;
   padding: 32px 24px;
   border-radius: 2px;
@@ -56,8 +55,6 @@
     width: 75%;
     max-width: 266px ;
 
-
-
     @include respond-to($tabletSmall) {
       max-width: 55%;
     }
@@ -71,8 +68,6 @@
     }
   }
 }
-
-
 
 .headerSecondSection {
   max-height: 309px;

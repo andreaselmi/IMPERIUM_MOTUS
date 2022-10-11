@@ -10,9 +10,6 @@
 }
 
 .headerContainer, .imageContainer, .textContainer {
-  grid-column: col-start / span 12;
-
-
   &.textContainer {
     @include respond-to("desktopSmall") {
       grid-column: col-start / span 6;
