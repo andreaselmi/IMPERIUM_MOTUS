@@ -1,56 +1,45 @@
-@import "../../utils/theme/colors";
+@import "../../utils/theme/colors.module";
+@import "../../utils/theme/breakpoints.module";
 
 .container {
-  height: 48px;
-  border: 1px solid;
+  height: 40px;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $global-color-light;
   margin: 0;
-  padding: 0;
+  padding: 8px 16px;
   cursor: pointer;
-}
 
-.buttonSection {
-  padding: 16px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-
-  .primaryText {
-    color: $global-color-dark;
-  }
-
-  .secondaryText {
-    color: $global-color-light;
+  @include respond-to($desktopSmall){
+    height: 48px;
   }
 }
 
 
-.primary {
-  background-color: transparent;
-  border-color: $global-color-dark;
+.primaryContainer {
+ background-color: $global-background-color-dark;
+  color: $global-color-light;
 }
 
-
-.secondary {
-  background-color: $global-background-color-dark;
-  border-color: $global-color-light
+.primaryLightContainer {
+  background-color: $global-background-color-neon;
+  color: $global-color-dark;
 }
 
-.separator {
-  width: 1px;
-  height: 48px;
-}
-
-.primarySeparator {
-  background-color: $global-background-color-dark;
-}
-
-.secondarySeparator {
+.secondaryContainer {
   background-color: $global-background-color-light;
+  color: $global-color-dark;
+  border: 1px solid $global-background-color-dark;
 }
+
+.secondaryLightContainer {
+  background-color: $global-background-color-dark;
+  color: $global-color-light;
+  border: 1px solid $global-background-color-light;
+}
+
+
 
 
 

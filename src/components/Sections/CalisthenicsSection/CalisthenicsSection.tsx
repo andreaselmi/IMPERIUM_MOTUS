@@ -53,7 +53,7 @@ const CalisthenicsSection = () => {
 
   return (
     <div ref={refDiv}>
-      <ScrollAnchor id={navBarButtons.CALISTHENICS} />
+      <ScrollAnchor id={navBarButtons.OUR_COURSES} />
       <SectionContainer className={styles.sectionContainer}>
         <div className={styles.container}>
           <SectionHeader
@@ -100,7 +100,7 @@ const CalisthenicsSection = () => {
           <div>
             <Button
               onClick={handleBookLesson}
-              type={"secondary"}
+              buttonType={"secondary"}
               label={"Perchè Calisthenics Garage?"}
             />
           </div>

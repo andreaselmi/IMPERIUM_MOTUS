@@ -25,11 +25,11 @@ export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 
 Primary.args = {
-  type: "primary",
+  buttonType: "primary",
   label: "Button",
 };
 
 Secondary.args = {
-  type: "secondary",
+  buttonType: "secondary",
   label: "Button",
 };

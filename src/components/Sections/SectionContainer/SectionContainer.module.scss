@@ -1,8 +1,8 @@
-@import "../../../utils/theme/breakpoints";
+@import "../../../utils/theme/breakpoints.module";
 
 .container {
     padding: 80px 0;
-    
+
     @include respond-to("desktopBig") {
     padding: 148px 0;
     }

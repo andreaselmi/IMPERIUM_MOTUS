@@ -1,0 +1,40 @@
+$tabletSmall: "tabletSmall";
+$tabletBig: "tabletBig";
+$desktopSmall: "desktopSmall";
+$desktopBig: "desktopBig";
+
+
+$tabletSmallSize: 576;
+$tabletBigSize: 768;
+$desktopSmallSize: 992;
+$desktopBigSize: 1200;
+
+$breakpoints: (
+        'tabletSmall': $tabletSmallSize + px,
+        'tabletBig': $tabletBigSize + px,
+        'desktopSmall': $desktopSmallSize + px,
+        'desktopBig': $desktopBigSize + px,
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+    // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+:export {
+  tabletSmall: $tabletSmallSize;
+  tabletBig: $tabletBigSize;
+  desktopSmall: $desktopSmallSize;
+  desktopBig: $desktopBigSize;
+}

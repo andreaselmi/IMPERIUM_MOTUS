@@ -97,7 +97,7 @@ const CoachSection = () => {
               onClick={handleBookLesson}
               className={styles.button}
               label={"Leggi la mia storia"}
-              type={"primary"}
+              buttonType={"primary"}
             />
           </div>
         </SectionContainer>
