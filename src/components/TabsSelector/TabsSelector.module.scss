@@ -1,0 +1,65 @@
+@import "src/utils/theme/colors.module.scss";
+@import "src/utils/theme/breakpoints.module.scss";
+
+.adsSelectorContainer {
+  overflow: scroll;
+  display: flex;
+  text-transform: uppercase;
+  position: relative;
+  height: 40px;
+  flex: 1;
+  /* hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  color: $global-color-light;
+
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .activeBar {
+    height: 4px;
+    width: 128px;
+    background-color: $global-color-accent;
+    position: absolute;
+    bottom: 0px;
+    z-index: 999;
+  }
+
+  .adsSelector {
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    min-width: 128px;
+    border-bottom-width: 4px;
+    height: 40px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .notActiveSelector {
+    margin-top: 2px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex: 1;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.animation {
+  transition: all .5s
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: $global-color-muted;
+  display: block;
+  position: relative;
+  top: -1px;
+}
