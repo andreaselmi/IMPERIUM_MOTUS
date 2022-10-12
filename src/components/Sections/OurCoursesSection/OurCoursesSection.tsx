@@ -4,7 +4,7 @@ import Typography from "../../Typography/Typography";
 import Button from "../../Button/Button";
 import SectionContainer from "../SectionContainer/SectionContainer";
 import Modal from "../../Modal/Modal";
-import styles from "./CalisthenicsSection.module.scss";
+import styles from "./OurCoursesSection.module.scss";
 import { ReactComponent as Calisthenics } from "../../../assets/images/sections/calisthenicsSection.svg";
 
 //Utils
@@ -18,7 +18,7 @@ import useAnalyticsEventTracker from "../../../hooks/useAnalyticsEventTracker";
 import { GAEventCategory, ModalEventAction } from "../../../defs/analytics";
 import { SiteSectionTypes } from "../../../defs/siteSection";
 
-const CalisthenicsSection = () => {
+const OurCoursesSection = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const dispatch = useAppDispatch();
 
@@ -45,7 +45,7 @@ const CalisthenicsSection = () => {
     window.addEventListener("scroll", () =>
       changeActiveSection(
         refDiv.current,
-        SiteSectionTypes.CALISTHENICS,
+        SiteSectionTypes.OUR_COURSES,
         dispatch
       )
     );
@@ -113,4 +113,4 @@ const CalisthenicsSection = () => {
   );
 };
 
-export default CalisthenicsSection;
+export default OurCoursesSection;

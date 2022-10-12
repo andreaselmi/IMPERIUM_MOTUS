@@ -32,7 +32,7 @@ const Schedules = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () =>
-      changeActiveSection(refDiv.current, SiteSectionTypes.COURSES, dispatch)
+      changeActiveSection(refDiv.current, SiteSectionTypes.SCHEDULES, dispatch)
     );
   }, []);
   return (
