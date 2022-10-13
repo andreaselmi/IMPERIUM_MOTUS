@@ -4,6 +4,7 @@
 .heading {
   font-size: $heading;
   font-family: $global-font-family-bold;
+  line-height: 100%;
 }
 
 .menu {
@@ -22,7 +23,7 @@
   font-size: $paragraph;
   font-family: $global-font-family-regular;
   font-weight: 400;
-  line-height: $paragraph * 1.5;
+  line-height: 150%;
 
 
 }
@@ -36,6 +37,7 @@
 .sectionTitle {
   font-size: $section-title;
   font-family: $global-font-family-bold;
+  line-height: 100%;
 }
 
 .smallParagraph {

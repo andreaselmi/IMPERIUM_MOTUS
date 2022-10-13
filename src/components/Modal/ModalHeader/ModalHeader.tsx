@@ -11,7 +11,7 @@ interface ModalHeaderProps {
 const ModalHeader = ({ title, titleStyle }: ModalHeaderProps) => {
   return (
     <header className={styles.contentHeader}>
-      <Typography style={titleStyle} variant={textVariant.heading}>
+      <Typography style={titleStyle} variant={textVariant.sectionTitle}>
         {title}
       </Typography>
     </header>
