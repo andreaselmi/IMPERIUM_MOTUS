@@ -24,11 +24,9 @@ const SectionHeader = ({
       <div className={`${styles.imageContainer} ${imageContainerClassName}`}>
         <span className={styles.image}>{SvgComponent}</span>
       </div>
-      <Typography
-        className={titleClass}
-        label={label}
-        variant={textVariant.sectionTitle}
-      />
+      <Typography className={titleClass} variant={textVariant.sectionTitle}>
+        {label}
+      </Typography>
     </header>
   );
 };

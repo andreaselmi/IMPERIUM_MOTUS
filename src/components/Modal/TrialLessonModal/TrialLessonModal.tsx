@@ -88,10 +88,9 @@ const TrialLessonModal = () => {
                 autoplay={true}
                 loop={true}
               />
-              <Typography
-                variant={textVariant.paragraph}
-                label={"Invio in corso..."}
-              />
+              <Typography variant={textVariant.paragraph}>
+                Invio in corso...
+              </Typography>
             </div>
           )}
 
@@ -106,14 +105,13 @@ const TrialLessonModal = () => {
               <Typography
                 style={{ fontWeight: "bold" }}
                 variant={textVariant.paragraph}
-                label={"Grazie per la richiesta"}
-              />
-              <Typography
-                variant={textVariant.paragraph}
-                label={
-                  "Ti ricontatteremo a breve per confermare giorno e orario"
-                }
-              />
+              >
+                Grazie per la richiesta
+              </Typography>
+              <Typography variant={textVariant.paragraph}>
+                {" "}
+                Ti ricontatteremo a breve per confermare giorno e orario
+              </Typography>
             </div>
           )}
           <label className={styles.label} htmlFor="fname">
@@ -182,10 +180,11 @@ const TrialLessonModal = () => {
               <Typography
                 style={{ color: "#E11900" }}
                 variant={textVariant.smallParagraph}
-                label={
-                  "Si è verificato un errore nell’invio della richiesta, per favore riprova"
-                }
-              />
+              >
+                {" "}
+                Si è verificato un errore nell’invio della richiesta, per favore
+                riprova
+              </Typography>
             </div>
           )}
 

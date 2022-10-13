@@ -4,7 +4,6 @@ import { textVariant } from "../../defs/textVariant";
 
 interface TypographyProps {
   variant: textVariant;
-  label: string;
   className?: string;
   style?: CSSProperties | undefined;
   children?: ReactNode;
@@ -12,23 +11,14 @@ interface TypographyProps {
 
 const Typography = ({
   className,
-  children,
   variant,
-  label,
+  children,
   style,
 }: TypographyProps) => {
-  if (children) {
-    return (
-      <div style={style} className={`${styles[variant]} ${className}`}>
-        {children}
-      </div>
-    );
-  }
-
   if (variant === textVariant.pageTitle) {
     return (
       <h1 style={style} className={`${styles.pageTitle} ${className}`}>
-        {label}
+        {children}
       </h1>
     );
   }
@@ -36,7 +26,7 @@ const Typography = ({
   if (variant === textVariant.sectionTitle) {
     return (
       <h2 style={style} className={`${styles.sectionTitle} ${className}`}>
-        {label}
+        {children}
       </h2>
     );
   }
@@ -44,7 +34,7 @@ const Typography = ({
   if (variant === textVariant.heading) {
     return (
       <h3 style={style} className={`${styles.heading} ${className}`}>
-        {label}
+        {children}
       </h3>
     );
   }
@@ -52,7 +42,7 @@ const Typography = ({
   if (variant === textVariant.menu) {
     return (
       <p style={style} className={`${styles.menu} ${className}`}>
-        {label}
+        {children}
       </p>
     );
   }
@@ -60,7 +50,7 @@ const Typography = ({
   if (variant === textVariant.smallTitle) {
     return (
       <h5 style={style} className={`${styles.smallTitle} ${className}`}>
-        {label}
+        {children}
       </h5>
     );
   }
@@ -68,7 +58,7 @@ const Typography = ({
   if (variant === textVariant.smallParagraph) {
     return (
       <p style={style} className={`${styles.smallParagraph} ${className}`}>
-        {label}
+        {children}
       </p>
     );
   }
@@ -76,7 +66,7 @@ const Typography = ({
   if (variant === textVariant.quotes) {
     return (
       <h2 style={style} className={`${styles.quotes} ${className}`}>
-        {label}
+        {children}
       </h2>
     );
   }
@@ -84,14 +74,14 @@ const Typography = ({
   if (variant === textVariant.label) {
     return (
       <p style={style} className={`${styles.label} ${className}`}>
-        {label}
+        {children}
       </p>
     );
   }
 
   return (
     <p style={style} className={`${styles.paragraph} ${className}`}>
-      {label}
+      {children}
     </p>
   );
 };

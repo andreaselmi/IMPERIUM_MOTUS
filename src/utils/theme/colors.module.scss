@@ -4,6 +4,7 @@ $black: #131313;
 $pureBlack: #000000;
 $white: #FFFFFF;
 $grey: #757575;
+$grey200: #C0C0C0;
 $red: #E11900;
 $orange: #FFA14F;
 $green: #4CD60C;
@@ -11,26 +12,28 @@ $green: #4CD60C;
 $global-color-success: $green;
 $global-color-warning: $orange;
 $global-color-danger: $red;
-$global-color-neon: $neon;
+$global-color-accent: $neon;
 $global-color-accent-purple: $neonPurple;
 $global-color-dark: $black;
 $global-color-muted: $grey;
+$global-color-mutedOnDark: $grey200;
 $global-color-light: $white;
 
 $global-background-color-dark: $global-color-dark;
 $global-background-color-black: $pureBlack;
 $global-background-color-light: $global-color-light;
-$global-background-color-neon: $global-color-neon;
+$global-background-color-neon: $global-color-accent;
 $global-background-color-accent-purple: $global-color-accent-purple;
 
 :export {
   success: $global-color-success;
   warning: $global-color-warning;
   danger:$global-color-danger;
-  neon: $global-color-neon;
+  neon: $global-color-accent;
   purple: $global-color-accent-purple;
   dark: $global-color-dark;
   muted: $global-color-muted;
+  mutedOnDark: $global-color-mutedOnDark;
   light: $global-color-light;
 
   backgroundDark:$global-background-color-dark;

@@ -40,18 +40,20 @@ const ScheduleType = ({
           }`}
         />
         <div className={styles.textContainer}>
-          <Typography variant={textVariant.smallTitle} label={title} />
+          <Typography variant={textVariant.smallTitle}>{title}</Typography>
           <Typography
             className={styles.subTitle}
             variant={textVariant.smallParagraph}
-            label={subTitle}
-          />
+          >
+            {subTitle}
+          </Typography>
           {paragraph ? (
             <Typography
               className={styles.subTitle}
               variant={textVariant.smallParagraph}
-              label={paragraph}
-            />
+            >
+              {paragraph}
+            </Typography>
           ) : null}
         </div>
       </div>

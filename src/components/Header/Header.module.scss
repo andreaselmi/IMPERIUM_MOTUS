@@ -108,6 +108,7 @@
   bottom: 0;
   right: 0;
 
+
   @include respond-to($desktopBig){
     right: 20px;
   }
@@ -117,6 +118,8 @@
 .headerButton {
   position: absolute;
   bottom: 24px;
+  z-index: 1;
+
 }
 
 .image {

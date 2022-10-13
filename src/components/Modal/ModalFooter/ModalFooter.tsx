@@ -1,11 +1,11 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styles from "./ModalFooter.module.scss";
 import quotesIcon from "../../../assets/icons/quotes.svg";
 import Typography from "../../Typography/Typography";
 import { textVariant } from "../../../defs/textVariant";
 
 interface ModalFooterProps {
-  label: string;
+  label: ReactNode;
   footerText?: string;
 }
 
@@ -18,8 +18,9 @@ const ModalFooter = ({ footerText, label }: ModalFooterProps) => {
           <Typography
             style={{ lineHeight: "150%" }}
             variant={textVariant.quotes}
-            label={label}
-          />
+          >
+            {label}
+          </Typography>
         </div>
       </div>
       {footerText && (

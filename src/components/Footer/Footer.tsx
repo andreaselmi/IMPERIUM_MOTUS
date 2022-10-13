@@ -17,19 +17,16 @@ const Footer = () => {
             </div>
             <div className={styles.textContainer}>
               <div className={styles.footerElement}>
-                <Typography
-                  variant={textVariant.smallParagraph}
-                  label={
-                    "Lupo Alessandro · Via A De Gasperi, 25 Cavallino 73020 (LE) · P.IVA 05198550757"
-                  }
-                />
+                <Typography variant={textVariant.smallParagraph}>
+                  Lupo Alessandro · Via A De Gasperi, 25 Cavallino 73020 (LE) ·
+                  P.IVA 05198550757
+                </Typography>
               </div>
 
               <div className={styles.footerElement}>
-                <Typography
-                  variant={textVariant.smallParagraph}
-                  label={"Sito creato da"}
-                />
+                <Typography variant={textVariant.smallParagraph}>
+                  Sito creato da
+                </Typography>
                 &nbsp;
                 <a
                   href={"https://www.enricocapone.com"}
@@ -37,13 +34,12 @@ const Footer = () => {
                   rel={"noreferrer"}
                   className={styles.footerLinkText}
                 >
-                  <Typography
-                    variant={textVariant.smallParagraph}
-                    label={"Enrico Capone"}
-                  />
+                  <Typography variant={textVariant.smallParagraph}>
+                    Enrico Capone
+                  </Typography>
                 </a>
                 &nbsp;
-                <Typography variant={textVariant.smallParagraph} label={"e"} />
+                <Typography variant={textVariant.smallParagraph}>e</Typography>
                 &nbsp;
                 <a
                   className={styles.footerLinkText}
@@ -51,10 +47,9 @@ const Footer = () => {
                   target={"_blank"}
                   rel={"noreferrer"}
                 >
-                  <Typography
-                    variant={textVariant.smallParagraph}
-                    label={"Andrea Selmi"}
-                  />
+                  <Typography variant={textVariant.smallParagraph}>
+                    Andrea Selmi
+                  </Typography>
                 </a>
               </div>
             </div>

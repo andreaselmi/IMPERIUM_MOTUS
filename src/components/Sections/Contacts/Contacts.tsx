@@ -16,29 +16,30 @@ const Contacts = () => {
         <LocationIcon className={styles.contactIcon} />
         <div className={styles.locationTextContainer}>
           <a
-            href={
-              "https://goo.gl/maps/g81WA3pPd42nMjSWA"
-            }
+            href={"https://goo.gl/maps/g81WA3pPd42nMjSWA"}
             target="_blank"
             rel="noreferrer"
           >
             <Typography
               className={`${styles.text} ${styles.locationStreetText}`}
               variant={textVariant.paragraph}
-              label={"Via Dei Bersaglieri, 22"}
-            />
+            >
+              Via Dei Bersaglieri, 22
+            </Typography>
             <Typography
               style={{ marginTop: 5 }}
               className={styles.text}
               variant={textVariant.paragraph}
-              label={"Castromediano"}
-            />
+            >
+              Castromediano
+            </Typography>
             <Typography
               style={{ marginTop: 5 }}
               className={styles.text}
               variant={textVariant.paragraph}
-              label={"Lecce"}
-            />
+            >
+              Lecce
+            </Typography>
           </a>
         </div>
       </div>
@@ -50,8 +51,9 @@ const Contacts = () => {
           <Typography
             className={`${styles.text}`}
             variant={textVariant.paragraph}
-            label={"+39 366 3752677"}
-          />
+          >
+            +39 366 3752677
+          </Typography>
         </div>
       </div>
 
@@ -67,8 +69,9 @@ const Contacts = () => {
             <Typography
               className={`${styles.text}`}
               variant={textVariant.paragraph}
-              label={"info@imperium-motus.it"}
-            />
+            >
+              info@imperium-motus.it
+            </Typography>
           </a>
         </div>
       </div>
@@ -85,8 +88,9 @@ const Contacts = () => {
             <Typography
               className={`${styles.text}`}
               variant={textVariant.paragraph}
-              label={"Facebook"}
-            />
+            >
+              Facebook
+            </Typography>
           </a>
         </div>
       </div>
@@ -102,8 +106,9 @@ const Contacts = () => {
             <Typography
               className={`${styles.text}`}
               variant={textVariant.paragraph}
-              label={"Instagram"}
-            />
+            >
+              Instagram
+            </Typography>
           </a>
         </div>
       </div>

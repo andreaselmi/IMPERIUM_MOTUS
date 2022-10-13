@@ -6,115 +6,56 @@ import CalendarSlot from "./CalendarSlot/CalendarSlot";
 import calendarSlotData from "../../defs/calendarDataTypes";
 
 const Calendar = () => {
+  const hours = [
+    "9:00",
+    "10:00",
+    "11:00",
+    "12:00",
+    "13:00",
+    "14:00",
+    "15:00",
+    "16:00",
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00",
+  ];
+
+  const days = ["lun", "mar", "mer", "gio", "ven", "sab"];
+
   return (
     <div className={styles.container}>
       <div className={styles.contentContainer}>
         <div className={styles.hoursContainer}>
           <div className={styles.hours}>
-            <Typography
-              className={styles.hourText}
-              variant={textVariant.smallParagraph}
-              label={"9:00"}
-            />
-            <Typography
-              className={styles.hourText}
-              variant={textVariant.smallParagraph}
-              label={"10:00"}
-            />
-            <Typography
-              className={styles.hourText}
-              variant={textVariant.smallParagraph}
-              label={"11:00"}
-            />
-            <Typography
-              className={styles.hourText}
-              variant={textVariant.smallParagraph}
-              label={"12:00"}
-            />
-            <Typography
-              className={styles.hourText}
-              variant={textVariant.smallParagraph}
-              label={"13:00"}
-            />
-            <Typography
-              className={styles.hourText}
-              variant={textVariant.smallParagraph}
-              label={"14:00"}
-            />
-            <Typography
-              className={styles.hourText}
-              variant={textVariant.smallParagraph}
-              label={"15:00"}
-            />
-            <Typography
-              className={styles.hourText}
-              variant={textVariant.smallParagraph}
-              label={"16:00"}
-            />
-            <Typography
-              className={styles.hourText}
-              variant={textVariant.smallParagraph}
-              label={"17:00"}
-            />
-            <Typography
-              className={styles.hourText}
-              variant={textVariant.smallParagraph}
-              label={"18:00"}
-            />
-            <Typography
-              className={styles.hourText}
-              variant={textVariant.smallParagraph}
-              label={"19:00"}
-            />
-            <Typography
-              className={styles.hourText}
-              variant={textVariant.smallParagraph}
-              label={"20:00"}
-            />
-            <Typography
-              className={styles.hourText}
-              variant={textVariant.smallParagraph}
-              label={"21:00"}
-            />
-            <Typography
-              className={styles.hourText}
-              variant={textVariant.smallParagraph}
-              label={"22:00"}
-            />
+            {hours.map((hour, index) => {
+              return (
+                <Typography
+                  key={index}
+                  className={styles.hourText}
+                  variant={textVariant.smallParagraph}
+                >
+                  {hour}
+                </Typography>
+              );
+            })}
           </div>
         </div>
         <div className={styles.slotContainer}>
           <div className={styles.daysHeaderContainer}>
-            <Typography
-              variant={textVariant.heading}
-              className={styles.singleDayContainer}
-              label={"Lun"}
-            />
-            <Typography
-              variant={textVariant.heading}
-              className={styles.singleDayContainer}
-              label={"Mar"}
-            />
-            <Typography
-              variant={textVariant.heading}
-              className={styles.singleDayContainer}
-              label={"Mer"}
-            />
-            <Typography
-              variant={textVariant.heading}
-              className={styles.singleDayContainer}
-              label={"Gio"}
-            />
-            <Typography
-              variant={textVariant.heading}
-              className={styles.singleDayContainer}
-              label={"Ven"}
-            />
-            <Typography
-              variant={textVariant.heading}
-              className={styles.singleDayContainer}
-              label={"Sab"}
-            />
+            {days.map((day, index) => {
+              return (
+                <Typography
+                  key={index}
+                  variant={textVariant.heading}
+                  className={styles.singleDayContainer}
+                >
+                  {day}
+                </Typography>
+              );
+            })}
           </div>
 
           <div className={styles.scheduleGrid}>

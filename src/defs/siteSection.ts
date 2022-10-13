@@ -1,6 +1,6 @@
 export enum SiteSectionTypes {
   COACH = "Coach",
-  CALISTHENICS = "Calisthenics",
-  COURSES = "Courses",
+  OUR_COURSES = "Courses",
+  SCHEDULES = "Schedules",
   MAP = "Map",
 }
