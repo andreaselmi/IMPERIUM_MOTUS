@@ -1,5 +1,5 @@
 import React from "react";
-import CalisthenicsSection from "../Sections/CalisthenicsSection/CalisthenicsSection";
+import OurCoursesSection from "../Sections/OurCoursesSection/OurCoursesSection";
 import CoachSection from "../Sections/CoachSection/CoachSection";
 import Schedules from "../Sections/Schedules/Schedules";
 import MapSection from "../Sections/MapSection/MapSection";
@@ -7,7 +7,7 @@ import MapSection from "../Sections/MapSection/MapSection";
 const Body = () => {
   return (
     <div>
-      <CalisthenicsSection />
+      <OurCoursesSection />
       <CoachSection />
       <Schedules />
       <MapSection />

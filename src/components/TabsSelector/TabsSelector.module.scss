@@ -3,56 +3,50 @@
 
 .adsSelectorContainer {
   overflow: scroll;
-  display: flex;
   text-transform: uppercase;
   position: relative;
-  height: 40px;
-  flex: 1;
   /* hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;
   scrollbar-width: none;
-  color: $global-color-light;
+  color: $global-color-mutedOnDark;
+
 
 
   &::-webkit-scrollbar {
     display: none;
   }
 
+  .activeText {
+    color: $global-color-light;
+
+  }
+
 
   .activeBar {
     height: 4px;
-    width: 128px;
     background-color: $global-color-accent;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     z-index: 999;
   }
 
   .adsSelector {
     cursor: pointer;
-    display: flex;
-    flex: 1;
-    min-width: 128px;
     border-bottom-width: 4px;
-    height: 40px;
     justify-content: center;
     text-align: center;
-  }
 
-  .notActiveSelector {
-    margin-top: 2px;
   }
 }
 
 .wrapper {
   display: flex;
-  flex: 1;
-  margin: auto;
-  justify-content: space-between;
+  min-width: 400px;
+  gap: 24px;
 }
 
 .animation {
-  transition: all .5s
+  transition: all .5s;
 }
 
 .separator {

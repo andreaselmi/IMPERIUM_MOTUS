@@ -13,11 +13,9 @@ interface NavbarLinkProps {
 const NavbarLinkButton = ({ isActive, path, label }: NavbarLinkProps) => {
   return (
     <Scroller className={styles.navbarMenuButton} path={path}>
-      <Typography
-        className={styles.navbarMenu}
-        variant={textVariant.menu}
-        label={label}
-      />
+      <Typography className={styles.navbarMenu} variant={textVariant.menu}>
+        {label}
+      </Typography>
       <span
         style={isActive ? { opacity: 1 } : {}}
         className={styles.hoverElement}

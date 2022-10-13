@@ -1,6 +1,7 @@
 import React, {
   createRef,
   CSSProperties,
+  LegacyRef,
   useEffect,
   useRef,
   useState,
@@ -31,14 +32,16 @@ const TabsSelector = ({
   tabStyle,
 }: MenuSelectorProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [showBar, setShowBar] = useState(false);
-  const elementsRef = useRef<any>(labels.map(() => createRef()));
+  const elementsRef = useRef<LegacyRef<HTMLSpanElement>[]>(
+    labels.map(() => createRef())
+  );
   const [labelsPosition, setLabelsPosition] = useState<number[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [activePosition, setActivePosition] = useState(0);
   const { width } = useWindowDimensions();
-  const [barWidth, setBarWitdth] = useState(0);
+  const [barWidth, setBarWidth] = useState(0);
 
+  // Scroll if there isn't enough space
   const checkScrollPosition = () => {
     const indexOf = labels.findIndex((el) => el === activeSection);
 
@@ -87,7 +90,7 @@ const TabsSelector = ({
       }
     });
 
-    setBarWitdth(barWidth[activeIndex]);
+    setBarWidth(barWidth[activeIndex]);
 
     setActivePosition(position[activeIndex] || 0);
   }, [activeIndex, labelsPosition]);
@@ -108,16 +111,15 @@ const TabsSelector = ({
     setActivePosition(position[activeIndex] || 0);
   }, [width]);
 
+  // Set timeout because getBoundingClientRect return wrong values as soon rendered
   useEffect(() => {
-    const positions = elementsRef?.current?.map((ref: any) => {
-      return ref.current.getBoundingClientRect().x;
-    });
+    setTimeout(() => {
+      const positions = elementsRef?.current?.map((ref: any) => {
+        return ref.current.getBoundingClientRect().x;
+      });
 
-    setLabelsPosition(positions);
-
-    setShowBar(true);
-
-    return () => setShowBar(false);
+      setLabelsPosition(positions);
+    }, 100);
   }, []);
 
   return (
@@ -126,16 +128,14 @@ const TabsSelector = ({
         className={`${styles.adsSelectorContainer} ${containerStyle}`}
         ref={scrollRef}
       >
-        {showBar && (
-          <div
-            className={`${styles.activeBar} ${styles.animation}`}
-            style={{
-              left: activePosition,
-              ...activeBarStyle,
-              width: barWidth,
-            }}
-          />
-        )}
+        <div
+          className={`${styles.activeBar} ${styles.animation}`}
+          style={{
+            left: activePosition,
+            ...activeBarStyle,
+            width: barWidth,
+          }}
+        />
 
         <div className={styles.wrapper}>
           {labels.length > 0
@@ -144,19 +144,15 @@ const TabsSelector = ({
                   <span
                     key={index}
                     ref={elementsRef.current[index]}
-                    className={`${styles.adsSelector} ${tabStyle}`}
+                    className={`${styles.adsSelector} ${
+                      activeIndex === index ? styles.activeText : ""
+                    } ${tabStyle}`}
                     role={"button"}
                     onClick={() => {
                       setActiveSection(label);
                     }}
                   >
-                    <Typography
-                      className={
-                        activeSection !== label ? styles.notActiveSelector : ""
-                      }
-                      variant={textVariant.menu}
-                      label={label}
-                    />
+                    <Typography variant={textVariant.menu}>{label}</Typography>
                   </span>
                 );
               })

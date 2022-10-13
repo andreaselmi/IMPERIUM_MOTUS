@@ -51,15 +51,21 @@
   font-family: $global-font-family-regular;
   font-weight: 500;
   line-height: $small-title * 1.3;
-
-
-  @include respond-to("tabletSmall"){
-    font-size: $small-title-desktop;
-  }
 }
 
 .label {
   font-size: $label;
   font-family: $global-font-family-regular;
   line-height: $label * 1.4;
+}
+
+
+@include respond-to("tabletSmall"){
+  .smallTitle{
+    font-size: $small-title-desktop;
+  }
+
+  .menu {
+    font-size: $menu-desktop;
+  }
 }

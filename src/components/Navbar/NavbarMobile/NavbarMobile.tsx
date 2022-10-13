@@ -64,8 +64,9 @@ const NavbarMobile = () => {
               <Typography
                 className={styles.menuButton}
                 variant={textVariant.menu}
-                label={"MENU"}
-              />
+              >
+                MENU
+              </Typography>
             </span>
           </div>
 
@@ -78,8 +79,9 @@ const NavbarMobile = () => {
                 <Typography
                   className={styles.menuButton}
                   variant={textVariant.menu}
-                  label={navBarButtons.OUR_COURSES}
-                />
+                >
+                  {navBarButtons.OUR_COURSES}
+                </Typography>
               </Scroller>
               <Scroller
                 path={navBarButtons.COACH}
@@ -88,8 +90,9 @@ const NavbarMobile = () => {
                 <Typography
                   className={styles.menuButton}
                   variant={textVariant.menu}
-                  label={navBarButtons.COACH}
-                />
+                >
+                  {navBarButtons.COACH}
+                </Typography>
               </Scroller>
             </div>
 
@@ -101,8 +104,9 @@ const NavbarMobile = () => {
                 <Typography
                   className={styles.menuButton}
                   variant={textVariant.menu}
-                  label={navBarButtons.SCHEDULES}
-                />
+                >
+                  {navBarButtons.SCHEDULES}
+                </Typography>
               </Scroller>
               <Scroller
                 path={navBarButtons.MAP}
@@ -111,8 +115,9 @@ const NavbarMobile = () => {
                 <Typography
                   className={styles.menuButton}
                   variant={textVariant.menu}
-                  label={navBarButtons.MAP}
-                />
+                >
+                  {navBarButtons.MAP}
+                </Typography>
               </Scroller>
             </div>
           </div>
