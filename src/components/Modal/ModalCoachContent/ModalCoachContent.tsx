@@ -1,6 +1,6 @@
 import React from "react";
 import ModalHeader from "../ModalHeader/ModalHeader";
-import styles from "../ModalCalisthenicsContent/ModalCalisthenicsContent.module.scss";
+import styles from "../../CoursesDescription/ModalContent/ModalCalisthenicsContent.module.scss";
 import Typography from "../../Typography/Typography";
 import { textVariant } from "../../../defs/textVariant";
 import ModalFooter from "../ModalFooter/ModalFooter";

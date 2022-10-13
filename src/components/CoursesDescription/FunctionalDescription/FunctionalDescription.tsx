@@ -42,7 +42,7 @@ const FunctionalDescription = ({
         onClick={onClickButton}
         buttonType={"secondary"}
         buttonStyle={"light"}
-        label={"Perchè Calisthenics Garage?"}
+        label={"Perchè Ginnastica Funzionale?"}
       />
     </>
   );

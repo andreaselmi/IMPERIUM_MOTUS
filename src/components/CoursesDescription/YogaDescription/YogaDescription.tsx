@@ -26,7 +26,7 @@ const YogaDescription = ({ onClickButton }: YogaDescriptionProps) => {
               className={styles.bodyText}
               variant={textVariant.paragraph}
             >
-              Previene mal di schiena, scoliosi e dolori cervicali
+              Previene mal di schiena, scoliosi edolori cervicali
             </Typography>
           </li>
           <li className={styles.listItem}>
@@ -61,7 +61,7 @@ const YogaDescription = ({ onClickButton }: YogaDescriptionProps) => {
         onClick={onClickButton}
         buttonType={"secondary"}
         buttonStyle={"light"}
-        label={"Perchè Calisthenics Garage?"}
+        label={"Scopri di più"}
       />
     </>
   );

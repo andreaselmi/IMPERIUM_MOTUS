@@ -1,9 +1,9 @@
 import React from "react";
-import Typography from "../../Typography/Typography";
-import ModalHeader from "../ModalHeader/ModalHeader";
-import ModalFooter from "../ModalFooter/ModalFooter";
-import styles from "./ModalCalisthenicsContent.module.scss";
-import { textVariant } from "../../../defs/textVariant";
+import Typography from "../../../Typography/Typography";
+import ModalHeader from "../../../Modal/ModalHeader/ModalHeader";
+import ModalFooter from "../../../Modal/ModalFooter/ModalFooter";
+import styles from "../ModalCalisthenicsContent.module.scss";
+import { textVariant } from "../../../../defs/textVariant";
 
 const ModalCalisthenicsContent = () => {
   return (
@@ -17,10 +17,8 @@ const ModalCalisthenicsContent = () => {
           trascorso, insieme ad amici e tanti ragazzi che si sono uniti poi
           succesivamente nel team, circa 7 anni ad{" "}
           <b style={{ fontWeight: "bold" }}> allenarci nel mio garage.</b>
-        </Typography>
-        <br />
-        <Typography variant={textVariant.paragraph}>
-          {" "}
+          <br />
+          <br />
           Negli anni mi sono fatto seguire sempre da vari Coach per poter
           imparare e migliorare sempre nuove tecniche di allenamento. Tutto ciò
           che imparavo sia dai trainer e sia dai tantissimi libri letti negli
@@ -36,7 +34,6 @@ const ModalCalisthenicsContent = () => {
       <br />
       <div className={styles.secondSectionText}>
         <Typography variant={textVariant.paragraph}>
-          {" "}
           Imperium Motus ha scelto di mantenere il nome
           <b style={{ fontWeight: "bold" }}> Calisthenics Garage</b> aprendo il
           primo centro di Calisthenics nel rione Castromediano, a Cavallino,
@@ -44,10 +41,8 @@ const ModalCalisthenicsContent = () => {
           nostra passione per questo sport, ma soprattutto cercando di mantenere
           la stessa energia e atmosfera che si è creata in ogni gruppo e con
           ognuno dei ragazzi e ragazze, tra risate e sudate.
-        </Typography>
-        <br />
-        <Typography variant={textVariant.paragraph}>
-          {" "}
+          <br />
+          <br />
           Vienici a trovare e prefisseremo
           <b style={{ fontWeight: "bold" }}> insieme</b> degli obiettivi
           raggiungibili.
