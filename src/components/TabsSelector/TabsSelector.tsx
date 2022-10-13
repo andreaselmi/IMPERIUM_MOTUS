@@ -2,6 +2,7 @@ import React, {
   createRef,
   CSSProperties,
   LegacyRef,
+  RefObject,
   useEffect,
   useRef,
   useState,

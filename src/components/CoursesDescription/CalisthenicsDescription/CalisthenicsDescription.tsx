@@ -1,12 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Typography from "../../Typography/Typography";
 import styles from "../../Sections/OurCoursesSection/OurCoursesSection.module.scss";
 import { textVariant } from "../../../defs/textVariant";
-import Button from "../../Button/Button";
-import ModalCalisthenicsContent from "../../Modal/ModalCalisthenicsContent/ModalCalisthenicsContent";
-import Modal from "../../Modal/Modal";
-import { GAEventCategory, ModalEventAction } from "../../../defs/analytics";
-import useAnalyticsEventTracker from "../../../hooks/useAnalyticsEventTracker";
 
 const CalisthenicsDescription = () => {
   return (
