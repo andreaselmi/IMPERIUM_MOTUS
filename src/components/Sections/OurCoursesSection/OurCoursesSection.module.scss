@@ -50,28 +50,4 @@
   color: $global-color-light;
   margin-bottom: 24px;
 }
-.courseDescriptionContainer {
-  min-height: 650px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 24px;
 
-
-  @include respond-to($tabletSmall){
-    min-height: 750px;
-  }
-
-  @include respond-to($tabletBig){
-    min-height: 570px;
-  }
-
-  @include respond-to($desktopSmall){
-    min-height: 500px;
-  }
-
-  @include respond-to($desktopBig){
-    min-height: 680px;
-  }
-
-}

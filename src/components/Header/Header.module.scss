@@ -11,6 +11,11 @@
     padding-top: $navbar-desktop-height + 40px;
 
   }
+
+  @include respond-to($desktopBig){
+    padding-bottom: 110px;
+    padding-top: $navbar-desktop-height + 48px;
+  }
 }
 
 .container {

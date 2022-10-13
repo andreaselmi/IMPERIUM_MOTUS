@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "../../Typography/Typography";
-import styles from "../../Sections/OurCoursesSection/OurCoursesSection.module.scss";
+import styles from "../CoursesDescription.module.scss";
 import { textVariant } from "../../../defs/textVariant";
 import Button from "../../Button/Button";
 
@@ -55,14 +55,14 @@ const YogaDescription = ({ onClickButton }: YogaDescriptionProps) => {
             </Typography>
           </li>
         </ul>
+        <Button
+          className={styles.modalButton}
+          onClick={onClickButton}
+          buttonType={"secondary"}
+          buttonStyle={"light"}
+          label={"Scopri di più"}
+        />
       </section>
-      <Button
-        className={styles.modalButton}
-        onClick={onClickButton}
-        buttonType={"secondary"}
-        buttonStyle={"light"}
-        label={"Scopri di più"}
-      />
     </>
   );
 };
