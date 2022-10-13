@@ -44,14 +44,16 @@ const CalendarSlot = ({ item, ...restProps }: CalendarSlotProps) => {
         className={`${styles.label} ${styles.text}`}
         style={{ color: item.type.hoursLabelColor }}
         variant={textVariant.label}
-        label={`${item.startHour} - ${item.endHour}`}
-      />
+      >
+        {item.startHour} - {item.endHour}
+      </Typography>
       <Typography
         className={styles.text}
         style={{ color: item.type.labelColor }}
         variant={textVariant.smallParagraph}
-        label={item.type.label}
-      />
+      >
+        {item.type.label}
+      </Typography>
     </div>
   );
 };

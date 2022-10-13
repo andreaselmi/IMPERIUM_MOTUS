@@ -12,11 +12,9 @@ const Certificates = () => {
   return (
     <div className={styles.certificatesScrollableContainer}>
       <div className={styles.certificatesContainer}>
-        <Typography
-          style={{ marginBottom: 24 }}
-          variant={textVariant.heading}
-          label={"Attestati"}
-        />
+        <Typography style={{ marginBottom: 24 }} variant={textVariant.heading}>
+          Attestati
+        </Typography>
         <div className={styles.certificatesContentContainer}>
           <div className={styles.singleCertificateContainer}>
             <div className={styles.certificateImgContainer}>
@@ -29,8 +27,9 @@ const Certificates = () => {
             <Typography
               className={styles.certificateText}
               variant={textVariant.smallTitle}
-              label={"Allenamento base Calisthenics"}
-            />
+            >
+              Allenamento base Calisthenics
+            </Typography>
           </div>
           <div className={styles.singleCertificateContainer}>
             <div className={styles.certificateImgContainer}>
@@ -43,8 +42,9 @@ const Certificates = () => {
             <Typography
               className={styles.certificateText}
               variant={textVariant.smallTitle}
-              label={"Istruttore Allenamento Calisthenico"}
-            />
+            >
+              Istruttore Allenamento Calisthenico
+            </Typography>
           </div>
           <div className={styles.singleCertificateContainer}>
             <div className={styles.certificateImgContainer}>
@@ -57,8 +57,9 @@ const Certificates = () => {
             <Typography
               className={styles.certificateText}
               variant={textVariant.smallTitle}
-              label={"Master “L’ ABC della GINNASTICA”"}
-            />
+            >
+              Master “L’ ABC della GINNASTICA”
+            </Typography>
           </div>
           <div className={styles.singleCertificateContainer}>
             <div className={styles.certificateImgContainer}>
@@ -71,8 +72,9 @@ const Certificates = () => {
             <Typography
               className={styles.certificateText}
               variant={textVariant.smallTitle}
-              label={"Istruttore Functional Training"}
-            />
+            >
+              Istruttore Functional Training
+            </Typography>
           </div>
           <div className={styles.singleCertificateContainer}>
             <div className={styles.certificateImgContainer}>
@@ -85,8 +87,9 @@ const Certificates = () => {
             <Typography
               className={styles.certificateText}
               variant={textVariant.smallTitle}
-              label={"Istruttore Posturologia"}
-            />
+            >
+              Istruttore Posturologia
+            </Typography>
           </div>
         </div>
       </div>

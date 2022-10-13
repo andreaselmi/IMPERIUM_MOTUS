@@ -58,39 +58,24 @@ const CoachSection = () => {
           </div>
 
           <div className={styles.textContainer}>
-            <Typography
-              className={styles.text}
-              variant={textVariant.paragraph}
-              label={""}
-            >
-              <p>
-                Ciao, sono{" "}
-                <span style={{ fontWeight: "bold" }}>Alessandro Lupo</span>,
-                giovane atleta e Istruttore di{" "}
-                <span style={{ fontWeight: "bold" }}>Calisthenics</span>.
-              </p>
+            <Typography className={styles.text} variant={textVariant.paragraph}>
+              Ciao, sono <b style={{ fontWeight: "bold" }}>Alessandro Lupo</b>,
+              giovane atleta e Istruttore di{" "}
+              <b style={{ fontWeight: "bold" }}>Calisthenics</b>.
             </Typography>
             <br />
-            <Typography
-              className={styles.text}
-              variant={textVariant.paragraph}
-              label={
-                "Ho scoperto questa disciplina nel 2012 all'età di 21 anni da autodidatta dopo aver trascorso in sala pesi molti anni e dopo aver provato vari sport nell’ arco della mia adolescenza."
-              }
-            />
+            <Typography className={styles.text} variant={textVariant.paragraph}>
+              Ho scoperto questa disciplina nel 2012 all&apos;età di 21 anni da
+              autodidatta dopo aver trascorso in sala pesi molti anni e dopo
+              aver provato vari sport nell’ arco della mia adolescenza.
+            </Typography>
             <br />
-            <Typography
-              className={styles.text}
-              variant={textVariant.paragraph}
-              label={""}
-            >
-              <p>
-                Ho frequentato l&apos;Università degli Studi di L&apos;Aquila
-                iscrivendomi alla facoltà di{" "}
-                <span style={{ fontWeight: "bold" }}>Scienze Motorie</span> per
-                arricchire le mie conoscenze e per fare della mia passione anche
-                una professione.
-              </p>
+            <Typography className={styles.text} variant={textVariant.paragraph}>
+              Ho frequentato l&apos;Università degli Studi di L&apos;Aquila
+              iscrivendomi alla facoltà di{" "}
+              <b style={{ fontWeight: "bold" }}>Scienze Motorie</b> per
+              arricchire le mie conoscenze e per fare della mia passione anche
+              una professione.
             </Typography>
 
             <Button
@@ -98,6 +83,7 @@ const CoachSection = () => {
               className={styles.button}
               label={"Leggi la mia storia"}
               buttonType={"primary"}
+              buttonStyle={"light"}
             />
           </div>
         </SectionContainer>

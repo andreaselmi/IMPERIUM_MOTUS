@@ -42,8 +42,9 @@ const Modal: React.FC<ModalProps> = ({ children, closeModal, isOpen }) => {
                 marginLeft: 8,
               }}
               variant={textVariant.heading}
-              label={"Chiudi"}
-            />
+            >
+              Chiudi
+            </Typography>
           </span>
         </Container>
       </div>

@@ -3,6 +3,7 @@
 
 .button {
   margin-top: 24px;
+  border: 1px solid $global-background-color-dark;
 
   @include respond-to("desktopBig") {
     margin-top: 40px;

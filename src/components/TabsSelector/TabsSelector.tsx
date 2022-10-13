@@ -152,7 +152,7 @@ const TabsSelector = ({
                       setActiveSection(label);
                     }}
                   >
-                    <Typography variant={textVariant.menu} label={label} />
+                    <Typography variant={textVariant.menu}>{label}</Typography>
                   </span>
                 );
               })

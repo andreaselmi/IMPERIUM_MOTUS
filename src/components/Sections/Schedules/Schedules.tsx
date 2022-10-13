@@ -57,6 +57,7 @@ const Schedules = () => {
 
       <div className={styles.button}>
         <Button
+          buttonType={"secondary"}
           onClick={handleBookLesson}
           label={"Prenota una lezione di prova"}
         />

@@ -27,7 +27,7 @@ const Button = ({
         } ${className}`}
         {...restProps}
       >
-        <Typography variant={textVariant.smallTitle} label={label} />
+        <Typography variant={textVariant.smallTitle}>{label}</Typography>
       </button>
     );
   } else
@@ -40,7 +40,7 @@ const Button = ({
         } ${className}`}
         {...restProps}
       >
-        <Typography variant={textVariant.smallTitle} label={label} />
+        <Typography variant={textVariant.smallTitle}>{label}</Typography>
       </button>
     );
 };
