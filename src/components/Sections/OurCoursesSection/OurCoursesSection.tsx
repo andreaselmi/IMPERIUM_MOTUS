@@ -28,7 +28,7 @@ const OurCoursesSection = () => {
 
   const gaEventTracker = useAnalyticsEventTracker(GAEventCategory.MODAL);
 
-  const handleBookLesson = () => {
+  const handleModalButton = () => {
     gaEventTracker(ModalEventAction.CALISTHENICS);
     setShowModal(true);
   };
@@ -75,21 +75,12 @@ const OurCoursesSection = () => {
 
           <div className={styles.body}>
             {courseSection === "Calisthenics" ? (
-              <CalisthenicsDescription />
+              <CalisthenicsDescription onClickButton={handleModalButton} />
             ) : courseSection === "Ginnastica funzionale" ? (
-              <FunctionalDescription />
+              <FunctionalDescription onClickButton={handleModalButton} />
             ) : (
-              <YogaDescription />
+              <YogaDescription onClickButton={handleModalButton} />
             )}
-          </div>
-
-          <div>
-            <Button
-              onClick={handleBookLesson}
-              buttonType={"secondary"}
-              buttonStyle={"light"}
-              label={"Perchè Calisthenics Garage?"}
-            />
           </div>
         </div>
       </SectionContainer>

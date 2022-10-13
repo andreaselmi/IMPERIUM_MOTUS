@@ -18,7 +18,7 @@
 }
 
 .sectionContainer {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../../assets/images/sections/calisthenicsSectionBg.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../../assets/images/sections/ourCoursesBg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -49,4 +49,31 @@
 .sectionTitle {
   color: $global-color-light;
   margin-bottom: 24px;
+}
+.courseDescriptionContainer {
+  min-height: 650px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+
+
+  @include respond-to($tabletSmall){
+    min-height: 750px;
+  }
+
+  @include respond-to($tabletBig){
+    min-height: 570px;
+  }
+
+  @include respond-to($desktopSmall){
+    min-height: 500px;
+  }
+
+  @include respond-to($desktopBig){
+    min-height: 680px;
+  }
+
+
+
 }
