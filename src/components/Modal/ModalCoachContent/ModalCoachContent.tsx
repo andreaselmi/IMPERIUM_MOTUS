@@ -14,34 +14,33 @@ const ModalCoachContent = () => {
           Ciao, sono <b style={{ fontWeight: "bold" }}>Alessandro Lupo</b>,
           giovane atleta e Istruttore di{" "}
           <b style={{ fontWeight: "bold" }}>Calisthenics</b>.
-          <br />
-          <br />
-          <Typography variant={textVariant.paragraph}>
-            Ho scoperto questa disciplina nel 2012 all&apos;età di 21 anni da
-            autodidatta dopo aver trascorso in sala pesi molti anni e dopo aver
-            provato vari sport nell’ arco della mia adolescenza.
-          </Typography>
-          <br />
-          <Typography variant={textVariant.paragraph}>
-            Ho frequentato l&apos;Università degli Studi di L&apos;Aquila
-            iscrivendomi alla facoltà di{" "}
-            <b style={{ fontWeight: "bold" }}>Scienze Motorie</b> per arricchire
-            le mie conoscenze e per fare della mia passione anche una
-            professione. Da sempre appassionato al mondo della ginnastica
-            artistica, al primo anno di università iniziai ad approcciarmi
-            all&apos;allenamento calistenico, perché mi dava la sensazione di
-            poter superare qualsiasi limite mentale.
-          </Typography>
-          <br />
-          <Typography variant={textVariant.paragraph}>
-            {" "}
-            Quando ho iniziato questo sport erano molto pochi gli atleti in
-            circolazione e con potenzialità veramente incredibili e l’unica voce
-            che gridava nella mia testa era “Se loro riescono a farlo, posso
-            farlo anch’io”.
-          </Typography>
-          <br />
-        </Typography>{" "}
+        </Typography>
+        <br />
+        <br />
+        <Typography variant={textVariant.paragraph}>
+          Ho scoperto questa disciplina nel 2012 all&apos;età di 21 anni da
+          autodidatta dopo aver trascorso in sala pesi molti anni e dopo aver
+          provato vari sport nell’ arco della mia adolescenza.
+        </Typography>
+        <br />
+        <Typography variant={textVariant.paragraph}>
+          Ho frequentato l&apos;Università degli Studi di L&apos;Aquila
+          iscrivendomi alla facoltà di{" "}
+          <b style={{ fontWeight: "bold" }}>Scienze Motorie</b> per arricchire
+          le mie conoscenze e per fare della mia passione anche una professione.
+          Da sempre appassionato al mondo della ginnastica artistica, al primo
+          anno di università iniziai ad approcciarmi all&apos;allenamento
+          calistenico, perché mi dava la sensazione di poter superare qualsiasi
+          limite mentale.
+        </Typography>
+        <br />
+        <Typography variant={textVariant.paragraph}>
+          Quando ho iniziato questo sport erano molto pochi gli atleti in
+          circolazione e con potenzialità veramente incredibili e l’unica voce
+          che gridava nella mia testa era “Se loro riescono a farlo, posso farlo
+          anch’io”.
+        </Typography>
+        <br />
         <Typography variant={textVariant.paragraph}>
           <b style={{ fontWeight: "bold" }}>
             Sono ormai più di nove anni che pratico questo sport
