@@ -8,7 +8,7 @@
 
 .bodyText {
   line-height: 150%;
-  color: $global-color-light
+  color: $global-color-light;
 }
 
 .container {
@@ -24,6 +24,16 @@
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
+}
+
+.listItem {
+  color: white;
+  list-style-type: disc;
+  margin-left: 24px;
+
+  &:not(:last-child){
+    margin-bottom: 8px;
+  }
 }
 
 .overlay {

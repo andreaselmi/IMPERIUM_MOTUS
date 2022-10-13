@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
-import Typography from "../../Typography/Typography";
 import Button from "../../Button/Button";
 import SectionContainer from "../SectionContainer/SectionContainer";
 import Modal from "../../Modal/Modal";
@@ -10,7 +9,6 @@ import { ReactComponent as OurCourses } from "../../../assets/images/sections/co
 //Utils
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import { navBarButtons } from "../../../defs/navbarButtons";
-import { textVariant } from "../../../defs/textVariant";
 import ModalCalisthenicsContent from "../../Modal/ModalCalisthenicsContent/ModalCalisthenicsContent";
 import { useAppDispatch } from "../../../store/store";
 import changeActiveSection from "../../../utils/changeActiveSection";
@@ -18,6 +16,9 @@ import useAnalyticsEventTracker from "../../../hooks/useAnalyticsEventTracker";
 import { GAEventCategory, ModalEventAction } from "../../../defs/analytics";
 import { SiteSectionTypes } from "../../../defs/siteSection";
 import TabsSelector from "../../TabsSelector/TabsSelector";
+import CalisthenicsDescription from "../../CoursesDescription/CalisthenicsDescription/CalisthenicsDescription";
+import FunctionalDescription from "../../CoursesDescription/FunctionalDescription/FunctionalDescription";
+import YogaDescription from "../../CoursesDescription/YogaDescription/YogaDescription";
 
 const OurCoursesSection = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -73,39 +74,13 @@ const OurCoursesSection = () => {
           />
 
           <div className={styles.body}>
-            <Typography
-              className={styles.bodyText}
-              variant={textVariant.paragraph}
-            >
-              <b style={{ fontWeight: "bold" }}>Imperium Motus</b>, che in
-              latino sta a significare{" "}
-              <i style={{ fontStyle: "italic" }}>Controllo del movimento</i>{" "}
-              nasce proprio dalla filosofia del{" "}
-              <b style={{ fontWeight: "bold" }}>Calisthenics</b>.
-            </Typography>
-            <br />
-            <Typography
-              className={styles.bodyText}
-              variant={textVariant.paragraph}
-            >
-              Il termine calistenia deriva dal greco Kalòs (bello) e Sthenos
-              (forza) e già l&apos;analisi etimologica lascia intendere come la
-              pratica dell&apos;allenamento calistenico abbia tra i suoi
-              obiettivi il miglioramento sia della performance del soggetto che
-              del suo aspetto fisico con il massimo controllo del proprio corpo.
-            </Typography>
-            <br />
-            <Typography
-              className={styles.bodyText}
-              variant={textVariant.paragraph}
-            >
-              {" "}
-              Il Calisthenics è l&apos;arte di usare il proprio peso corporeo
-              come resistenza per allenarsi e sviluppare il fisico tramite il
-              sistema di allenamento basato sulla ginnastica a corpo libero,
-              includendo tutti quegli esercizi ginnici atti a sviluppare la
-              bellezza, la forza e l&apos;eleganza dei movimenti.
-            </Typography>
+            {courseSection === "Calisthenics" ? (
+              <CalisthenicsDescription />
+            ) : courseSection === "Ginnastica funzionale" ? (
+              <FunctionalDescription />
+            ) : (
+              <YogaDescription />
+            )}
           </div>
 
           <div>
