@@ -5,7 +5,7 @@ import Button from "../../Button/Button";
 import SectionContainer from "../SectionContainer/SectionContainer";
 import Modal from "../../Modal/Modal";
 import styles from "./OurCoursesSection.module.scss";
-import { ReactComponent as Calisthenics } from "../../../assets/images/sections/calisthenicsSection.svg";
+import { ReactComponent as OurCourses } from "../../../assets/images/sections/coursesSection.svg";
 
 //Utils
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
@@ -17,10 +17,13 @@ import changeActiveSection from "../../../utils/changeActiveSection";
 import useAnalyticsEventTracker from "../../../hooks/useAnalyticsEventTracker";
 import { GAEventCategory, ModalEventAction } from "../../../defs/analytics";
 import { SiteSectionTypes } from "../../../defs/siteSection";
+import TabsSelector from "../../TabsSelector/TabsSelector";
 
 const OurCoursesSection = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const dispatch = useAppDispatch();
+
+  const [courseSection, setCourseSection] = useState("Calisthenics");
 
   const gaEventTracker = useAnalyticsEventTracker(GAEventCategory.MODAL);
 
@@ -57,10 +60,16 @@ const OurCoursesSection = () => {
       <SectionContainer className={styles.sectionContainer}>
         <div className={styles.container}>
           <SectionHeader
-            SvgComponent={<Calisthenics />}
+            SvgComponent={<OurCourses />}
             titleClass={styles.sectionTitle}
             imageAlt={"Il Calisthenics"}
-            label={"Calisthenics garage"}
+            label={"I nostri corsi"}
+          />
+
+          <TabsSelector
+            setActiveSection={(section) => setCourseSection(section)}
+            labels={["Calisthenics", "Ginnastica funzionale", "Yoga"]}
+            activeSection={courseSection}
           />
 
           <div className={styles.body}>

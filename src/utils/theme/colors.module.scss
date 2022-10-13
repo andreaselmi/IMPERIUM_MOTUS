@@ -4,6 +4,7 @@ $black: #131313;
 $pureBlack: #000000;
 $white: #FFFFFF;
 $grey: #757575;
+$grey200: #C0C0C0;
 $red: #E11900;
 $orange: #FFA14F;
 $green: #4CD60C;
@@ -15,6 +16,7 @@ $global-color-accent: $neon;
 $global-color-accent-purple: $neonPurple;
 $global-color-dark: $black;
 $global-color-muted: $grey;
+$global-color-mutedOnDark: $grey200;
 $global-color-light: $white;
 
 $global-background-color-dark: $global-color-dark;
@@ -31,6 +33,7 @@ $global-background-color-accent-purple: $global-color-accent-purple;
   purple: $global-color-accent-purple;
   dark: $global-color-dark;
   muted: $global-color-muted;
+  mutedOnDark: $global-color-mutedOnDark;
   light: $global-color-light;
 
   backgroundDark:$global-background-color-dark;

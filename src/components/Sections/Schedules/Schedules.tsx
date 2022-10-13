@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import SectionContainer from "../SectionContainer/SectionContainer";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
-import { ReactComponent as Courses } from "../../../assets/images/sections/coursesSection.svg";
+import { ReactComponent as Courses } from "../../../assets/images/sections/scheduleSection.svg";
 import styles from "./Schedules.module.scss";
 import Button from "../../Button/Button";
 import { navBarButtons } from "../../../defs/navbarButtons";
