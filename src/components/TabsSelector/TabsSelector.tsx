@@ -41,6 +41,9 @@ const TabsSelector = ({
   const { width } = useWindowDimensions();
   const [barWidth, setBarWidth] = useState(0);
 
+  // Set timeout because getBoundingClientRect return wrong values as soon rendered
+  const [renderFlag, setRenderFlag] = useState(false);
+
   // Scroll if there isn't enough space
   const checkScrollPosition = () => {
     const indexOf = labels.findIndex((el) => el === activeSection);
@@ -78,22 +81,24 @@ const TabsSelector = ({
   }, [activeSection]);
 
   useEffect(() => {
-    const position = labelsPosition.map((label: number, index: number) => {
-      if (index === activeIndex) {
-        return label - (scrollRef?.current?.getBoundingClientRect().x || 0);
-      }
-    });
+    if (renderFlag) {
+      const position = labelsPosition.map((label: number, index: number) => {
+        if (index === activeIndex) {
+          return label - (scrollRef?.current?.getBoundingClientRect().x || 0);
+        }
+      });
 
-    const barWidth = elementsRef?.current?.map((ref: any, index: number) => {
-      if (index === activeIndex) {
-        return ref?.current?.getBoundingClientRect().width || 0;
-      }
-    });
+      const barWidth = elementsRef?.current?.map((ref: any, index: number) => {
+        if (index === activeIndex) {
+          return ref?.current?.getBoundingClientRect().width || 0;
+        }
+      });
 
-    setBarWidth(barWidth[activeIndex]);
+      setBarWidth(barWidth[activeIndex]);
 
-    setActivePosition(position[activeIndex] || 0);
-  }, [activeIndex, labelsPosition]);
+      setActivePosition(position[activeIndex] || 0);
+    }
+  }, [activeIndex, labelsPosition, renderFlag]);
 
   useEffect(() => {
     const positions = elementsRef?.current?.map((ref: any) => {
@@ -111,16 +116,24 @@ const TabsSelector = ({
     setActivePosition(position[activeIndex] || 0);
   }, [width]);
 
-  // Set timeout because getBoundingClientRect return wrong values as soon rendered
   useEffect(() => {
     setTimeout(() => {
+      setRenderFlag(true);
+    }, 300);
+
+    return () => setRenderFlag(false);
+  }, []);
+
+  // Set timeout because getBoundingClientRect return wrong values as soon rendered
+  useEffect(() => {
+    if (renderFlag) {
       const positions = elementsRef?.current?.map((ref: any) => {
         return ref.current.getBoundingClientRect().x;
       });
 
       setLabelsPosition(positions);
-    }, 100);
-  }, []);
+    }
+  }, [renderFlag]);
 
   return (
     <>
