@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "../../Typography/Typography";
-import styles from "../../Sections/OurCoursesSection/OurCoursesSection.module.scss";
+import styles from "../CoursesDescription.module.scss";
 import { textVariant } from "../../../defs/textVariant";
 import Button from "../../Button/Button";
 
@@ -36,14 +36,14 @@ const FunctionalDescription = ({
           movimenti quotidiani, scongiurando il rischio di incorrere in
           fastidiosi indolenzimenti o veri e propri microtraumi.
         </Typography>
+        <Button
+          className={styles.modalButton}
+          onClick={onClickButton}
+          buttonType={"secondary"}
+          buttonStyle={"light"}
+          label={"Perchè Ginnastica Funzionale?"}
+        />
       </section>
-      <Button
-        className={styles.modalButton}
-        onClick={onClickButton}
-        buttonType={"secondary"}
-        buttonStyle={"light"}
-        label={"Perchè Ginnastica Funzionale?"}
-      />
     </>
   );
 };

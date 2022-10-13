@@ -1,0 +1,30 @@
+@import "src/utils/theme/breakpoints.module";
+@import "src/utils/theme/colors.module";
+.courseDescriptionContainer {
+  min-height: 650px;
+  position: relative;
+  padding-bottom: 24px;
+  color: $global-color-light;
+
+
+  @include respond-to($tabletSmall){
+    min-height: 750px;
+  }
+
+  @include respond-to($tabletBig){
+    min-height: 570px;
+  }
+
+  @include respond-to($desktopSmall){
+    min-height: 500px;
+  }
+
+  @include respond-to($desktopBig){
+    min-height: 680px;
+  }
+
+  .modalButton {
+    margin-top: 40px;
+  }
+
+}
