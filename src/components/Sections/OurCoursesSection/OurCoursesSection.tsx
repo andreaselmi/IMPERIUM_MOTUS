@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
-import Button from "../../Button/Button";
 import SectionContainer from "../SectionContainer/SectionContainer";
 import Modal from "../../Modal/Modal";
 import styles from "./OurCoursesSection.module.scss";
