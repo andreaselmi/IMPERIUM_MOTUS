@@ -101,7 +101,7 @@ const CoachingOnlineModal = () => {
             <div className={styles.iconContainer}>
               <img src={formIcon} alt={"Icona di compilazione form"} />
             </div>
-            <div>
+            <div className={styles.coachingOnlineFieldWithIconTextContainer}>
               <Typography variant={textVariant.smallTitle}>
                 Richiesta e consulenza
               </Typography>{" "}
@@ -118,16 +118,13 @@ const CoachingOnlineModal = () => {
             <div className={styles.iconContainer}>
               <img src={videoCallIcon} alt={"Icona di un computer"} />
             </div>
-            <div>
+            <div className={styles.coachingOnlineFieldWithIconTextContainer}>
               <Typography variant={textVariant.smallTitle}>
-                Richiesta e consulenza
+                Lezione tramite videochiamata
               </Typography>{" "}
               <Typography variant={textVariant.smallParagraph}>
-                Una volta inviata la candidatura via email verrai contattato dal
-                nostro staff tramite chiamata telefonica, WhatsApp o Telegram.
-                Per individuare meglio il tuo livello atletico, ti verranno
-                assegnati dei test da svolgere e prefisserete un appuntamento
-                con il coach per andare a lavorare sui test svolti.
+                La lezione è individuale, verrà effettuata tramite l’App zoom ed
+                avrà la durata di 1 ora.
               </Typography>
             </div>
           </div>
@@ -135,16 +132,14 @@ const CoachingOnlineModal = () => {
             <div className={styles.iconContainer}>
               <img src={programIcon} alt={"Icona di un taccuino"} />
             </div>
-            <div>
+            <div className={styles.coachingOnlineFieldWithIconTextContainer}>
               <Typography variant={textVariant.smallTitle}>
-                Richiesta e consulenza
+                Consegna del programma
               </Typography>{" "}
               <Typography variant={textVariant.smallParagraph}>
-                Una volta inviata la candidatura via email verrai contattato dal
-                nostro staff tramite chiamata telefonica, WhatsApp o Telegram.
-                Per individuare meglio il tuo livello atletico, ti verranno
-                assegnati dei test da svolgere e prefisserete un appuntamento
-                con il coach per andare a lavorare sui test svolti.
+                Il programma vi verrà inviato completo di mini video lezioni in
+                cui ci sarà la spiegazione degli esercizi che dovrai andare a
+                svolgere.
               </Typography>
             </div>
           </div>
@@ -152,41 +147,43 @@ const CoachingOnlineModal = () => {
             <div className={styles.iconContainer}>
               <img src={supportIcon} alt={"Icona di uno smartphone"} />
             </div>
-            <div>
-              <Typography variant={textVariant.smallTitle}>
-                Richiesta e consulenza
-              </Typography>{" "}
+            <div className={styles.coachingOnlineFieldWithIconTextContainer}>
+              <Typography variant={textVariant.smallTitle}>Supporto</Typography>{" "}
               <Typography variant={textVariant.smallParagraph}>
-                Una volta inviata la candidatura via email verrai contattato dal
-                nostro staff tramite chiamata telefonica, WhatsApp o Telegram.
-                Per individuare meglio il tuo livello atletico, ti verranno
-                assegnati dei test da svolgere e prefisserete un appuntamento
-                con il coach per andare a lavorare sui test svolti.
+                Durante il percorso di coaching, ogni settimana, dovrai inviare
+                il video con esecuzione di ogni esercizio. Riceverai supporto
+                tramite whatsapp o telegram per risolvere i tuoi dubbi e
+                ricevere eventuali correzioni.
               </Typography>
             </div>
           </div>
         </div>
-
-        <div>
-          <Typography
-            className={styles.coachingOnlineHighlightedText}
-            variant={textVariant.paragraph}
-          >
-            Ricordiamo che il percorso prevede la lezione individuale, non
-            lezioni collettive.
-          </Typography>
-          <Typography variant={textVariant.paragraph}></Typography>
+        <Typography
+          className={styles.coachingOnlineHighlightedText}
+          variant={textVariant.paragraph}
+        >
+          Ricordiamo che il percorso prevede la lezione individuale, non lezioni
+          collettive.
+        </Typography>
+        <Typography variant={textVariant.paragraph}>
           Una volta inviata la candidatura, se ritenuta idonea, lo Staff ti
-          indicherà le prime disponibilità per iniziare il percorso. Il percorso
-          è accessibile a qualsiasi livello, partendo da 0 fino ai movimenti più
-          avanzati su un braccio, a condizione che ci sia impegno, serietà,
-          costanza e si rispettino i requisiti del percorso presentati durante
-          la consulenza. In questa esperienza riceverai il massimo, ma dovrai
-          anche dare il massimo!
-        </div>
+          indicherà le prime disponibilità per iniziare il percorso.
+          <br />
+          <br />
+          Il percorso è accessibile a qualsiasi livello, partendo da 0 fino ai
+          movimenti più avanzati su un braccio, a condizione che ci sia{" "}
+          <b style={{ fontWeight: "bold" }}>impegno, serietà, costanza</b> e si
+          rispettino i requisiti del percorso presentati durante la consulenza.
+          <br />
+          <br />
+          In questa esperienza riceverai il{" "}
+          <b style={{ fontWeight: "bold" }}>massimo</b>, ma dovrai anche dare il
+          massimo!
+        </Typography>
       </div>
 
       <ModalFooter
+        style={{ marginBottom: 60 }}
         label={
           "NON è IMPORTANTE IL LIVELLO MA SONO DETERMINANTI GLI OBIETTIVI, DISPONIBILITA' DI ALLENAMENTO E costanza"
         }
@@ -196,11 +193,9 @@ const CoachingOnlineModal = () => {
         target={"_blank"}
         href={"https://forms.gle/oDufrxyNJfhZixGz7"}
         rel="noreferrer"
+        style={{ margin: "0 auto 20px" }}
       >
-        <Button
-          style={{ margin: " 40px auto" }}
-          label={"Compila la candidatura"}
-        />
+        <Button label={"Compila la candidatura"} />
       </a>
     </>
   );

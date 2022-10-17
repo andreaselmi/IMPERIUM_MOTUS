@@ -24,7 +24,7 @@
 }
 
 .underlinedText {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 .coachingOnlineSection {
@@ -34,6 +34,7 @@
 .coachingOnlineFieldWithIcon {
   margin-top: 32px;
   display: flex;
+  align-items: center;
 
   .iconContainer {
     width: 64px;
@@ -46,6 +47,16 @@
   & img {
     width: 100%;
     height: 100%;
+  }
+
+  .coachingOnlineFieldWithIconTextContainer {
+    & :first-child {
+      font-weight: bold;
+    }
+
+    & :not(:first-child) {
+      font-size: 18px;
+    }
   }
 }
 

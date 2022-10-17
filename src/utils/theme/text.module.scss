@@ -5,14 +5,15 @@ $quotes: 2.25rem;
 $menu: 1.33rem;
 $menu-desktop: 1rem;
 $paragraph: 1rem;
-$small-title:0.888rem;
+$small-title: 0.888rem;
 $small-title-desktop: 0.75rem;
 $small-paragraph: 0.618rem;
 $label: 0.542rem;
 
-$global-font-family-bold: "Bison Bold", "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$global-font-family-regular: "Inter", "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-
+$global-font-family-bold: "Bison Bold", "SF Pro Text", "Helvetica Neue",
+  "Helvetica", "Arial", sans-serif;
+$global-font-family-regular: "Inter", "SF Pro Text", "Helvetica Neue",
+  "Helvetica", "Arial", sans-serif;
 
 :export {
   pageTitle: $page-title;
@@ -22,10 +23,9 @@ $global-font-family-regular: "Inter", "SF Pro Text", "Helvetica Neue", "Helvetic
   menu: $menu;
   paragraph: $paragraph;
   smallTitle: $small-title;
-  smallTitleDesktop:$small-title-desktop;
+  smallTitleDesktop: $small-title-desktop;
   smallParagraph: $small-paragraph;
   label: $label;
-
 
   fontFamilyBold: $global-font-family-bold;
   fontFamilyRegular: $global-font-family-regular;

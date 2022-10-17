@@ -1,6 +1,5 @@
 @import "../../../utils/theme/breakpoints.module";
 
-
 .footer {
   grid-column: col-start 2 / span 11;
   margin: 56px 0 80px 0;
@@ -11,13 +10,13 @@
 }
 
 .footerContentContainer {
-  background-color: #E1FF2C;
+  background-color: #e1ff2c;
 }
 
 .footerTextContainer {
   position: relative;
   top: -40px;
-  left: 20px
+  left: 20px;
 }
 
 .quotes {
