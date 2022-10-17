@@ -101,7 +101,7 @@ const CoachingOnlineModal = () => {
             <div className={styles.iconContainer}>
               <img src={formIcon} alt={"Icona di compilazione form"} />
             </div>
-            <div>
+            <div className={styles.coachingOnlineFieldWithIconTextContainer}>
               <Typography variant={textVariant.smallTitle}>
                 Richiesta e consulenza
               </Typography>{" "}
@@ -118,7 +118,7 @@ const CoachingOnlineModal = () => {
             <div className={styles.iconContainer}>
               <img src={videoCallIcon} alt={"Icona di un computer"} />
             </div>
-            <div>
+            <div className={styles.coachingOnlineFieldWithIconTextContainer}>
               <Typography variant={textVariant.smallTitle}>
                 Lezione tramite videochiamata
               </Typography>{" "}
@@ -132,7 +132,7 @@ const CoachingOnlineModal = () => {
             <div className={styles.iconContainer}>
               <img src={programIcon} alt={"Icona di un taccuino"} />
             </div>
-            <div>
+            <div className={styles.coachingOnlineFieldWithIconTextContainer}>
               <Typography variant={textVariant.smallTitle}>
                 Consegna del programma
               </Typography>{" "}
@@ -147,7 +147,7 @@ const CoachingOnlineModal = () => {
             <div className={styles.iconContainer}>
               <img src={supportIcon} alt={"Icona di uno smartphone"} />
             </div>
-            <div>
+            <div className={styles.coachingOnlineFieldWithIconTextContainer}>
               <Typography variant={textVariant.smallTitle}>Supporto</Typography>{" "}
               <Typography variant={textVariant.smallParagraph}>
                 Durante il percorso di coaching, ogni settimana, dovrai inviare
