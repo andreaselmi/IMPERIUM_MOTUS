@@ -10,7 +10,7 @@ export enum CourseNameType {
 }
 
 export enum CourseLabel {
-  PERSONAL = "Personal",
+  PERSONAL = "Su appuntamento",
   YOGA = "Hatha Yoga",
   CLASS = "I.M. Class",
   CALISTHENICS = "Calisthenics",
@@ -230,6 +230,13 @@ const calendarSlotData: CourseType[] = [
     type: personalLabel,
     day: "mar",
     startHour: "16:30",
+    endHour: "17:30",
+  },
+  {
+    id: Math.random().toString(),
+    type: yogaLabel,
+    day: "mar",
+    startHour: "17:30",
     endHour: "18:30",
   },
   {
@@ -355,6 +362,14 @@ const calendarSlotData: CourseType[] = [
     type: personalLabel,
     day: "gio",
     startHour: "16:30",
+    endHour: "17:30",
+  },
+
+  {
+    id: Math.random().toString(),
+    type: yogaLabel,
+    day: "gio",
+    startHour: "17:30",
     endHour: "18:30",
   },
   {

@@ -25,6 +25,14 @@ const Modal: React.FC<ModalProps> = ({ children, closeModal, isOpen }) => {
       window.removeEventListener("keydown", handleUserKeyPress);
     };
   }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpen]);
   return (
     <>
       <div onClick={closeModal} className={`${isOpen ? styles.overlay : ""}`} />
