@@ -4,14 +4,14 @@ import quotesIcon from "../../../assets/icons/quotes.svg";
 import Typography from "../../Typography/Typography";
 import { textVariant } from "../../../defs/textVariant";
 
-interface ModalFooterProps {
+interface ModalFooterProps extends React.ComponentProps<"div"> {
   label: ReactNode;
   footerText?: string;
 }
 
-const ModalFooter = ({ footerText, label }: ModalFooterProps) => {
+const ModalFooter = ({ footerText, label, ...restProps }: ModalFooterProps) => {
   return (
-    <div className={styles.footer}>
+    <div className={styles.footer} {...restProps}>
       <div className={styles.footerContentContainer}>
         <div className={styles.footerTextContainer}>
           <img className={styles.quotes} src={quotesIcon} alt={"Virgolette"} />

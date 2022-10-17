@@ -25,7 +25,16 @@ const ModalYogaContent = () => {
           <li>
             <Typography variant={textVariant.paragraph}>
               Previene mal di schiena, scoliosi e{" "}
-              <span className={styles.underlinedText}>dolori cervicali</span>
+              <a
+                rel="noreferrer"
+                href={
+                  "https://www.tuttogreen.it/cervicalgia-prevenzione-rimedi/"
+                }
+                target={"_blank"}
+                className={styles.underlinedText}
+              >
+                dolori cervicali
+              </a>
             </Typography>
           </li>
           <li>
@@ -42,7 +51,16 @@ const ModalYogaContent = () => {
           <li>
             <Typography variant={textVariant.paragraph}>
               Previene le{" "}
-              <span className={styles.underlinedText}>vene varicose</span>
+              <a
+                rel="noreferrer"
+                href={
+                  "https://www.tuttogreen.it/vene-varicose-rimedi-naturali/"
+                }
+                target={"_blank"}
+                className={styles.underlinedText}
+              >
+                vene varicose
+              </a>
             </Typography>
           </li>
           <li>
@@ -52,7 +70,15 @@ const ModalYogaContent = () => {
           </li>
           <li>
             <Typography variant={textVariant.paragraph}>
-              Migliora la <span className={styles.underlinedText}>postura</span>
+              Migliora la{" "}
+              <a
+                rel="noreferrer"
+                href={"https://www.tuttogreen.it/adottare-postura-corretta/"}
+                target={"_blank"}
+                className={styles.underlinedText}
+              >
+                postura
+              </a>
             </Typography>
           </li>
           <li>
@@ -72,21 +98,67 @@ const ModalYogaContent = () => {
           </li>
           <li>
             <Typography variant={textVariant.paragraph}>
-              Combatte <span className={styles.underlinedText}>ansia</span>,{" "}
-              <span className={styles.underlinedText}>stress cronico</span> e{" "}
-              <span className={styles.underlinedText}>attacchi di panico</span>
+              Combatte{" "}
+              <a
+                rel="noreferrer"
+                href={
+                  "https://www.tuttogreen.it/come-combattere-l-ansia-sintomi-rimedi/"
+                }
+                target={"_blank"}
+                className={styles.underlinedText}
+              >
+                ansia
+              </a>
+              ,{" "}
+              <a
+                rel="noreferrer"
+                href={
+                  "https://www.tuttogreen.it/rimedi-naturali-per-lo-stress/"
+                }
+                target={"_blank"}
+                className={styles.underlinedText}
+              >
+                stress cronico
+              </a>{" "}
+              e{" "}
+              <a
+                rel="noreferrer"
+                href={
+                  "https://www.tuttogreen.it/attacchi-di-panico-sintomi-rimedi-e-consigli-per-prevenirli/"
+                }
+                target={"_blank"}
+                className={styles.underlinedText}
+              >
+                attacchi di panico
+              </a>
             </Typography>
           </li>
           <li>
             <Typography variant={textVariant.paragraph}>
               Aiuta in caso di{" "}
-              <span className={styles.underlinedText}>depressione</span>
+              <a
+                rel="noreferrer"
+                href={
+                  "https://www.tuttogreen.it/come-curare-la-depressione-sintomi-cause/"
+                }
+                target={"_blank"}
+                className={styles.underlinedText}
+              >
+                depressione
+              </a>
             </Typography>
           </li>
           <li>
             <Typography variant={textVariant.paragraph}>
               Combatte l’
-              <span className={styles.underlinedText}>insonnia</span>
+              <a
+                rel="noreferrer"
+                href={"https://www.tuttogreen.it/rimedi-naturali-insonnia/"}
+                target={"_blank"}
+                className={styles.underlinedText}
+              >
+                insonnia
+              </a>
             </Typography>
           </li>
         </ul>
