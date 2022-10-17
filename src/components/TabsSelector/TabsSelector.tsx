@@ -21,7 +21,7 @@ interface MenuSelectorProps {
   tabStyle?: string;
 }
 
-// TODO add type of activeSection
+// TODO add dynamic bar
 
 const TabsSelector = ({
   activeBarStyle,
@@ -41,9 +41,6 @@ const TabsSelector = ({
   const { width } = useWindowDimensions();
   const [barWidth, setBarWidth] = useState(0);
 
-  // Set timeout because getBoundingClientRect return wrong values as soon rendered
-  const [renderFlag, setRenderFlag] = useState(false);
-
   // Scroll if there isn't enough space
   const checkScrollPosition = () => {
     const indexOf = labels.findIndex((el) => el === activeSection);
@@ -61,7 +58,7 @@ const TabsSelector = ({
               });
             } else {
               return scrollRef?.current?.scroll({
-                left: labelsPosition[indexOf] - width / 3,
+                left: 100,
                 behavior: "smooth",
               });
             }
@@ -79,61 +76,49 @@ const TabsSelector = ({
     }
     checkScrollPosition();
   }, [activeSection]);
+  //
+  // useEffect(() => {
+  //   const position = labelsPosition.map((label: number, index: number) => {
+  //     if (index === activeIndex) {
+  //       return label - (scrollRef?.current?.getBoundingClientRect().x || 0);
+  //     }
+  //   });
+  //
+  //   const barWidth = elementsRef?.current?.map((ref: any, index: number) => {
+  //     if (index === activeIndex) {
+  //       return ref?.current?.getBoundingClientRect().width || 0;
+  //     }
+  //   });
+  //
+  //   setBarWidth(barWidth[activeIndex]);
+  //
+  //   setActivePosition(position[activeIndex] || 0);
+  // }, [activeIndex, labelsPosition, renderFlag]);
 
-  useEffect(() => {
-    if (renderFlag) {
-      const position = labelsPosition.map((label: number, index: number) => {
-        if (index === activeIndex) {
-          return label - (scrollRef?.current?.getBoundingClientRect().x || 0);
-        }
-      });
-
-      const barWidth = elementsRef?.current?.map((ref: any, index: number) => {
-        if (index === activeIndex) {
-          return ref?.current?.getBoundingClientRect().width || 0;
-        }
-      });
-
-      setBarWidth(barWidth[activeIndex]);
-
-      setActivePosition(position[activeIndex] || 0);
-    }
-  }, [activeIndex, labelsPosition, renderFlag]);
-
-  useEffect(() => {
-    const positions = elementsRef?.current?.map((ref: any) => {
-      return ref.current.getBoundingClientRect().x;
-    });
-
-    setLabelsPosition(positions);
-
-    const position = positions.map((label: number, index: number) => {
-      if (index === activeIndex) {
-        return label - (scrollRef?.current?.getBoundingClientRect().x || 0);
-      }
-    });
-
-    setActivePosition(position[activeIndex] || 0);
-  }, [width]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setRenderFlag(true);
-    }, 300);
-
-    return () => setRenderFlag(false);
-  }, []);
-
-  // Set timeout because getBoundingClientRect return wrong values as soon rendered
-  useEffect(() => {
-    if (renderFlag) {
-      const positions = elementsRef?.current?.map((ref: any) => {
-        return ref.current.getBoundingClientRect().x;
-      });
-
-      setLabelsPosition(positions);
-    }
-  }, [renderFlag]);
+  // useEffect(() => {
+  //   const positions = elementsRef?.current?.map((ref: any) => {
+  //     return ref.current.getBoundingClientRect().x;
+  //   });
+  //
+  //   setLabelsPosition(positions);
+  //
+  //   const position = positions.map((label: number, index: number) => {
+  //     if (index === activeIndex) {
+  //       return label - (scrollRef?.current?.getBoundingClientRect().x || 0);
+  //     }
+  //   });
+  //
+  //   setActivePosition(position[activeIndex] || 0);
+  // }, [width]);
+  //
+  // // Set timeout because getBoundingClientRect return wrong values as soon rendered
+  // useEffect(() => {
+  //   const positions = elementsRef?.current?.map((ref: any) => {
+  //     return ref.current.getBoundingClientRect().x;
+  //   });
+  //
+  //   setLabelsPosition(positions);
+  // }, []);
 
   return (
     <>
