@@ -8,7 +8,7 @@ import { ReactComponent as OurCourses } from "../../../assets/images/sections/co
 //Utils
 import ScrollAnchor from "../../ScrollAnchor/ScrollAnchor";
 import { navBarButtons } from "../../../defs/navbarButtons";
-import ModalCalisthenicsContent from "../../CoursesDescription/ModalContent/ModalCalisthenicsContent/ModalCalisthenicsContent";
+import ModalCalisthenicsContent from "../../Modal/ModalsContent/ModalCalisthenicsContent/ModalCalisthenicsContent";
 import { useAppDispatch } from "../../../store/store";
 import changeActiveSection from "../../../utils/changeActiveSection";
 import useAnalyticsEventTracker from "../../../hooks/useAnalyticsEventTracker";
@@ -18,8 +18,8 @@ import TabsSelector from "../../TabsSelector/TabsSelector";
 import CalisthenicsDescription from "../../CoursesDescription/CalisthenicsDescription/CalisthenicsDescription";
 import FunctionalDescription from "../../CoursesDescription/FunctionalDescription/FunctionalDescription";
 import YogaDescription from "../../CoursesDescription/YogaDescription/YogaDescription";
-import ModalFunctionalContent from "../../CoursesDescription/ModalContent/ModalFunctionalContent/ModalFunctionalContent";
-import ModalYogaContent from "../../CoursesDescription/ModalContent/ModalYogaContent/ModalYogaContent";
+import ModalFunctionalContent from "../../Modal/ModalsContent/ModalFunctionalContent/ModalFunctionalContent";
+import ModalYogaContent from "../../Modal/ModalsContent/ModalYogaContent/ModalYogaContent";
 
 const OurCoursesSection = () => {
   const [showModal, setShowModal] = useState<boolean>(false);

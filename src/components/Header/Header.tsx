@@ -16,14 +16,22 @@ import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
 // Defs
 import { GAEventCategory, ModalEventAction } from "../../defs/analytics";
 import Grid from "../Grid/Grid";
+import CoachingOnlineModal from "../Modal/ModalsContent/CoachingOnlineModal/CoachingOnlineModal";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
+  const [showCoachingOnlineModal, setShowCoachingOnlineModal] = useState(false);
   const gaEventTracker = useAnalyticsEventTracker(GAEventCategory.MODAL);
 
   const handleBookLesson = () => {
     gaEventTracker(ModalEventAction.BOOK_TEST_HEADER);
     setShowModal(true);
+  };
+
+  const handleOpenCoachingOnline = () => {
+    gaEventTracker(ModalEventAction.COACHING_ONLINE_HEADER);
+
+    setShowCoachingOnlineModal(true);
   };
 
   return (
@@ -59,7 +67,7 @@ const Header = () => {
             <Button
               className={styles.headerButton}
               buttonStyle={"light"}
-              onClick={handleBookLesson}
+              onClick={handleOpenCoachingOnline}
               buttonType={"secondary"}
               label={"Scopri i nostri piani"}
             />
@@ -77,6 +85,13 @@ const Header = () => {
 
       <Modal isOpen={showModal} closeModal={() => setShowModal(false)}>
         <TrialLessonModal />
+      </Modal>
+
+      <Modal
+        isOpen={showCoachingOnlineModal}
+        closeModal={() => setShowCoachingOnlineModal(false)}
+      >
+        <CoachingOnlineModal />
       </Modal>
     </header>
   );

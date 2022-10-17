@@ -16,7 +16,7 @@
 
   .activeText {
     color: $global-color-light;
-    border-bottom: 3px solid $global-color-accent;
+    border-bottom: 4px solid $global-color-accent;
   }
 
   .activeBar {
@@ -28,11 +28,8 @@
   }
 
   .adsSelector {
-    //display: block;
-    //cursor: pointer;
-    //border-bottom-width: 4px;
-    //justify-content: center;
-    //text-align: center;
+    display: block;
+    cursor: pointer;
   }
 }
 

@@ -1,9 +1,9 @@
 import React from "react";
-import ModalHeader from "../../../Modal/ModalHeader/ModalHeader";
+import ModalHeader from "../../ModalHeader/ModalHeader";
 import styles from "../ModalCalisthenicsContent.module.scss";
 import Typography from "../../../Typography/Typography";
 import { textVariant } from "../../../../defs/textVariant";
-import ModalFooter from "../../../Modal/ModalFooter/ModalFooter";
+import ModalFooter from "../../ModalFooter/ModalFooter";
 
 const ModalFunctionalContent = () => {
   return (

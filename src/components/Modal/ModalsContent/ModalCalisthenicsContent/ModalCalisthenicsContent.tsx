@@ -1,7 +1,7 @@
 import React from "react";
 import Typography from "../../../Typography/Typography";
-import ModalHeader from "../../../Modal/ModalHeader/ModalHeader";
-import ModalFooter from "../../../Modal/ModalFooter/ModalFooter";
+import ModalHeader from "../../ModalHeader/ModalHeader";
+import ModalFooter from "../../ModalFooter/ModalFooter";
 import styles from "../ModalCalisthenicsContent.module.scss";
 import { textVariant } from "../../../../defs/textVariant";
 
