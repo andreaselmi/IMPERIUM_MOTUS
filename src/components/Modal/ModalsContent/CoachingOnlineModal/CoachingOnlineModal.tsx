@@ -102,7 +102,7 @@ const CoachingOnlineModal = () => {
               <img src={formIcon} alt={"Icona di compilazione form"} />
             </div>
             <div className={styles.coachingOnlineFieldWithIconTextContainer}>
-              <Typography variant={textVariant.smallTitle}>
+              <Typography variant={textVariant.paragraph}>
                 Richiesta e consulenza
               </Typography>{" "}
               <Typography variant={textVariant.smallParagraph}>
@@ -119,7 +119,7 @@ const CoachingOnlineModal = () => {
               <img src={videoCallIcon} alt={"Icona di un computer"} />
             </div>
             <div className={styles.coachingOnlineFieldWithIconTextContainer}>
-              <Typography variant={textVariant.smallTitle}>
+              <Typography variant={textVariant.paragraph}>
                 Lezione tramite videochiamata
               </Typography>{" "}
               <Typography variant={textVariant.smallParagraph}>
@@ -133,7 +133,7 @@ const CoachingOnlineModal = () => {
               <img src={programIcon} alt={"Icona di un taccuino"} />
             </div>
             <div className={styles.coachingOnlineFieldWithIconTextContainer}>
-              <Typography variant={textVariant.smallTitle}>
+              <Typography variant={textVariant.paragraph}>
                 Consegna del programma
               </Typography>{" "}
               <Typography variant={textVariant.smallParagraph}>
@@ -148,7 +148,7 @@ const CoachingOnlineModal = () => {
               <img src={supportIcon} alt={"Icona di uno smartphone"} />
             </div>
             <div className={styles.coachingOnlineFieldWithIconTextContainer}>
-              <Typography variant={textVariant.smallTitle}>Supporto</Typography>{" "}
+              <Typography variant={textVariant.paragraph}>Supporto</Typography>{" "}
               <Typography variant={textVariant.smallParagraph}>
                 Durante il percorso di coaching, ogni settimana, dovrai inviare
                 il video con esecuzione di ogni esercizio. Riceverai supporto
