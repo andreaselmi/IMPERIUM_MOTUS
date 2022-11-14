@@ -213,14 +213,14 @@ const calendarSlotData: CourseType[] = [
   },
   {
     id: Math.random().toString(),
-    type: classLabel,
+    type: personalLabel,
     day: "mar",
     startHour: "13:30",
     endHour: "15:00",
   },
   {
     id: Math.random().toString(),
-    type: classLabel,
+    type: personalLabel,
     day: "mar",
     startHour: "15:00",
     endHour: "16:30",
@@ -345,14 +345,14 @@ const calendarSlotData: CourseType[] = [
   },
   {
     id: Math.random().toString(),
-    type: classLabel,
+    type: personalLabel,
     day: "gio",
     startHour: "13:30",
     endHour: "15:00",
   },
   {
     id: Math.random().toString(),
-    type: classLabel,
+    type: personalLabel,
     day: "gio",
     startHour: "15:00",
     endHour: "16:30",
@@ -480,7 +480,7 @@ const calendarSlotData: CourseType[] = [
 
   {
     id: Math.random().toString(),
-    type: classLabel,
+    type: personalLabel,
     day: "sab",
     startHour: "13:30",
     endHour: "15:00",
