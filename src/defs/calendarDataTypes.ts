@@ -293,14 +293,14 @@ const calendarSlotData: CourseType[] = [
 
   {
     id: Math.random().toString(),
-    type: functionalLabel,
+    type: personalLabel,
     day: "mer",
     startHour: "16:30",
     endHour: "17:30",
   },
   {
     id: Math.random().toString(),
-    type: functionalLabel,
+    type: personalLabel,
     day: "mer",
     startHour: "17:30",
     endHour: "18:30",
