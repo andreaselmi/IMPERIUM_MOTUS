@@ -11,7 +11,7 @@ export enum CourseNameType {
 
 export enum CourseLabel {
   PERSONAL = "Su appuntamento",
-  YOGA = "Hatha Yoga",
+  YOGA = "Yoga Posturale",
   CLASS = "I.M. Class",
   CALISTHENICS = "Calisthenics",
   FUNZIONALE = "Funzionale",
@@ -125,24 +125,10 @@ const calendarSlotData: CourseType[] = [
   // Lunedì
   {
     id: Math.random().toString(),
-    type: yogaLabel,
-    day: "lun",
-    startHour: "9:00",
-    endHour: "10:00",
-  },
-  {
-    id: Math.random().toString(),
-    type: yogaLabel,
-    day: "lun",
-    startHour: "10:00",
-    endHour: "11:00",
-  },
-  {
-    id: Math.random().toString(),
     type: personalLabel,
     day: "lun",
-    startHour: "11:00",
-    endHour: "12:30",
+    startHour: "9:00",
+    endHour: "13:00",
   },
   {
     id: Math.random().toString(),
@@ -206,10 +192,17 @@ const calendarSlotData: CourseType[] = [
   },
   {
     id: Math.random().toString(),
-    type: classLabel,
+    type: yogaLabel,
     day: "mar",
     startHour: "11:00",
-    endHour: "12:30",
+    endHour: "12:00",
+  },
+  {
+    id: Math.random().toString(),
+    type: personalLabel,
+    day: "mar",
+    startHour: "12:00",
+    endHour: "13:00",
   },
   {
     id: Math.random().toString(),
@@ -257,24 +250,10 @@ const calendarSlotData: CourseType[] = [
   // Mercoledì
   {
     id: Math.random().toString(),
-    type: yogaLabel,
-    day: "mer",
-    startHour: "9:00",
-    endHour: "10:00",
-  },
-  {
-    id: Math.random().toString(),
-    type: yogaLabel,
-    day: "mer",
-    startHour: "10:00",
-    endHour: "11:00",
-  },
-  {
-    id: Math.random().toString(),
     type: personalLabel,
     day: "mer",
-    startHour: "11:00",
-    endHour: "12:30",
+    startHour: "9:00",
+    endHour: "13:00",
   },
   {
     id: Math.random().toString(),
@@ -293,14 +272,14 @@ const calendarSlotData: CourseType[] = [
 
   {
     id: Math.random().toString(),
-    type: functionalLabel,
+    type: personalLabel,
     day: "mer",
     startHour: "16:30",
     endHour: "17:30",
   },
   {
     id: Math.random().toString(),
-    type: functionalLabel,
+    type: personalLabel,
     day: "mer",
     startHour: "17:30",
     endHour: "18:30",
@@ -338,10 +317,17 @@ const calendarSlotData: CourseType[] = [
   },
   {
     id: Math.random().toString(),
-    type: classLabel,
+    type: yogaLabel,
     day: "gio",
     startHour: "11:00",
-    endHour: "12:30",
+    endHour: "12:00",
+  },
+  {
+    id: Math.random().toString(),
+    type: personalLabel,
+    day: "gio",
+    startHour: "12:00",
+    endHour: "13:00",
   },
   {
     id: Math.random().toString(),
@@ -388,27 +374,12 @@ const calendarSlotData: CourseType[] = [
   },
 
   // Venerdì
-
-  {
-    id: Math.random().toString(),
-    type: yogaLabel,
-    day: "ven",
-    startHour: "9:00",
-    endHour: "10:00",
-  },
-  {
-    id: Math.random().toString(),
-    type: yogaLabel,
-    day: "ven",
-    startHour: "10:00",
-    endHour: "11:00",
-  },
   {
     id: Math.random().toString(),
     type: personalLabel,
     day: "ven",
-    startHour: "11:00",
-    endHour: "12:30",
+    startHour: "9:00",
+    endHour: "13:00",
   },
   {
     id: Math.random().toString(),
