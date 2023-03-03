@@ -8,6 +8,7 @@ const ModalYogaContent = () => {
   return (
     <>
       <ModalHeader title={"Yoga Posturale"} />
+      <Typography variant={textVariant.heading}>Cos&apos;è?</Typography>
 
       <div className={styles.firstSectionText}>
         <Typography variant={textVariant.paragraph}>
