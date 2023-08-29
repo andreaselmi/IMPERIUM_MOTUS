@@ -1,16 +1,15 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Typography from "../../Typography/Typography";
 import styles from "./ScheduleType.module.scss";
 import { textVariant } from "../../../defs/textVariant";
 
 interface ScheduleTypeProps {
   type:
-    | "functionalTraining"
+    | "califunctional"
     | "calisthenics"
     | "smallGroup"
-    | "personal"
-    | "yoga";
-  title: string;
+    | "calistretching"
+  children: ReactNode;
   subTitle: string;
   paragraph?: string;
   className?: string;
@@ -20,7 +19,7 @@ const ScheduleType = ({
   className,
   paragraph,
   subTitle,
-  title,
+  children,
   type,
 }: ScheduleTypeProps) => {
   return (
@@ -28,19 +27,19 @@ const ScheduleType = ({
       <div style={{ display: "flex" }}>
         <div
           className={`${styles.typeBar} ${
-            type === "functionalTraining"
+            type === "califunctional"
               ? styles.functionalBar
               : type === "calisthenics"
               ? styles.calisthenicsBar
               : type === "smallGroup"
               ? styles.smallBar
-              : type === "yoga"
+              : type === "calistretching"
               ? styles.yogaBar
-              : styles.openBar
+              : null
           }`}
         />
         <div className={styles.textContainer}>
-          <Typography variant={textVariant.smallTitle}>{title}</Typography>
+          {children}
           <Typography
             className={styles.subTitle}
             variant={textVariant.smallParagraph}

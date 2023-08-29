@@ -51,8 +51,9 @@ const CalendarSlot = ({ item, ...restProps }: CalendarSlotProps) => {
         className={styles.text}
         style={{ color: item.type.labelColor }}
         variant={textVariant.smallParagraph}
+        
       >
-        {item.type.label}
+        <span dangerouslySetInnerHTML={{__html:item.type.label}}/>
       </Typography>
     </div>
   );
