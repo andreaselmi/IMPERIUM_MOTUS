@@ -5,11 +5,10 @@ import { textVariant } from "../../../defs/textVariant";
 
 interface ScheduleTypeProps {
   type:
-    | "functionalTraining"
+    | "califunctional"
     | "calisthenics"
     | "smallGroup"
-    | "personal"
-    | "yoga";
+    | "calistretching"
   title: string;
   subTitle: string;
   paragraph?: string;
@@ -28,15 +27,15 @@ const ScheduleType = ({
       <div style={{ display: "flex" }}>
         <div
           className={`${styles.typeBar} ${
-            type === "functionalTraining"
+            type === "califunctional"
               ? styles.functionalBar
               : type === "calisthenics"
               ? styles.calisthenicsBar
               : type === "smallGroup"
               ? styles.smallBar
-              : type === "yoga"
+              : type === "calistretching"
               ? styles.yogaBar
-              : styles.openBar
+              : null
           }`}
         />
         <div className={styles.textContainer}>
