@@ -2,27 +2,22 @@ export type DayType = "lun" | "mar" | "mer" | "gio" | "ven" | "sab";
 
 export enum CourseNameType {
   PERSONAL = "personal",
-  YOGA = "yoga",
-  CLASS = "class",
+  CALISTRETCHING = "calistretching",
   CALISTHENICS = "calisthenics",
   FUNZIONALE = "funzionale",
-  APPOINTMENT = "appuntamento",
 }
 
 export enum CourseLabel {
-  PERSONAL = "Su appuntamento",
-  YOGA = "Yoga Posturale",
-  CLASS = "I.M. Class",
+  PERSONAL = "Personal/Small group",
+  CALISTRETCHING = "<span style='font-weight: bold;'>Cali</span>stretching",
   CALISTHENICS = "Calisthenics",
-  FUNZIONALE = "Funzionale",
-  APPOINTMENT = "Solo su appuntamento",
+  FUNZIONALE = "<span style='font-weight: bold;'>Cali</span>functional",
 }
 
 export enum CourseColorType {
   PERSONAL = "#C0C0C0",
-  YOGA = "#96ECFF",
-  CLASS = "#E1FF2C",
-  CALISTHENICS = "#131313",
+  CALISTRETCHING = "#96ECFF",
+  CALISTHENICS = "#E1FF2C",
   FUNZIONALE = "#D45DFE",
   APPOINTMENT = "#C0C0C0",
 }
@@ -31,14 +26,14 @@ const calisthenicsLabel = {
   name: CourseNameType.CALISTHENICS,
   color: CourseColorType.CALISTHENICS,
   label: CourseLabel.CALISTHENICS,
-  labelColor: "#FFFFFF",
-  hoursLabelColor: "#C0C0C0",
+  labelColor: "#000000",
+  hoursLabelColor: "#757575",
 };
 
-const yogaLabel = {
-  name: CourseNameType.YOGA,
-  color: CourseColorType.YOGA,
-  label: CourseLabel.YOGA,
+const calistretchingLabel = {
+  name: CourseNameType.CALISTRETCHING,
+  color: CourseColorType.CALISTRETCHING,
+  label: CourseLabel.CALISTRETCHING,
   labelColor: "#131313",
   hoursLabelColor: "#757575",
 };
@@ -51,26 +46,10 @@ const functionalLabel = {
   hoursLabelColor: "rgba(19, 19, 19, .6)",
 };
 
-const classLabel = {
-  name: CourseNameType.CLASS,
-  color: CourseColorType.CLASS,
-  label: CourseLabel.CLASS,
-  labelColor: "#131313",
-  hoursLabelColor: "#757575",
-};
-
 const personalLabel = {
   name: CourseNameType.PERSONAL,
   color: CourseColorType.PERSONAL,
   label: CourseLabel.PERSONAL,
-  labelColor: "#131313",
-  hoursLabelColor: "#757575",
-};
-
-const appointmentLabel = {
-  name: CourseNameType.APPOINTMENT,
-  color: CourseColorType.APPOINTMENT,
-  label: CourseLabel.APPOINTMENT,
   labelColor: "#131313",
   hoursLabelColor: "#757575",
 };
@@ -128,7 +107,21 @@ const calendarSlotData: CourseType[] = [
     type: personalLabel,
     day: "lun",
     startHour: "9:00",
-    endHour: "13:00",
+    endHour: "10:00",
+  },
+  {
+    id: Math.random().toString(),
+    type: personalLabel,
+    day: "lun",
+    startHour: "10:00",
+    endHour: "11:00",
+  },
+  {
+    id: Math.random().toString(),
+    type: personalLabel,
+    day: "lun",
+    startHour: "11:00",
+    endHour: "12:00",
   },
   {
     id: Math.random().toString(),
@@ -192,23 +185,16 @@ const calendarSlotData: CourseType[] = [
   },
   {
     id: Math.random().toString(),
-    type: yogaLabel,
+    type: calisthenicsLabel,
     day: "mar",
     startHour: "11:00",
-    endHour: "12:00",
+    endHour: "12:30",
   },
   {
     id: Math.random().toString(),
     type: personalLabel,
     day: "mar",
-    startHour: "12:00",
-    endHour: "13:00",
-  },
-  {
-    id: Math.random().toString(),
-    type: personalLabel,
-    day: "mar",
-    startHour: "13:30",
+    startHour: "14:00",
     endHour: "15:00",
   },
   {
@@ -216,25 +202,25 @@ const calendarSlotData: CourseType[] = [
     type: personalLabel,
     day: "mar",
     startHour: "15:00",
-    endHour: "16:30",
+    endHour: "16:00",
+  },
+  {
+    id: Math.random().toString(),
+    type: calistretchingLabel,
+    day: "mar",
+    startHour: "16:00",
+    endHour: "17:00",
   },
   {
     id: Math.random().toString(),
     type: personalLabel,
     day: "mar",
-    startHour: "16:30",
-    endHour: "17:30",
+    startHour: "17:00",
+    endHour: "18:00",
   },
   {
     id: Math.random().toString(),
-    type: yogaLabel,
-    day: "mar",
-    startHour: "17:30",
-    endHour: "18:30",
-  },
-  {
-    id: Math.random().toString(),
-    type: classLabel,
+    type: calisthenicsLabel,
     day: "mar",
     startHour: "18:30",
     endHour: "20:00",
@@ -253,7 +239,21 @@ const calendarSlotData: CourseType[] = [
     type: personalLabel,
     day: "mer",
     startHour: "9:00",
-    endHour: "13:00",
+    endHour: "10:00",
+  },
+  {
+    id: Math.random().toString(),
+    type: personalLabel,
+    day: "mer",
+    startHour: "10:00",
+    endHour: "11:00",
+  },
+  {
+    id: Math.random().toString(),
+    type: personalLabel,
+    day: "mer",
+    startHour: "11:00",
+    endHour: "12:00",
   },
   {
     id: Math.random().toString(),
@@ -317,23 +317,16 @@ const calendarSlotData: CourseType[] = [
   },
   {
     id: Math.random().toString(),
-    type: yogaLabel,
+    type: calisthenicsLabel,
     day: "gio",
     startHour: "11:00",
-    endHour: "12:00",
+    endHour: "12:30",
   },
   {
     id: Math.random().toString(),
     type: personalLabel,
     day: "gio",
-    startHour: "12:00",
-    endHour: "13:00",
-  },
-  {
-    id: Math.random().toString(),
-    type: personalLabel,
-    day: "gio",
-    startHour: "13:30",
+    startHour: "14:00",
     endHour: "15:00",
   },
   {
@@ -341,26 +334,25 @@ const calendarSlotData: CourseType[] = [
     type: personalLabel,
     day: "gio",
     startHour: "15:00",
-    endHour: "16:30",
+    endHour: "16:00",
+  },
+  {
+    id: Math.random().toString(),
+    type: calistretchingLabel,
+    day: "gio",
+    startHour: "16:00",
+    endHour: "17:00",
   },
   {
     id: Math.random().toString(),
     type: personalLabel,
     day: "gio",
-    startHour: "16:30",
-    endHour: "17:30",
-  },
-
-  {
-    id: Math.random().toString(),
-    type: yogaLabel,
-    day: "gio",
-    startHour: "17:30",
-    endHour: "18:30",
+    startHour: "17:00",
+    endHour: "18:00",
   },
   {
     id: Math.random().toString(),
-    type: classLabel,
+    type: calisthenicsLabel,
     day: "gio",
     startHour: "18:30",
     endHour: "20:00",
@@ -379,7 +371,21 @@ const calendarSlotData: CourseType[] = [
     type: personalLabel,
     day: "ven",
     startHour: "9:00",
-    endHour: "13:00",
+    endHour: "10:00",
+  },
+  {
+    id: Math.random().toString(),
+    type: personalLabel,
+    day: "ven",
+    startHour: "10:00",
+    endHour: "11:00",
+  },
+  {
+    id: Math.random().toString(),
+    type: personalLabel,
+    day: "ven",
+    startHour: "11:00",
+    endHour: "12:00",
   },
   {
     id: Math.random().toString(),
@@ -443,7 +449,7 @@ const calendarSlotData: CourseType[] = [
   },
   {
     id: Math.random().toString(),
-    type: classLabel,
+    type: calisthenicsLabel,
     day: "sab",
     startHour: "11:00",
     endHour: "12:30",
@@ -453,15 +459,22 @@ const calendarSlotData: CourseType[] = [
     id: Math.random().toString(),
     type: personalLabel,
     day: "sab",
-    startHour: "13:30",
-    endHour: "15:00",
+    startHour: "15:00",
+    endHour: "16:00",
   },
   {
     id: Math.random().toString(),
-    type: appointmentLabel,
+    type: personalLabel,
     day: "sab",
-    startHour: "15:00",
-    endHour: "20:00",
+    startHour: "16:00",
+    endHour: "17:00",
+  },
+  {
+    id: Math.random().toString(),
+    type: calisthenicsLabel,
+    day: "sab",
+    startHour: "17:00",
+    endHour: "18:30",
   },
 ];
 

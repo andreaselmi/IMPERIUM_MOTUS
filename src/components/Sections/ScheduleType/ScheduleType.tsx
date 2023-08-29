@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Typography from "../../Typography/Typography";
 import styles from "./ScheduleType.module.scss";
 import { textVariant } from "../../../defs/textVariant";
@@ -9,7 +9,7 @@ interface ScheduleTypeProps {
     | "calisthenics"
     | "smallGroup"
     | "calistretching"
-  title: string;
+  children: ReactNode;
   subTitle: string;
   paragraph?: string;
   className?: string;
@@ -19,7 +19,7 @@ const ScheduleType = ({
   className,
   paragraph,
   subTitle,
-  title,
+  children,
   type,
 }: ScheduleTypeProps) => {
   return (
@@ -39,7 +39,7 @@ const ScheduleType = ({
           }`}
         />
         <div className={styles.textContainer}>
-          <Typography variant={textVariant.smallTitle}>{title}</Typography>
+          {children}
           <Typography
             className={styles.subTitle}
             variant={textVariant.smallParagraph}
