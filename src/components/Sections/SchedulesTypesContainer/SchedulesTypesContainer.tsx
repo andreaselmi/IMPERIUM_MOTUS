@@ -35,7 +35,7 @@ const SchedulesTypesContainer = () => {
           subTitle={"Lezione individuale o in gruppi di massimo 6 persone"}
         
         >
-          <Typography variant={textVariant.smallTitle}>Imperium Motus Class</Typography>
+          <Typography variant={textVariant.smallTitle}>Personal o Small group</Typography>
           </ScheduleType>
       </div>
     </div>
