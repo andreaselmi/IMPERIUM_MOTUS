@@ -3,78 +3,64 @@ import ModalHeader from "../../ModalHeader/ModalHeader";
 import styles from "../ModalCalisthenicsContent.module.scss";
 import Typography from "../../../Typography/Typography";
 import { textVariant } from "../../../../defs/textVariant";
+import ModalFooter from "../../ModalFooter/ModalFooter";
 
-const ModalYogaContent = () => {
+const ModalPosturalContent = () => {
   return (
     <>
-      <ModalHeader title={"Yoga Posturale"} />
+      <ModalHeader title={"Ginnastica posturale"} />
+      <Typography variant={textVariant.paragraph} style={{marginBottom: "40px"}}>
+      È considerata uno dei principali strumenti terapeutici in caso di dolori articolari, 
+      dolori muscolari e problematiche molto comuni come il dolore alla schiena, l’ernia del disco, 
+      la scoliosi e il male alla cervicale. È così nata nel corso degli anni un’enorme attenzione verso questa particolare categoria 
+      terapeutica composta essenzialmente da una serie di esercizi posturali.
+      </Typography>
       <Typography variant={textVariant.heading}>Cos&apos;è?</Typography>
 
       <div className={styles.firstSectionText}>
         <Typography variant={textVariant.paragraph}>
-          È forse limitante parlare di yoga posturale perché, in effetti, tutto
-          lo yoga è adatto per mantenere una corretta postura. L’allenamento
-          all’ascolto del proprio corpo, alla concentrazione, alla
-          propriocezione e alla meditazione, infatti, permettono di portare ciò
-          che si impara e si sperimenta sul tappetino anche nella vita di tutti
-          i giorni; ciò comporta che le posizioni corrette apprese durante la
-          pratica diventano sempre più naturali e spontanee, così come diviene
-          sempre più semplice acquisire e mantenere una corretta igiene
-          posturale. Lo yoga posturale ha, però, il principale obiettivo di
-          correggere i problemi e gli squilibri posturali; possiamo considerarlo
-          una sorta di derivazione occidentale della pratica originaria, visto
-          che si concentra proprio su quelle posizioni che sfruttano i riflessi
-          neuro muscolari per ripristinare la condizione di equilibrio; in
-          questo modo è possibile combattere un torcicollo, risolvere un mal di
-          schiena, lenire il{" "}
-          <b style={{ fontWeight: "bold" }}>dolore cervicale</b> e, più in
-          generale, acquisire una condizione armonia e di benessere. Ovviamente
-          anche lo yoga posturale, sebbene abbia una vocazione più fisica,
-          mantiene anche la componente spirituale; non mancano infatti gli asana
-          dedicati al rilassamento e alla concentrazione e gli esercizi di
-          respirazione. Da aggiungere, per concludere, che lo yoga posturale si
-          rivela perfetto anche quando si deve recuperare la condizione fisica
-          dopo un incidente o un’operazione; possiamo quindi considerarlo una
-          forma base dello{" "}
-          <b style={{ fontWeight: "bold" }}>yoga terapeutico</b>.
+        È l’allenamento all&apos;ascolto del proprio corpo, 
+        alla concentrazione e alla propriocezione, infatti, permettono di portare ciò che si impara e si sperimenta nella vita di tutti i giorni.
+        Ciò comporta che le posizioni corrette apprese durante la pratica diventano sempre più naturali e spontanee, 
+        così come diviene sempre più semplice acquisire e mantenere una corretta igiene posturale.
+        <br/>
+        <br/>
+        Lo ginnastica posturale ha, però, il <b style={{ fontWeight: "bold" }}>principale obiettivo di correggere i problemi e gli squilibri posturali;</b> possiamo considerarlo una 
+        sorta di derivazione occidentale della pratica originaria, visto che si concentra proprio su quelle posizioni che sfruttano i riflessi neuro muscolari 
+        per ripristinare la condizione di equilibrio; in questo modo è possibile combattere un torcicollo, risolvere un mal di schiena, lenire il dolore cervicale e,
+        più in generale, acquisire una condizione armonia e di benessere.
         </Typography>
       </div>
       <div className={styles.secondSectionText}>
         <Typography variant={textVariant.heading}>
-          Yoga posturale: a chi è adatto
+          A chi è adatta?
         </Typography>
         <Typography variant={textVariant.paragraph} style={{ marginTop: 16 }}>
           I problemi di postura stanno diventando sempre più frequenti a
-          qualsiasi età; secondo recenti studi il della popolazione mondiale
-          soffre di mal di schiena e non è così azzardato affermare che si
-          tratta di uno dei problemi principali dell’era moderna.
-        </Typography>
-        <br />
-        <Typography variant={textVariant.paragraph}>
-          Per questo lo yoga terapeutico è adatto per chiunque soffra di
-          squilibri posturali, e quindi si rivela perfetto per:
+          qualsiasi età; Per questo la ginnastica terapeutica è adatta per chiunque soffra di squilibri posturali,
+          e quindi si rivela perfetta per:
         </Typography>
         <ul className={styles.list}>
           <li>
             <Typography variant={textVariant.paragraph}>
-              i giovani che passano troppo tempo seduti a una scrivania;
+              I giovani che passano troppo tempo seduti a una scrivania;
             </Typography>
           </li>
           <li>
             <Typography variant={textVariant.paragraph}>
-              gli anziani che hanno le articolazioni un po’ usurate e
+              Gli anziani che hanno le articolazioni un po’ usurate e
               irrigidite;
             </Typography>
           </li>
           <li>
             <Typography variant={textVariant.paragraph}>
-              chiunque passa troppo tempo in piedi per lavoro ed è costretto ad
+              Chiunque passa troppo tempo in piedi per lavoro ed è costretto ad
               assumere posizioni scorrette durante la giornata;
             </Typography>
           </li>
           <li>
             <Typography variant={textVariant.paragraph}>
-              chi è dovuto stare fermo per tanto tempo e sta affrontando un
+              Chi è dovuto stare fermo per tanto tempo e sta affrontando un
               percorso riabilitativo.
             </Typography>
           </li>
@@ -222,6 +208,26 @@ const ModalYogaContent = () => {
               </a>
             </Typography>
           </li>
+          <li>
+            <Typography variant={textVariant.paragraph}>
+              Favorisce la concentrazione
+            </Typography>
+          </li>
+          <li>
+            <Typography variant={textVariant.paragraph}>
+              Aumenta la forza e la calma e combatte la debolezza
+            </Typography>
+          </li>
+          <li>
+            <Typography variant={textVariant.paragraph}>
+              Stimola le ghiandole ormonali
+            </Typography>
+          </li>
+          <li>
+            <Typography variant={textVariant.paragraph}>
+              Massaggia gli organi interni
+            </Typography>
+          </li>
         </ul>
 
         <Typography variant={textVariant.heading} style={{ marginBottom: 16 }}>
@@ -233,8 +239,12 @@ const ModalYogaContent = () => {
           gravidanza.
         </Typography>
       </div>
+      <ModalFooter
+        footerText="Jim Rohn"
+        label={`ABBI BUONA CURA DEL TUO CORPO, E' L'UNICO POSTO IN CUI DEVI VIVERE`}
+      />
     </>
   );
 };
 
-export default ModalYogaContent;
+export default ModalPosturalContent;

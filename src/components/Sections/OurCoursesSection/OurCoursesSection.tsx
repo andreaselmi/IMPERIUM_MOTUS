@@ -17,9 +17,11 @@ import { SiteSectionTypes } from "../../../defs/siteSection";
 import TabsSelector from "../../TabsSelector/TabsSelector";
 import CalisthenicsDescription from "../../CoursesDescription/CalisthenicsDescription/CalisthenicsDescription";
 import FunctionalDescription from "../../CoursesDescription/FunctionalDescription/FunctionalDescription";
-import YogaDescription from "../../CoursesDescription/YogaDescription/YogaDescription";
+import PosturalDescription from "../../CoursesDescription/PosturalDescription/PosturalDescription";
+import StretchingDescription from "../../CoursesDescription/StretchingDescription";
 import ModalFunctionalContent from "../../Modal/ModalsContent/ModalFunctionalContent/ModalFunctionalContent";
-import ModalYogaContent from "../../Modal/ModalsContent/ModalYogaContent/ModalYogaContent";
+import ModalPosturalContent from "../../Modal/ModalsContent/ModalPosturalContent/ModalPosturalContent";
+import ModalStretchingContent from "../../Modal/ModalsContent/ModalStretchingContent";
 
 const OurCoursesSection = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -70,7 +72,7 @@ const OurCoursesSection = () => {
 
           <TabsSelector
             setActiveSection={(section) => setCourseSection(section)}
-            labels={["Calisthenics", "Ginnastica funzionale", "Yoga"]}
+            labels={["Calisthenics", "Ginnastica funzionale", "Ginnastica posturale", "Stretching"]}
             activeSection={courseSection}
           />
 
@@ -79,9 +81,11 @@ const OurCoursesSection = () => {
               <CalisthenicsDescription onClickButton={handleModalButton} />
             ) : courseSection === "Ginnastica funzionale" ? (
               <FunctionalDescription onClickButton={handleModalButton} />
-            ) : (
-              <YogaDescription onClickButton={handleModalButton} />
-            )}
+            ) : courseSection === "Ginnastica posturale" ?(
+              <PosturalDescription onClickButton={handleModalButton} />
+            ) : 
+            <StretchingDescription onClickButton={handleModalButton} />
+          }
           </div>
         </div>
       </SectionContainer>
@@ -90,9 +94,10 @@ const OurCoursesSection = () => {
           <ModalCalisthenicsContent />
         ) : courseSection === "Ginnastica funzionale" ? (
           <ModalFunctionalContent />
-        ) : (
-          <ModalYogaContent />
-        )}
+        ) : courseSection === "Ginnastica posturale" ? (
+          <ModalPosturalContent />
+        ) : <ModalStretchingContent />
+      }
       </Modal>
     </div>
   );

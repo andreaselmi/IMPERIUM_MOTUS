@@ -24,7 +24,7 @@ const ModalFooter = ({ footerText, label, ...restProps }: ModalFooterProps) => {
         </div>
       </div>
       {footerText && (
-        <p style={{ marginLeft: 20, marginTop: 10 }}>{footerText}</p>
+        <Typography variant={textVariant.smallTitle} style={{ marginLeft: 20, marginTop: 10 }}>{footerText}</Typography>
       )}
     </div>
   );
