@@ -35,7 +35,7 @@ const ModalCalisthenicsContent = () => {
           l&apos;importante è iniziare con gradualità, partendo con gli esercizi base per poi avanzare salendo di livello e complessità, in modo da evitare il rischio di infortuni.
           <br/>
           <br/>
-          Io credo che questa disciplina, se fatta bene, sia una delle migliori attività sportive per chiunque. Nasce come una forma di allenamento semplice, 
+          Questa disciplina, se fatta bene, è una delle migliori attività sportive per chiunque. Nasce come una forma di allenamento semplice, 
           che non ha bisogno di spazi particolari né di alcuna sovrastruttura. Di base, infatti, l&apos;unica cosa necessaria per eseguire la quasi totalità degli esercizi è il proprio corpo. 
           Lo si può fare da soli, in pochi metri quadri di spazio, ma anche i pochi attrezzi utili per le sequenze più avanzate sono tutti facilmente reperibili ed economici.
         </Typography>
