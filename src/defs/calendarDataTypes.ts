@@ -10,7 +10,7 @@ export enum CourseNameType {
 export enum CourseLabel {
   PERSONAL = "Personal/Small group",
   CALISTRETCHING = "<span style='font-weight: bold;'>Cali</span>stretching",
-  CALISTHENICS = "Calisthenics",
+  CALISTHENICS = "<span style='font-weight: bold;'>Cali</span>sthenics",
   FUNZIONALE = "<span style='font-weight: bold;'>Cali</span>functional",
 }
 

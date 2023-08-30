@@ -13,7 +13,7 @@ const SchedulesTypesContainer = () => {
           type={"calisthenics"}
           subTitle={"Lezione di Calishtenics, massimo 12 persone"}
         >
-          <Typography variant={textVariant.smallTitle}>Calisthenics</Typography>
+          <Typography variant={textVariant.smallTitle}><span style={{fontWeight: "bolder"}}>Cali</span>sthenics</Typography>
         </ScheduleType>
         <ScheduleType
           className={styles.scheduleType}
