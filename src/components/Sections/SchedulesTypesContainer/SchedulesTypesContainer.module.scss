@@ -2,15 +2,17 @@
 
 
 .scheduleTypesScrollableContainer {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
   overflow-y: scroll;
 
-  @include respond-to("desktopSmall"){
+  @include respond-to("desktopSmall") {
     padding-left: 7%;
   }
 
-  @include respond-to("desktopBig"){
+  @include respond-to("desktopBig") {
     padding-left: 0;
   }
 
@@ -27,12 +29,12 @@
     flex: 1;
     margin: auto;
 
-    @include respond-to("desktopBig"){
+    @include respond-to("desktopBig") {
       min-width: 1140px;
       max-width: 1140px;
     }
 
-    @include respond-to("tabletBig"){
+    @include respond-to("tabletBig") {
       min-width: 1140px;
       max-width: 1140px;
     }
@@ -41,20 +43,9 @@
 
   .scheduleType {
     display: flex;
-    flex:1;
-    @include respond-to("desktopBig"){
-      max-width: 208px;
-    }
+    flex: 1;
+    // @include respond-to("desktopBig"){
+    //   max-width: 208px;
+    // }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
