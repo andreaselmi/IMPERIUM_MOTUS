@@ -459,22 +459,22 @@ const calendarSlotData: CourseType[] = [
     id: Math.random().toString(),
     type: personalLabel,
     day: "sab",
-    startHour: "15:00",
-    endHour: "16:00",
+    startHour: "14:00",
+    endHour: "15:00",
   },
   {
     id: Math.random().toString(),
     type: personalLabel,
     day: "sab",
-    startHour: "16:00",
-    endHour: "17:00",
+    startHour: "15:00",
+    endHour: "16:00",
   },
   {
     id: Math.random().toString(),
     type: calisthenicsLabel,
     day: "sab",
-    startHour: "17:00",
-    endHour: "18:30",
+    startHour: "16:00",
+    endHour: "17:30",
   },
 ];
 
