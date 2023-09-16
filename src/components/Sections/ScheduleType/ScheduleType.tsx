@@ -24,7 +24,7 @@ const ScheduleType = ({
 }: ScheduleTypeProps) => {
   return (
     <div className={`${styles.container} ${className}`}>
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex",flex:1, height: "100%" }}>
         <div
           className={`${styles.typeBar} ${
             type === "califunctional"
@@ -33,8 +33,6 @@ const ScheduleType = ({
               ? styles.calisthenicsBar
               : type === "smallGroup"
               ? styles.smallBar
-              : type === "calistretching"
-              ? styles.yogaBar
               : null
           }`}
         />

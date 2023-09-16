@@ -15,6 +15,14 @@ const SchedulesTypesContainer = () => {
         >
           <Typography variant={textVariant.smallTitle}><span style={{fontWeight: "bolder"}}>Cali</span>sthenics</Typography>
         </ScheduleType>
+
+        <ScheduleType
+          className={styles.scheduleType}
+          type={"smallGroup"}
+          subTitle={"Lezione di Calishtenics, massimo 6 persone"}
+        >
+          <Typography variant={textVariant.smallTitle}><span style={{fontWeight: "bolder"}}>Cali</span>sthenics Small Group</Typography>
+        </ScheduleType>
         <ScheduleType
           className={styles.scheduleType}
           type={"califunctional"}
@@ -24,18 +32,11 @@ const SchedulesTypesContainer = () => {
         </ScheduleType>
         <ScheduleType
           className={styles.scheduleType}
-          type={"calistretching"}
-          subTitle={"Lezione di gruppo di stretching"}
-        >
-          <Typography variant={textVariant.smallTitle}><span style={{fontWeight: "bolder"}}>Cali</span>stretching</Typography>
-        </ScheduleType>
-        <ScheduleType
-          className={styles.scheduleType}
           type={"smallGroup"}
-          subTitle={"Lezione individuale o in gruppi di massimo 6 persone"}
+          subTitle={"Lezione individuale o di coppia"}
         
         >
-          <Typography variant={textVariant.smallTitle}>Personal o Small group</Typography>
+          <Typography variant={textVariant.smallTitle}><span style={{fontWeight: "bolder"}}>Cali</span>personal</Typography>
           </ScheduleType>
       </div>
     </div>
