@@ -16,9 +16,12 @@ a {
   color: inherit;
 }
 
-body {
+body,
+html,
+#root {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 @media only screen and (max-width: 575px) {

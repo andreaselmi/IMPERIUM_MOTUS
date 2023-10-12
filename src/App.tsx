@@ -6,6 +6,9 @@ import Footer from "./components/Footer/Footer";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 import ReactGA from "react-ga";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 ReactGA.initialize("UA-242604338-1");
 
 function App() {
@@ -15,10 +18,12 @@ function App() {
 
   return (
     <Provider store={store}>
-      <Navbar />
-      <Header />
-      <Body />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </Provider>
   );
 }
