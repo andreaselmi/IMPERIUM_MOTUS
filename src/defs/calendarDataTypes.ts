@@ -182,7 +182,7 @@ const calendarSlotData: CourseType[] = [
   },
   {
     id: Math.random().toString(),
-    type: personalLabel,
+    type: calisthenicsLabel,
     day: "mar",
     startHour: "14:00",
     endHour: "15:00",
@@ -203,7 +203,7 @@ const calendarSlotData: CourseType[] = [
   },
   {
     id: Math.random().toString(),
-    type: personalLabel,
+    type: calisthenicsLabel,
     day: "mar",
     startHour: "18:00",
     endHour: "19:00",
@@ -314,7 +314,7 @@ const calendarSlotData: CourseType[] = [
   },
   {
     id: Math.random().toString(),
-    type: personalLabel,
+    type: calisthenicsLabel,
     day: "gio",
     startHour: "14:00",
     endHour: "15:00",
@@ -335,7 +335,7 @@ const calendarSlotData: CourseType[] = [
   },
   {
     id: Math.random().toString(),
-    type: personalLabel,
+    type: calisthenicsLabel,
     day: "gio",
     startHour: "18:00",
     endHour: "19:00",
@@ -447,7 +447,7 @@ const calendarSlotData: CourseType[] = [
 
   {
     id: Math.random().toString(),
-    type: personalLabel,
+    type: calisthenicsLabel,
     day: "sab",
     startHour: "14:00",
     endHour: "15:00",
